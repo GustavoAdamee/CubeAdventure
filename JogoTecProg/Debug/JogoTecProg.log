@@ -1,0 +1,19 @@
+﻿  GerenciadorColisoes.cpp
+  GerenciadorTiles.cpp
+C:\Users\Gustavo\Desktop\JogoTecProg\JogoTecProg\GerenciadorTiles.cpp(78,29): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
+C:\Users\Gustavo\Desktop\JogoTecProg\JogoTecProg\GerenciadorTiles.cpp(78,21): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
+C:\Users\Gustavo\Desktop\JogoTecProg\JogoTecProg\GerenciadorTiles.cpp(83,35): warning C4244: 'argumento': conversão de 'int' para 'T', possível perda de dados
+          with
+          [
+              T=float
+          ]
+C:\Users\Gustavo\Desktop\JogoTecProg\JogoTecProg\GerenciadorTiles.cpp(83,27): warning C4244: 'argumento': conversão de 'int' para 'T', possível perda de dados
+          with
+          [
+              T=float
+          ]
+  Jogo.cpp
+C:\Users\Gustavo\Desktop\JogoTecProg\JogoTecProg\Jogo.cpp(285,25): warning C4244: 'argumento': conversão de 'double' para 'float', possível perda de dados
+  main.cpp
+  Gerando Código...
+  JogoTecProg.vcxproj -> C:\Users\Gustavo\Desktop\JogoTecProg\Debug\JogoTecProg.exe
