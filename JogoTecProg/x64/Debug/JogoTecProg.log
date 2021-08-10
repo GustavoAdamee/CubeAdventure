@@ -1,0 +1,60 @@
+﻿  BlocoCaverna.cpp
+C:\Users\Gustavo\Desktop\CubeAdventure\JogoTecProg\Entidade.h(2,10): fatal error C1083: Não é possível abrir arquivo incluir: 'SFML/Graphics.hpp': No such file or directory
+  Entidade.cpp
+C:\Users\Gustavo\Desktop\CubeAdventure\JogoTecProg\Entidade.h(2,10): fatal error C1083: Não é possível abrir arquivo incluir: 'SFML/Graphics.hpp': No such file or directory
+  Fase.cpp
+C:\Users\Gustavo\Desktop\CubeAdventure\JogoTecProg\Entidade.h(2,10): fatal error C1083: Não é possível abrir arquivo incluir: 'SFML/Graphics.hpp': No such file or directory
+  GerenciadorColisoes.cpp
+C:\Users\Gustavo\Desktop\CubeAdventure\JogoTecProg\GerenciadorGrafico.h(5,10): fatal error C1083: Não é possível abrir arquivo incluir: 'SFML/Graphics.hpp': No such file or directory
+  GerenciadorTiles.cpp
+C:\Users\Gustavo\Desktop\CubeAdventure\JogoTecProg\GerenciadorGrafico.h(5,10): fatal error C1083: Não é possível abrir arquivo incluir: 'SFML/Graphics.hpp': No such file or directory
+  BlocoGrama.cpp
+C:\Users\Gustavo\Desktop\CubeAdventure\JogoTecProg\Entidade.h(2,10): fatal error C1083: Não é possível abrir arquivo incluir: 'SFML/Graphics.hpp': No such file or directory
+  FaseGrama.cpp
+C:\Users\Gustavo\Desktop\CubeAdventure\JogoTecProg\Entidade.h(2,10): fatal error C1083: Não é possível abrir arquivo incluir: 'SFML/Graphics.hpp': No such file or directory
+  FaseCaverna.cpp
+C:\Users\Gustavo\Desktop\CubeAdventure\JogoTecProg\Entidade.h(2,10): fatal error C1083: Não é possível abrir arquivo incluir: 'SFML/Graphics.hpp': No such file or directory
+  FaseCavernaChefao.cpp
+C:\Users\Gustavo\Desktop\CubeAdventure\JogoTecProg\Entidade.h(2,10): fatal error C1083: Não é possível abrir arquivo incluir: 'SFML/Graphics.hpp': No such file or directory
+  GerenciadorEventos.cpp
+C:\Users\Gustavo\Desktop\CubeAdventure\JogoTecProg\GerenciadorEventos.h(2,10): fatal error C1083: Não é possível abrir arquivo incluir: 'SFML/Graphics.hpp': No such file or directory
+  GerenciadorGrafico.cpp
+C:\Users\Gustavo\Desktop\CubeAdventure\JogoTecProg\GerenciadorGrafico.h(5,10): fatal error C1083: Não é possível abrir arquivo incluir: 'SFML/Graphics.hpp': No such file or directory
+  Inimigo.cpp
+C:\Users\Gustavo\Desktop\CubeAdventure\JogoTecProg\Entidade.h(2,10): fatal error C1083: Não é possível abrir arquivo incluir: 'SFML/Graphics.hpp': No such file or directory
+  Inseto.cpp
+C:\Users\Gustavo\Desktop\CubeAdventure\JogoTecProg\Entidade.h(2,10): fatal error C1083: Não é possível abrir arquivo incluir: 'SFML/Graphics.hpp': No such file or directory
+  Atirador.cpp
+  Aranha.cpp
+C:\Users\Gustavo\Desktop\CubeAdventure\JogoTecProg\Entidade.h(2,10): fatal error C1083: Não é possível abrir arquivo incluir: 'SFML/Graphics.hpp': No such file or directory
+  Jogador.cpp
+C:\Users\Gustavo\Desktop\CubeAdventure\JogoTecProg\Entidade.h(2,10): fatal error C1083: Não é possível abrir arquivo incluir: 'SFML/Graphics.hpp': No such file or directory
+  CuboCowboy.cpp
+C:\Users\Gustavo\Desktop\CubeAdventure\JogoTecProg\Entidade.h(2,10): fatal error C1083: Não é possível abrir arquivo incluir: 'SFML/Graphics.hpp': No such file or directory
+  CuboExplorador.cpp
+C:\Users\Gustavo\Desktop\CubeAdventure\JogoTecProg\Entidade.h(2,10): fatal error C1083: Não é possível abrir arquivo incluir: 'SFML/Graphics.hpp': No such file or directory
+  Jogo.cpp
+C:\Users\Gustavo\Desktop\CubeAdventure\JogoTecProg\Jogo.h(2,10): fatal error C1083: Não é possível abrir arquivo incluir: 'SFML/Graphics.hpp': No such file or directory
+  ListaEntidades.cpp
+C:\Users\Gustavo\Desktop\CubeAdventure\JogoTecProg\Entidade.h(2,10): fatal error C1083: Não é possível abrir arquivo incluir: 'SFML/Graphics.hpp': No such file or directory
+  Gerando Código...
+  Compilando...
+  main.cpp
+C:\Users\Gustavo\Desktop\CubeAdventure\JogoTecProg\main.cpp(3,10): fatal error C1083: Não é possível abrir arquivo incluir: 'SFML/Graphics.hpp': No such file or directory
+  MenuPrincipal.cpp
+C:\Users\Gustavo\Desktop\CubeAdventure\JogoTecProg\Menu.h(3,10): fatal error C1083: Não é possível abrir arquivo incluir: 'SFML/Graphics.hpp': No such file or directory
+  Menu.cpp
+C:\Users\Gustavo\Desktop\CubeAdventure\JogoTecProg\Menu.h(3,10): fatal error C1083: Não é possível abrir arquivo incluir: 'SFML/Graphics.hpp': No such file or directory
+  MenuFases.cpp
+C:\Users\Gustavo\Desktop\CubeAdventure\JogoTecProg\Menu.h(3,10): fatal error C1083: Não é possível abrir arquivo incluir: 'SFML/Graphics.hpp': No such file or directory
+  MenuJogadores.cpp
+C:\Users\Gustavo\Desktop\CubeAdventure\JogoTecProg\Menu.h(3,10): fatal error C1083: Não é possível abrir arquivo incluir: 'SFML/Graphics.hpp': No such file or directory
+  MenuPause.cpp
+C:\Users\Gustavo\Desktop\CubeAdventure\JogoTecProg\Menu.h(3,10): fatal error C1083: Não é possível abrir arquivo incluir: 'SFML/Graphics.hpp': No such file or directory
+  Personagem.cpp
+C:\Users\Gustavo\Desktop\CubeAdventure\JogoTecProg\Entidade.h(2,10): fatal error C1083: Não é possível abrir arquivo incluir: 'SFML/Graphics.hpp': No such file or directory
+  AranhaChefao.cpp
+C:\Users\Gustavo\Desktop\CubeAdventure\JogoTecProg\Entidade.h(2,10): fatal error C1083: Não é possível abrir arquivo incluir: 'SFML/Graphics.hpp': No such file or directory
+  Tiles.cpp
+C:\Users\Gustavo\Desktop\CubeAdventure\JogoTecProg\Entidade.h(2,10): fatal error C1083: Não é possível abrir arquivo incluir: 'SFML/Graphics.hpp': No such file or directory
+  Gerando Código...

@@ -23,5 +23,9 @@ void Tiles::initTile(int i, int j)
 	gTiles->initMapaTiles(i, j);
 }
 
+void Tiles::desenhar()
+{
+}
+
 
 

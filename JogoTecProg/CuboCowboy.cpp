@@ -34,6 +34,10 @@ void CuboCowboy::mover()
     }
 }
 
+void CuboCowboy::desenhar()
+{
+}
+
 Vector2f CuboCowboy::getTamEntidade()
 {
     return tam;

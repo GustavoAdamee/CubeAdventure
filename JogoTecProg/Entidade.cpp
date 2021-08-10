@@ -1,10 +1,13 @@
 #include "Entidade.h"
 
 Entidade::Entidade(Vector2f pos, Vector2f vel, const char* caminhoTextura):
+	
+	Ente(),
 	posicao(pos), 
 	v(vel), 
 	caminho(caminhoTextura),
 	gEv()
+
 {
 
 }
@@ -16,7 +19,6 @@ Entidade::~Entidade()
 
 void Entidade::setGGraf(GerenciadorGrafico& g)
 {
-	//gGraf = g;
 	g.carregarTextura(caminho);
 }
 

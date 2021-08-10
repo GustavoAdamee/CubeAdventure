@@ -2,6 +2,7 @@
 
 Menu::Menu(GerenciadorEventos& gE, GerenciadorGrafico& g, int n_itens) :
 	
+	Ente(),
 	gGraf(&g),
 	gEv(&gE),
 	qnt_itens(n_itens),
@@ -23,6 +24,7 @@ Menu::Menu(GerenciadorEventos& gE, GerenciadorGrafico& g, int n_itens) :
 		texto[i].setFillColor(sf::Color::White);
 		texto[i].setPosition(sf::Vector2f(50, height / (qnt_itens + 1) * (i+1)));
 	}
+	
 	texto[0].setFillColor(sf::Color::Yellow);
 }
 

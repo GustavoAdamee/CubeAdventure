@@ -12,5 +12,7 @@ public:
 
 	virtual void mover() = 0;
 
+	void desenhar();
+
 	virtual Vector2f getTamEntidade() = 0;
 };

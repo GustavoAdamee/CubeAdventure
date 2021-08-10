@@ -2,12 +2,13 @@
 using namespace Fases;
 
 Fase::Fase(CuboCowboy* pJ1, CuboExplorador* pJ2, GerenciadorGrafico& g, GerenciadorTiles& gTiles, const char* caminhoTile, const char* caminhoMapaTile, const char* caminhoBackground) :
+	
+	Ente(),
 	gTiles(&gTiles),
 	pJogador1(pJ1),
 	pJogador2(nullptr),
 	listaEntidades(nullptr),
 	gGraf(&g),
-	/*gTiles(&g, caminhoTile, caminhoMapaTile),*/
 	caminhoTile(caminhoTile),
 	caminhoMapaTile(caminhoMapaTile),
 	passaFase(false)

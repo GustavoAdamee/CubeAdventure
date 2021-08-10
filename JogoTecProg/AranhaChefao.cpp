@@ -13,6 +13,10 @@ void AranhaChefao::mover()
 {
 }
 
+void AranhaChefao::desenhar()
+{
+}
+
 Vector2f AranhaChefao::getTamEntidade()
 {
 	return tam;

@@ -23,6 +23,8 @@ public:
 
     void initTile(int i, int j);
 
+    void desenhar();
+
     virtual Vector2f getTamEntidade() = 0;
 };
 

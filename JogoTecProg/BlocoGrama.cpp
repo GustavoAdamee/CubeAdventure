@@ -10,6 +10,10 @@ BlocoGrama::~BlocoGrama()
 {
 }
 
+void BlocoGrama::desenhar()
+{
+}
+
 Vector2f BlocoGrama::getTamEntidade()
 {
 	return Vector2f();

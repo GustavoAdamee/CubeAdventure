@@ -146,6 +146,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="BlocoCaverna.cpp" />
+    <ClCompile Include="Ente.cpp" />
     <ClCompile Include="Entidade.cpp" />
     <ClCompile Include="Fase.cpp" />
     <ClCompile Include="GerenciadorColisoes.cpp" />
@@ -179,6 +180,7 @@
   <ItemGroup>
     <ClInclude Include="BlocoCaverna.h" />
     <ClInclude Include="Elemento.h" />
+    <ClInclude Include="Ente.h" />
     <ClInclude Include="Entidade.h" />
     <ClInclude Include="Fase.h" />
     <ClInclude Include="GerenciadorColisoes.h" />

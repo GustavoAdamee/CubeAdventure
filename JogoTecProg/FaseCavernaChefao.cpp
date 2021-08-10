@@ -63,3 +63,7 @@ int FaseCavernaChefao::getFaseAtual()
 {
 	return 3;
 }
+
+void FaseCavernaChefao::desenhar()
+{
+}

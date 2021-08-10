@@ -63,4 +63,8 @@ int FaseGrama::getFaseAtual()
 	return 1;
 }
 
+void FaseGrama::desenhar()
+{
+}
+
 

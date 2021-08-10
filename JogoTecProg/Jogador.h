@@ -16,6 +16,8 @@ namespace Jogadores {
 		//Move o jogador conforme seu movimento proprio
 		virtual void mover() = 0;
 
+		void desenhar();
+
 		virtual Vector2f getTamEntidade() = 0;
 
 	};

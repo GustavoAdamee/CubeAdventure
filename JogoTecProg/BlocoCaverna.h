@@ -10,6 +10,7 @@ public:
 	BlocoCaverna(Vector2f pos = { 0.0f, 0.0f }, Vector2f vel = { 0.0f, 0.0f }, const char* caminhoTextura = nullptr, GerenciadorGrafico* g = nullptr, GerenciadorTiles* gTiles = nullptr);
 	~BlocoCaverna();
 
+	void desenhar();
 
 	Vector2f getTamEntidade();
 };

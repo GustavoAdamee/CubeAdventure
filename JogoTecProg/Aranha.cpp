@@ -13,6 +13,10 @@ void Aranha::mover()
 {
 }
 
+void Aranha::desenhar()
+{
+}
+
 Vector2f Aranha::getTamEntidade()
 {
 	return tam;

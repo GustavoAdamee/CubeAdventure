@@ -8,3 +8,7 @@ Personagem::Personagem(Vector2f pos, Vector2f vel, const char* caminhoTextura) :
 Personagem::~Personagem()
 {
 }
+
+void Personagem::desenhar()
+{
+}

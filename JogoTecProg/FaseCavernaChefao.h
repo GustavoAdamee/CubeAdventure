@@ -20,5 +20,7 @@ public:
 	void criarPlataformas();
 
 	int getFaseAtual();
+	
+	void desenhar();
 };
 

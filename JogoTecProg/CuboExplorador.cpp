@@ -32,6 +32,10 @@ void CuboExplorador::mover()
     }
 }
 
+void CuboExplorador::desenhar()
+{
+}
+
 Vector2f CuboExplorador::getTamEntidade()
 {
     return tam;

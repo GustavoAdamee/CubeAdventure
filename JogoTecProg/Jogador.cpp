@@ -10,3 +10,7 @@ Jogador::~Jogador()
 {
 }
 
+void Jogadores::Jogador::desenhar()
+{
+}
+

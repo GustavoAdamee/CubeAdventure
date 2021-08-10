@@ -1,12 +1,13 @@
 #pragma once
 
-#include "SFML/Graphics.hpp"
+#include "Ente.h"
 #include "GerenciadorGrafico.h"
 #include "GerenciadorEventos.h"
 
 #define MAX_ITENS 4
 
-class Menu
+class Menu:
+	public Ente
 {
 protected:
 	

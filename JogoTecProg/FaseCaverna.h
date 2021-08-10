@@ -20,5 +20,7 @@ public:
 
 	int getFaseAtual();
 
+	void desenhar();
+
 };
 

@@ -57,3 +57,7 @@ int FaseCaverna::getFaseAtual()
 {
 	return 2;
 }
+
+void FaseCaverna::desenhar()
+{
+}

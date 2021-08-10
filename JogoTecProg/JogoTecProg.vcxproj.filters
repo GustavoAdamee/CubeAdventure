@@ -13,35 +13,41 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Arquivos de Cabeçalho\Entidades">
-      <UniqueIdentifier>{d1e5e5ee-c23f-437c-8b6b-a973d0470318}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Arquivos de Cabeçalho\Template">
       <UniqueIdentifier>{d06ba668-2b8c-434f-a92b-4ab691017156}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Arquivos de Cabeçalho\Fase">
-      <UniqueIdentifier>{0a369f4e-f447-4c1d-8176-a88b4f55d25e}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Arquivos de Origem\Entidades">
-      <UniqueIdentifier>{0d6c0af7-3b0b-4079-bcc0-7c9a8279454c}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Arquivos de Origem\Fase">
-      <UniqueIdentifier>{69454bb7-7c4e-4b1b-802b-16f8dc86788b}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Arquivos de Origem\Template">
       <UniqueIdentifier>{3bddd883-4359-43ab-a400-21758087b43b}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Arquivos de Cabeçalho\Menu">
-      <UniqueIdentifier>{368014c6-ad1c-4ab1-8c34-3b26e37ba79a}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Arquivos de Origem\Menu">
-      <UniqueIdentifier>{805b3652-3ba5-4fdb-a548-b94263847735}</UniqueIdentifier>
     </Filter>
     <Filter Include="Arquivos de Cabeçalho\Gerenciadores">
       <UniqueIdentifier>{37ea1271-571d-497d-b72b-c6eca0a732bf}</UniqueIdentifier>
     </Filter>
     <Filter Include="Arquivos de Origem\Gerenciadores">
       <UniqueIdentifier>{9edad4db-30b4-4d97-81ab-1d4112b01d90}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Arquivos de Cabeçalho\Ente">
+      <UniqueIdentifier>{382a8526-838a-45d8-a5c0-c5df4b264d16}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Arquivos de Cabeçalho\Ente\Entidades">
+      <UniqueIdentifier>{d1e5e5ee-c23f-437c-8b6b-a973d0470318}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Arquivos de Cabeçalho\Ente\Fase">
+      <UniqueIdentifier>{0a369f4e-f447-4c1d-8176-a88b4f55d25e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Arquivos de Cabeçalho\Ente\Menu">
+      <UniqueIdentifier>{368014c6-ad1c-4ab1-8c34-3b26e37ba79a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Arquivos de Origem\Ente">
+      <UniqueIdentifier>{adf3da9e-9f72-46a4-a180-be818aea2dc0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Arquivos de Origem\Ente\Entidades">
+      <UniqueIdentifier>{0d6c0af7-3b0b-4079-bcc0-7c9a8279454c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Arquivos de Origem\Ente\Fase">
+      <UniqueIdentifier>{69454bb7-7c4e-4b1b-802b-16f8dc86788b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Arquivos de Origem\Ente\Menu">
+      <UniqueIdentifier>{805b3652-3ba5-4fdb-a548-b94263847735}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -52,58 +58,58 @@
       <Filter>Arquivos de Origem</Filter>
     </ClCompile>
     <ClCompile Include="Entidade.cpp">
-      <Filter>Arquivos de Origem\Entidades</Filter>
+      <Filter>Arquivos de Origem\Ente\Entidades</Filter>
     </ClCompile>
     <ClCompile Include="Fase.cpp">
-      <Filter>Arquivos de Origem\Fase</Filter>
+      <Filter>Arquivos de Origem\Ente\Fase</Filter>
     </ClCompile>
     <ClCompile Include="FaseGrama.cpp">
-      <Filter>Arquivos de Origem\Fase</Filter>
+      <Filter>Arquivos de Origem\Ente\Fase</Filter>
     </ClCompile>
     <ClCompile Include="FaseCaverna.cpp">
-      <Filter>Arquivos de Origem\Fase</Filter>
+      <Filter>Arquivos de Origem\Ente\Fase</Filter>
     </ClCompile>
     <ClCompile Include="Inimigo.cpp">
-      <Filter>Arquivos de Origem\Entidades</Filter>
+      <Filter>Arquivos de Origem\Ente\Entidades</Filter>
     </ClCompile>
     <ClCompile Include="Jogador.cpp">
-      <Filter>Arquivos de Origem\Entidades</Filter>
+      <Filter>Arquivos de Origem\Ente\Entidades</Filter>
     </ClCompile>
     <ClCompile Include="CuboCowboy.cpp">
-      <Filter>Arquivos de Origem\Entidades</Filter>
+      <Filter>Arquivos de Origem\Ente\Entidades</Filter>
     </ClCompile>
     <ClCompile Include="CuboExplorador.cpp">
-      <Filter>Arquivos de Origem\Entidades</Filter>
+      <Filter>Arquivos de Origem\Ente\Entidades</Filter>
     </ClCompile>
     <ClCompile Include="ListaEntidades.cpp">
       <Filter>Arquivos de Origem\Template</Filter>
     </ClCompile>
     <ClCompile Include="Personagem.cpp">
-      <Filter>Arquivos de Origem\Entidades</Filter>
+      <Filter>Arquivos de Origem\Ente\Entidades</Filter>
     </ClCompile>
     <ClCompile Include="Inseto.cpp">
-      <Filter>Arquivos de Origem\Entidades</Filter>
+      <Filter>Arquivos de Origem\Ente\Entidades</Filter>
     </ClCompile>
     <ClCompile Include="FaseCavernaChefao.cpp">
-      <Filter>Arquivos de Origem\Fase</Filter>
+      <Filter>Arquivos de Origem\Ente\Fase</Filter>
     </ClCompile>
     <ClCompile Include="MenuPrincipal.cpp">
-      <Filter>Arquivos de Origem\Menu</Filter>
+      <Filter>Arquivos de Origem\Ente\Menu</Filter>
     </ClCompile>
     <ClCompile Include="Menu.cpp">
-      <Filter>Arquivos de Origem\Menu</Filter>
+      <Filter>Arquivos de Origem\Ente\Menu</Filter>
     </ClCompile>
     <ClCompile Include="MenuJogadores.cpp">
-      <Filter>Arquivos de Origem\Menu</Filter>
+      <Filter>Arquivos de Origem\Ente\Menu</Filter>
     </ClCompile>
     <ClCompile Include="Aranha.cpp">
-      <Filter>Arquivos de Origem\Entidades</Filter>
+      <Filter>Arquivos de Origem\Ente\Entidades</Filter>
     </ClCompile>
     <ClCompile Include="MenuPause.cpp">
-      <Filter>Arquivos de Origem\Menu</Filter>
+      <Filter>Arquivos de Origem\Ente\Menu</Filter>
     </ClCompile>
     <ClCompile Include="MenuFases.cpp">
-      <Filter>Arquivos de Origem\Menu</Filter>
+      <Filter>Arquivos de Origem\Ente\Menu</Filter>
     </ClCompile>
     <ClCompile Include="GerenciadorEventos.cpp">
       <Filter>Arquivos de Origem\Gerenciadores</Filter>
@@ -115,25 +121,28 @@
       <Filter>Arquivos de Origem</Filter>
     </ClCompile>
     <ClCompile Include="Tiles.cpp">
-      <Filter>Arquivos de Origem\Entidades</Filter>
+      <Filter>Arquivos de Origem\Ente\Entidades</Filter>
     </ClCompile>
     <ClCompile Include="GerenciadorTiles.cpp">
       <Filter>Arquivos de Origem\Gerenciadores</Filter>
     </ClCompile>
     <ClCompile Include="BlocoGrama.cpp">
-      <Filter>Arquivos de Origem\Entidades</Filter>
+      <Filter>Arquivos de Origem\Ente\Entidades</Filter>
     </ClCompile>
     <ClCompile Include="Atirador.cpp">
-      <Filter>Arquivos de Origem\Entidades</Filter>
+      <Filter>Arquivos de Origem\Ente\Entidades</Filter>
     </ClCompile>
     <ClCompile Include="AranhaChefao.cpp">
-      <Filter>Arquivos de Origem\Entidades</Filter>
+      <Filter>Arquivos de Origem\Ente\Entidades</Filter>
     </ClCompile>
     <ClCompile Include="GerenciadorColisoes.cpp">
       <Filter>Arquivos de Origem\Gerenciadores</Filter>
     </ClCompile>
     <ClCompile Include="BlocoCaverna.cpp">
-      <Filter>Arquivos de Origem\Entidades</Filter>
+      <Filter>Arquivos de Origem\Ente\Entidades</Filter>
+    </ClCompile>
+    <ClCompile Include="Ente.cpp">
+      <Filter>Arquivos de Origem\Ente</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -141,34 +150,34 @@
       <Filter>Arquivos de Cabeçalho</Filter>
     </ClInclude>
     <ClInclude Include="Inimigo.h">
-      <Filter>Arquivos de Cabeçalho\Entidades</Filter>
+      <Filter>Arquivos de Cabeçalho\Ente\Entidades</Filter>
     </ClInclude>
     <ClInclude Include="Jogador.h">
-      <Filter>Arquivos de Cabeçalho\Entidades</Filter>
+      <Filter>Arquivos de Cabeçalho\Ente\Entidades</Filter>
     </ClInclude>
     <ClInclude Include="CuboCowboy.h">
-      <Filter>Arquivos de Cabeçalho\Entidades</Filter>
+      <Filter>Arquivos de Cabeçalho\Ente\Entidades</Filter>
     </ClInclude>
     <ClInclude Include="CuboExplorador.h">
-      <Filter>Arquivos de Cabeçalho\Entidades</Filter>
+      <Filter>Arquivos de Cabeçalho\Ente\Entidades</Filter>
     </ClInclude>
     <ClInclude Include="Personagem.h">
-      <Filter>Arquivos de Cabeçalho\Entidades</Filter>
+      <Filter>Arquivos de Cabeçalho\Ente\Entidades</Filter>
     </ClInclude>
     <ClInclude Include="Elemento.h">
       <Filter>Arquivos de Cabeçalho\Template</Filter>
     </ClInclude>
     <ClInclude Include="Entidade.h">
-      <Filter>Arquivos de Cabeçalho\Entidades</Filter>
+      <Filter>Arquivos de Cabeçalho\Ente\Entidades</Filter>
     </ClInclude>
     <ClInclude Include="Fase.h">
-      <Filter>Arquivos de Cabeçalho\Fase</Filter>
+      <Filter>Arquivos de Cabeçalho\Ente\Fase</Filter>
     </ClInclude>
     <ClInclude Include="FaseGrama.h">
-      <Filter>Arquivos de Cabeçalho\Fase</Filter>
+      <Filter>Arquivos de Cabeçalho\Ente\Fase</Filter>
     </ClInclude>
     <ClInclude Include="FaseCaverna.h">
-      <Filter>Arquivos de Cabeçalho\Fase</Filter>
+      <Filter>Arquivos de Cabeçalho\Ente\Fase</Filter>
     </ClInclude>
     <ClInclude Include="Lista.h">
       <Filter>Arquivos de Cabeçalho\Template</Filter>
@@ -177,28 +186,28 @@
       <Filter>Arquivos de Cabeçalho\Template</Filter>
     </ClInclude>
     <ClInclude Include="Inseto.h">
-      <Filter>Arquivos de Cabeçalho\Entidades</Filter>
+      <Filter>Arquivos de Cabeçalho\Ente\Entidades</Filter>
     </ClInclude>
     <ClInclude Include="FaseCavernaChefao.h">
-      <Filter>Arquivos de Cabeçalho\Fase</Filter>
+      <Filter>Arquivos de Cabeçalho\Ente\Fase</Filter>
     </ClInclude>
     <ClInclude Include="MenuPrincipal.h">
-      <Filter>Arquivos de Cabeçalho\Menu</Filter>
+      <Filter>Arquivos de Cabeçalho\Ente\Menu</Filter>
     </ClInclude>
     <ClInclude Include="Menu.h">
-      <Filter>Arquivos de Cabeçalho\Menu</Filter>
+      <Filter>Arquivos de Cabeçalho\Ente\Menu</Filter>
     </ClInclude>
     <ClInclude Include="MenuJogadores.h">
-      <Filter>Arquivos de Cabeçalho\Menu</Filter>
+      <Filter>Arquivos de Cabeçalho\Ente\Menu</Filter>
     </ClInclude>
     <ClInclude Include="MenuPause.h">
-      <Filter>Arquivos de Cabeçalho\Menu</Filter>
+      <Filter>Arquivos de Cabeçalho\Ente\Menu</Filter>
     </ClInclude>
     <ClInclude Include="Aranha.h">
-      <Filter>Arquivos de Cabeçalho\Entidades</Filter>
+      <Filter>Arquivos de Cabeçalho\Ente\Entidades</Filter>
     </ClInclude>
     <ClInclude Include="MenuFases.h">
-      <Filter>Arquivos de Cabeçalho\Menu</Filter>
+      <Filter>Arquivos de Cabeçalho\Ente\Menu</Filter>
     </ClInclude>
     <ClInclude Include="GerenciadorEventos.h">
       <Filter>Arquivos de Cabeçalho\Gerenciadores</Filter>
@@ -210,25 +219,28 @@
       <Filter>Arquivos de Cabeçalho</Filter>
     </ClInclude>
     <ClInclude Include="Tiles.h">
-      <Filter>Arquivos de Cabeçalho\Entidades</Filter>
+      <Filter>Arquivos de Cabeçalho\Ente\Entidades</Filter>
     </ClInclude>
     <ClInclude Include="GerenciadorTiles.h">
       <Filter>Arquivos de Cabeçalho\Gerenciadores</Filter>
     </ClInclude>
     <ClInclude Include="BlocoGrama.h">
-      <Filter>Arquivos de Cabeçalho\Entidades</Filter>
+      <Filter>Arquivos de Cabeçalho\Ente\Entidades</Filter>
     </ClInclude>
     <ClInclude Include="AranhaChefao.h">
-      <Filter>Arquivos de Cabeçalho\Entidades</Filter>
+      <Filter>Arquivos de Cabeçalho\Ente\Entidades</Filter>
     </ClInclude>
     <ClInclude Include="Atirador.h">
-      <Filter>Arquivos de Cabeçalho\Entidades</Filter>
+      <Filter>Arquivos de Cabeçalho\Ente\Entidades</Filter>
     </ClInclude>
     <ClInclude Include="BlocoCaverna.h">
-      <Filter>Arquivos de Cabeçalho\Entidades</Filter>
+      <Filter>Arquivos de Cabeçalho\Ente\Entidades</Filter>
     </ClInclude>
     <ClInclude Include="GerenciadorColisoes.h">
       <Filter>Arquivos de Cabeçalho\Gerenciadores</Filter>
+    </ClInclude>
+    <ClInclude Include="Ente.h">
+      <Filter>Arquivos de Cabeçalho\Ente</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

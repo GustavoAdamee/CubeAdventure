@@ -1,9 +1,10 @@
 #pragma once
-#include <SFML/Graphics.hpp>
+#include "Ente.h"
 #include "GerenciadorGrafico.h"
 #include "GerenciadorEventos.h"
 
-class Entidade
+class Entidade:
+	public Ente
 {
 protected:
 

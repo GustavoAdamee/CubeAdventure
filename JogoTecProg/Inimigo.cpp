@@ -9,3 +9,7 @@ Inimigo::Inimigo(Vector2f pos, Vector2f vel, const char* caminhoTextura):
 Inimigo::~Inimigo()
 {
 }
+
+void Inimigos::Inimigo::desenhar()
+{
+}

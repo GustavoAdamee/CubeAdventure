@@ -9,6 +9,10 @@ BlocoCaverna::~BlocoCaverna()
 {
 }
 
+void BlocoCaverna::desenhar()
+{
+}
+
 Vector2f BlocoCaverna::getTamEntidade()
 {
 	return Vector2f();

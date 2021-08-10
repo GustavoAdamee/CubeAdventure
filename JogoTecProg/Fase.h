@@ -1,5 +1,6 @@
 #pragma once
 
+#include"Ente.h"
 #include"CuboCowboy.h"
 #include"CuboExplorador.h"
 #include"Inseto.h"
@@ -14,7 +15,8 @@ using namespace Jogadores;
 
 namespace Fases {
 
-	class Fase
+	class Fase:
+		public Ente
 	{
 	protected:
 		//Entidades - Jogadores
