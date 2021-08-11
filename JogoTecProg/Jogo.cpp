@@ -10,6 +10,8 @@ Jogo::Jogo():
 
 {
     Ente::setGGrafico(&gerenciadorGrafico);
+    
+    //Seta os gerenciadores
     gerenciadorEventos.setGGraf(gerenciadorGrafico);
     gerenciadorTiles.setGColisoes(&gerenciadorColisoes);
     gerenciadorTiles.setGGraf(&gerenciadorGrafico);
