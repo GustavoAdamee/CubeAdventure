@@ -15,20 +15,10 @@ private:
 	
 	//Listas
 	ListaEntidades* listaEnt;
-
-	//vector<GerenciadorColisoes::DadosTiles> vetorTiles;
-
-public:
-	class InfoTiles
-	{
-	public:
-		Vector2f posicao;
-		Vector2f tamanho;
-	};
-
-private:
-	vector<InfoTiles> vetorTiles;
-
+	
+	//Armazena todas as tiles da uma fase
+	vector < GerenciadorTiles::InfoTiles > vetorTiles;
+	
 public:
 
 	//Construtora e Destrutora
@@ -44,7 +34,7 @@ public:
 	void setListaEntidades(ListaEntidades* listaEnt);
 	void setGerenciadorTiles(GerenciadorTiles* gTiles);
 
-	void adicionarTile(InfoTiles aux);
+	void adicionarTile(GerenciadorTiles::InfoTiles aux);
 	void limparTiles();
 };
 

@@ -17,10 +17,6 @@ Entidade::~Entidade()
 
 }
 
-void Entidade::setGGraf(GerenciadorGrafico& g)
-{
-	g.carregarTextura(caminho);
-}
 
 void Entidade::atualizar(float t)
 {

@@ -7,7 +7,7 @@ protected:
 	static GerenciadorGrafico* gGrafico;
 
 public:
-	//static GerenciadorGrafico* gGrafico;
+
 	//Contrutora e Destrutora
 	Ente();
 	~Ente();

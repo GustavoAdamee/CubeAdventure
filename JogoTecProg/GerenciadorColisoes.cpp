@@ -80,11 +80,16 @@ int GerenciadorColisoes::checarColisao(Entidade* aux1, Entidade* aux2)
 	Vector2f tam2 = aux2->getTamEntidade();
 
 	int i = 0;
+	
 	/*
+	
+	i tem um retorna para cada tipo de colisão
+
 	1 = colisao pela esquerda do aux2
 	2 = colisao por cima do aux2
 	3 = colisao pela direita do aux2
 	4 = colisao por baixo do aux2
+
 	*/
 
 	if (tam1.y != tam2.y) {
@@ -141,7 +146,7 @@ void GerenciadorColisoes::setGerenciadorTiles(GerenciadorTiles* gTiles)
 	this->gTiles = gTiles;
 }
 
-void GerenciadorColisoes::adicionarTile(InfoTiles aux)
+void GerenciadorColisoes::adicionarTile(GerenciadorTiles::InfoTiles aux)
 {
 	vetorTiles.push_back(aux);
 }

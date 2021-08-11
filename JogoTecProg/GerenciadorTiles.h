@@ -36,6 +36,17 @@ private:
     vector<Sprite> vetorTiles;
 
 public:
+    
+    class InfoTiles
+    {
+    
+    public:
+        
+        Vector2f posicao;
+        Vector2f tamanho;
+
+    };
+    
     //Construtora e Destrutora
     GerenciadorTiles();
     ~GerenciadorTiles();

@@ -28,9 +28,6 @@ public:
 	Entidade(Vector2f pos = { 0.0f, 0.0f }, Vector2f vel = {0.0f, 0.0f}, const char* caminhoTextura = nullptr);
 	virtual ~Entidade();
 
-	//seta o gerenciador e carrega a textura
-	void setGGraf(GerenciadorGrafico& g);
-
 	//Atualiza e desenha a entidade
 	void atualizar(float t);
 	void desenhar()final;
@@ -40,6 +37,7 @@ public:
 
 	//Retorna a posição da Entidade
 	const sf::Vector2f getPos() const;
+	
 	//Seta a Posição da Entidade
 	void setPos(const sf::Vector2f pos);
 

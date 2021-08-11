@@ -79,7 +79,7 @@ void GerenciadorTiles::initMapaTiles(int i, int j)
 	
 	tile.setTextureRect(IntRect(mapa[i][j] * 50, 0, 50, 50));
 
-	GerenciadorColisoes::InfoTiles  aux;
+	InfoTiles  aux;
 	aux.posicao = Vector2f(i * 50, j * 50);
 	aux.tamanho = Vector2f(50, 50);
 
