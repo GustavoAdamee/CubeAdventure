@@ -9,9 +9,10 @@ AranhaChefao::~AranhaChefao()
 {
 }
 
-void AranhaChefao::mover()
+void AranhaChefao::mover(double t)
 {
 }
+
 
 Vector2f AranhaChefao::getTamEntidade()
 {

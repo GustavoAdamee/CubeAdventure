@@ -144,6 +144,12 @@
     <ClCompile Include="Ente.cpp">
       <Filter>Arquivos de Origem\Ente</Filter>
     </ClCompile>
+    <ClCompile Include="Espinho.cpp">
+      <Filter>Arquivos de Origem\Ente\Entidades</Filter>
+    </ClCompile>
+    <ClCompile Include="BlocoVoador.cpp">
+      <Filter>Arquivos de Origem</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Jogo.h">
@@ -241,6 +247,12 @@
     </ClInclude>
     <ClInclude Include="Ente.h">
       <Filter>Arquivos de Cabeçalho\Ente</Filter>
+    </ClInclude>
+    <ClInclude Include="Espinho.h">
+      <Filter>Arquivos de Cabeçalho\Ente\Entidades</Filter>
+    </ClInclude>
+    <ClInclude Include="BlocoVoador.h">
+      <Filter>Arquivos de Cabeçalho</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -33,7 +33,7 @@ public:
 	void desenhar()final;
 
 	//Função virtual para mover o jogador
-	virtual void mover() = 0;
+	virtual void mover(double t) = 0;
 
 	//Retorna a posição da Entidade
 	const sf::Vector2f getPos() const;

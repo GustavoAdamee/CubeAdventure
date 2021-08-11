@@ -18,7 +18,7 @@ public:
     ~Tiles();
 
     //Deixar virtual e depois mandar para tile que for mover 
-    void mover();
+    virtual void mover(double t);
 
     void initTile(int i, int j);
 

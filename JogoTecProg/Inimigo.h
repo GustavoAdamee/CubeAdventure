@@ -14,7 +14,7 @@ namespace Inimigos {
         Inimigo(Vector2f pos = { 0.0f, 0.0f }, Vector2f vel = { 0.0f, 0.0f }, const char* caminhoTextura = nullptr);
         ~Inimigo();
 
-        virtual void mover() = 0;
+        virtual void mover(double t) = 0 ;
 
         virtual Vector2f getTamEntidade() = 0;
 

@@ -11,7 +11,7 @@ public:
 	Aranha(Vector2f pos = { 0.0f, 0.0f }, Vector2f vel = { 0.0f, 0.0f }, const char* caminhoTextura = nullptr);
 	~Aranha();
 
-	void mover();
+	void mover(double t);
 
 	 Vector2f getTamEntidade();
 	

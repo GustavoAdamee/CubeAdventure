@@ -9,7 +9,7 @@ Aranha::~Aranha()
 {
 }
 
-void Aranha::mover()
+void Aranha::mover(double t)
 {
 }
 

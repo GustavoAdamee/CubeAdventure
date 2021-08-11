@@ -11,7 +11,7 @@ Tiles::~Tiles()
 	gTiles = nullptr;
 }
 
-void Tiles::mover()
+void Tiles::mover(double t)
 {
 }
 

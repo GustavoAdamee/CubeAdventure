@@ -9,8 +9,8 @@ FaseCavernaChefao::FaseCavernaChefao(CuboCowboy* pJ1, CuboExplorador* pJ2, Geren
 		pJogador2->setPos(sf::Vector2f(120, 780));
 	}
 
-	criarPlataformas();
 	criarObstaculos();
+	criarObstaculosDanosos();
 	criarInimigos();
 }
 
@@ -21,30 +21,101 @@ FaseCavernaChefao::~FaseCavernaChefao()
 void FaseCavernaChefao::criarInimigos()
 {
 	Inseto* insetoAux = nullptr;
+
+	//Spawn de Insetos
+	insetoAux = new Inseto(Vector2f(350, 800), Vector2f(0, 0), "images/inseto.png");
+	listaEntidades->getLista().push(insetoAux);
+
+	insetoAux = new Inseto(Vector2f(1150, 800), Vector2f(0, 0), "images/inseto.png");
+	listaEntidades->getLista().push(insetoAux);
+
+	insetoAux = new Inseto(Vector2f(900, 550), Vector2f(0, 0), "images/inseto.png");
+	listaEntidades->getLista().push(insetoAux);
+
+	//Inimigos aleatorios (66% de chance de spawn)
+	//if (rand() % 3 != 1) {
+		insetoAux = new Inseto(Vector2f(300, 550), Vector2f(0, 0), "images/inseto.png");
+		listaEntidades->getLista().push(insetoAux);
+	//}
+
+
 	Aranha* aranhaAux = nullptr;
+
+	//Spawn de Aranhas
+	aranhaAux = new Aranha(Vector2f(700, 805), Vector2f(0, 0), "images/aranha.png");
+	listaEntidades->getLista().push(aranhaAux);
+
+	aranhaAux = new Aranha(Vector2f(1300, 555), Vector2f(0, 0), "images/aranha.png");
+	listaEntidades->getLista().push(aranhaAux);
+
+	aranhaAux = new Aranha(Vector2f(900, 755), Vector2f(0, 0), "images/aranha.png");
+	listaEntidades->getLista().push(aranhaAux);
+
+	//Inimigos aleatorios (66% de chance de spawn)
+	//if (rand() % 3 != 1) {
+		aranhaAux = new Aranha(Vector2f(550, 555), Vector2f(0, 0), "images/aranha.png");
+		listaEntidades->getLista().push(aranhaAux);
+	//}
+
+	
 	AranhaChefao* chefaoAux = nullptr;
 
-	for (int i = 1; i <= (rand() % 2 + 3); i++) {
-		//Randomizar posicao do inimigo aqui
-		insetoAux = new Inseto(Vector2f(i * 100 + 150, 800), Vector2f(0, 0), "images/inseto.png");
-		listaEntidades->getLista().push(insetoAux);
-	}
-
-	for (int i = 1; i <= (rand() % 2 + 3); i++) {
-		//Randomizar posicao do inimigo aqui
-		aranhaAux = new Aranha(Vector2f(i * 100 + 650, 550), Vector2f(0, 0), "images/aranha.png");
-		listaEntidades->getLista().push(aranhaAux);
-	}
-
+	//Spawn do Chefao
 	chefaoAux = new AranhaChefao(Vector2f(1100, 235), Vector2f(0, 0), "images/aranhaChefao.png");
 	listaEntidades->getLista().push(chefaoAux);
 }
 
-void FaseCavernaChefao::criarObstaculos()
+void FaseCavernaChefao::criarObstaculosDanosos()
 {
+
+	Espinho* espinhoAux = nullptr;
+
+	//Spawn de Espinhos
+	espinhoAux = new Espinho(Vector2f(650, 600), Vector2f(0, 0), "images/espinho.png");
+	listaEntidades->getLista().push(espinhoAux);
+
+	espinhoAux = new Espinho(Vector2f(700, 600), Vector2f(0, 0), "images/espinho.png");
+	listaEntidades->getLista().push(espinhoAux);
+
+	espinhoAux = new Espinho(Vector2f(1150, 600), Vector2f(0, 0), "images/espinho.png");
+	listaEntidades->getLista().push(espinhoAux);
+	espinhoAux = new Espinho(Vector2f(1200, 600), Vector2f(0, 0), "images/espinho.png");
+	listaEntidades->getLista().push(espinhoAux);
+
+
+	//Obstaculo aleatorio(50 % de chance de spawn)
+	if (rand() % 2 == 0) {
+		espinhoAux = new Espinho(Vector2f(1000, 800), Vector2f(0, 0), "images/espinho.png");
+		listaEntidades->getLista().push(espinhoAux);
+	}
+
+
+	BlocoVoador* blocoVoadorAux = nullptr;
+
+	//Spawn de BlocosVoadores
+	blocoVoadorAux = new BlocoVoador(Vector2f(550, 650), Vector2f(0, 0), "images/blocoVoador.png");
+	listaEntidades->getLista().push(blocoVoadorAux);
+
+	blocoVoadorAux = new BlocoVoador(Vector2f(250, 50), Vector2f(0, 0), "images/blocoVoador.png");
+	listaEntidades->getLista().push(blocoVoadorAux);
+
+	blocoVoadorAux = new BlocoVoador(Vector2f(550, 50), Vector2f(0, 0), "images/blocoVoador.png");
+	listaEntidades->getLista().push(blocoVoadorAux);
+
+	//Obstaculo aleatorio(50 % de chance de spawn)
+	if (rand() % 2 == 0) {
+		blocoVoadorAux = new BlocoVoador(Vector2f(800, 400), Vector2f(0, 0), "images/blocoVoador.png");
+		listaEntidades->getLista().push(blocoVoadorAux);
+	}
+	//Obstaculo aleatorio(66 % de chance de spawn)
+	if (rand() % 3 != 0) {
+		blocoVoadorAux = new BlocoVoador(Vector2f(400, 50), Vector2f(0, 0), "images/blocoVoador.png");
+		listaEntidades->getLista().push(blocoVoadorAux);
+	}
+
 }
 
-void FaseCavernaChefao::criarPlataformas()
+void FaseCavernaChefao::criarObstaculos()
 {
 	Tiles* pTile = new BlocoCaverna({ 0,0 }, { 0,0 }, caminhoTile, gTiles);
 	for (int i = 0; i < 32; i++) {

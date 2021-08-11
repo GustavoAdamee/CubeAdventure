@@ -15,7 +15,7 @@ namespace Jogadores {
 		~Jogador();
 
 		//Move o jogador conforme seu movimento proprio
-		virtual void mover(double t);
+		virtual void mover(double t) = 0;
 
 		virtual Vector2f getTamEntidade() = 0;
 

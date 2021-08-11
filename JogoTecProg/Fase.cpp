@@ -46,6 +46,18 @@ Fase::~Fase()
 	listaEntidades = nullptr;	
 }
 
+void Fases::Fase::criarInimigos()
+{
+}
+
+void Fases::Fase::criarObstaculosDanosos()
+{
+}
+
+void Fases::Fase::criarObsataculos()
+{
+}
+
 int Fase::getFaseAtual()
 {
 	return 0;

@@ -9,9 +9,6 @@ Personagem::~Personagem()
 {
 }
 
-void Personagem::mover()
-{
-}
 
 void Personagem::setChao(bool aux)
 {

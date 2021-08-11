@@ -68,6 +68,9 @@ void GerenciadorColisoes::VerificaColisoes(Entidade* entidade)
 		pAux = listaEnt->getLista().getItem(i);
 		checarColisao(entidade, pAux);
 		//pAux->colidir(checarColisao(entidade, pAux));
+		
+		//Implementar isso 
+		//entidade->colidir(pAux->colidir(checarColisao(entidade, pAux)));
 	}
 }
 

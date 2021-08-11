@@ -9,6 +9,8 @@
 #include"Tiles.h"
 #include"BlocoGrama.h"
 #include"BlocoCaverna.h"
+#include"Espinho.h"
+#include"BlocoVoador.h"
 #include"GerenciadorGrafico.h"
 #include"GerenciadorTiles.h"
 using namespace Jogadores;
@@ -46,9 +48,9 @@ namespace Fases {
 		virtual ~Fase();
 
 		//Inicializadoras Virtuais
-		virtual void criarInimigos() = 0;
-		virtual void criarObstaculos() = 0;
-		virtual void criarPlataformas() = 0;
+		virtual void criarInimigos();
+		virtual void criarObstaculosDanosos();
+		virtual void criarObsataculos();
 		
 		//Retorna a fase atual
 		virtual int getFaseAtual() = 0;

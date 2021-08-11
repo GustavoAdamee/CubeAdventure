@@ -13,8 +13,8 @@ FaseGrama::FaseGrama(CuboCowboy* pJ1, CuboExplorador* pJ2, GerenciadorTiles& gTi
 	}
 	
 
-	criarPlataformas();
 	criarObstaculos();
+	criarObstaculosDanosos();
 	criarInimigos();
 }
 
@@ -26,25 +26,99 @@ FaseGrama::~FaseGrama()
 void FaseGrama::criarInimigos()
 {
 	Inseto* insetoAux = nullptr;
-	Aranha* aranhaAux = nullptr;
 
-	for (int i = 1; i <= (rand() % 2 + 3); i++) {
-		//Randomizar posicao do inimigo aqui
-		insetoAux = new Inseto(Vector2f(i*300, 250), Vector2f(0, 0), "images/inseto.png");
+	//Spawn de Insetos
+	insetoAux = new Inseto(Vector2f(900, 700), Vector2f(0, 0), "images/inseto.png");
+	listaEntidades->getLista().push(insetoAux);
+
+	insetoAux = new Inseto(Vector2f(800, 500), Vector2f(0, 0), "images/inseto.png");
+	listaEntidades->getLista().push(insetoAux);
+
+	insetoAux = new Inseto(Vector2f(400, 400), Vector2f(0, 0), "images/inseto.png");
+	listaEntidades->getLista().push(insetoAux);
+
+	//Inimigos aleatorios (66% de chance de spawn)
+	if (rand() % 3 != 1) {
+		insetoAux = new Inseto(Vector2f(1300, 250), Vector2f(0, 0), "images/inseto.png");
 		listaEntidades->getLista().push(insetoAux);
 	}
+	
 
-	for (int i = 1; i <= (rand() % 2 + 3); i++) {
-		aranhaAux = new Aranha(Vector2f(i*200+200, 805), Vector2f(0, 0), "images/aranha.png");
+
+	Aranha* aranhaAux = nullptr;
+
+	//Spawn de Aranhas
+	aranhaAux = new Aranha(Vector2f(550, 705), Vector2f(0, 0), "images/aranha.png");
+	listaEntidades->getLista().push(aranhaAux);
+
+	aranhaAux = new Aranha(Vector2f(1150,705), Vector2f(0, 0), "images/aranha.png");
+	listaEntidades->getLista().push(aranhaAux);
+
+	aranhaAux = new Aranha(Vector2f(1000, 205), Vector2f(0, 0), "images/aranha.png");
+	listaEntidades->getLista().push(aranhaAux);
+
+	//Inimigos aleatorios (50% de chance de spawn)
+	if (rand() % 2 != 1) {
+		aranhaAux = new Aranha(Vector2f(1305, 505), Vector2f(0, 0), "images/aranha.png");
 		listaEntidades->getLista().push(aranhaAux);
 	}
+
+	//Inimigos aleatorios(66 % de chance de spawn)
+	if (rand() % 3 != 1) {
+		aranhaAux = new Aranha(Vector2f(750, 205), Vector2f(0, 0), "images/aranha.png");
+		listaEntidades->getLista().push(aranhaAux);
+	}
+
+	insetoAux = nullptr;
+	aranhaAux = nullptr;
+
+}
+
+void FaseGrama::criarObstaculosDanosos()
+{
+	Espinho* espinhoAux = nullptr;
+	
+	//Spawn de Espinhos
+	espinhoAux = new Espinho(Vector2f(650, 800), Vector2f(0, 0), "images/espinho.png");
+	listaEntidades->getLista().push(espinhoAux);
+	
+	espinhoAux = new Espinho(Vector2f(700, 800), Vector2f(0, 0), "images/espinho.png");
+	listaEntidades->getLista().push(espinhoAux);
+	
+	espinhoAux = new Espinho(Vector2f(850, 250), Vector2f(0, 0), "images/espinho.png");
+	listaEntidades->getLista().push(espinhoAux);
+
+	espinhoAux = new Espinho(Vector2f(900, 250), Vector2f(0, 0), "images/espinho.png");
+	listaEntidades->getLista().push(espinhoAux);
+
+	//Obstaculo aleatorio(50 % de chance de spawn)
+	if (rand() % 2 == 0) {
+		espinhoAux = new Espinho(Vector2f(650, 500), Vector2f(0, 0), "images/espinho.png");
+		listaEntidades->getLista().push(espinhoAux);
+	}
+	
+
+	BlocoVoador* blocoVoadorAux = nullptr;
+	
+	//Spawn de BlocosVoadores
+	blocoVoadorAux = new BlocoVoador(Vector2f(400, 600), Vector2f(0, 0), "images/blocoVoador.png");
+	listaEntidades->getLista().push(blocoVoadorAux);
+
+	blocoVoadorAux = new BlocoVoador(Vector2f(300, 50), Vector2f(0, 0), "images/blocoVoador.png");
+	listaEntidades->getLista().push(blocoVoadorAux);
+
+	blocoVoadorAux = new BlocoVoador(Vector2f(600, 50), Vector2f(0, 0), "images/blocoVoador.png");
+	listaEntidades->getLista().push(blocoVoadorAux);
+
+	if (rand() % 3 != 0) {
+		blocoVoadorAux = new BlocoVoador(Vector2f(450, 50), Vector2f(0, 0), "images/blocoVoador.png");
+		listaEntidades->getLista().push(blocoVoadorAux);
+	}
+	
+
 }
 
 void FaseGrama::criarObstaculos()
-{
-}
-
-void FaseGrama::criarPlataformas()
 {
 	Tiles* pTile = new BlocoGrama({ 0,0 }, { 0,0 }, caminhoTile, gTiles);
 	for (int i = 0; i < 32; i++) {

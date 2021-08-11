@@ -111,6 +111,7 @@ vector<Sprite>* GerenciadorTiles::getVetorTiles()
 void GerenciadorTiles::setGColisoes(GerenciadorColisoes* gCol)
 {
 	gColisoes = gCol;
+	gColisoes->setGerenciadorTiles(this);
 }
 
 void GerenciadorTiles::setGGraf(GerenciadorGrafico* gG)

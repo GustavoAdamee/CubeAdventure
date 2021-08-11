@@ -15,9 +15,9 @@ public:
 
 	void criarInimigos();
 
-	void criarObstaculos();
+	void criarObstaculosDanosos();
 
-	void criarPlataformas();
+	void criarObstaculos();
 
 	int getFaseAtual();
 };

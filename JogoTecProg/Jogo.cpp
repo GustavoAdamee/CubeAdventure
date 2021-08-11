@@ -275,15 +275,12 @@ void Jogo::verificaAtualizacoes()
 {
     //Atualiza as posições de cada entidade conforme o relogio "passa"
     double t = relogio.getTempo();
-    //Move os jogadores 
-    pJogador1->mover(t);
-    if (pJogador2 != nullptr) {
-        pJogador2->mover(t);
-    }
+  
  
     for (int i = 0; i < LEs->getLista().getTam(); i++) {
         Entidade* pAux = NULL;
         pAux = LEs->getLista().getItem(i);
+        pAux->mover(t);
         pAux->atualizar(t);
     }
 

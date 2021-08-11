@@ -10,7 +10,7 @@ Inseto::~Inseto()
 {
 }
 
-void Inseto::mover()
+void Inseto::mover(double t)
 {
 }
 

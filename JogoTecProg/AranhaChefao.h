@@ -12,7 +12,7 @@ public:
 	AranhaChefao(Vector2f pos = { 0.0f, 0.0f }, Vector2f vel = { 0.0f, 0.0f }, const char* caminhoTextura = nullptr);
 	~AranhaChefao();
 
-	void mover();
+	void mover(double t);
 
 	Vector2f getTamEntidade();
 
