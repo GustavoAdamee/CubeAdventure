@@ -13,11 +13,7 @@ void CuboExplorador::mover(double t)
 {
 
     v.x = 0;
-    v.y = 0;
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
-    {
-        v.y += 250;
-    }
+    
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
     {
         v.x += 250;
@@ -28,7 +24,16 @@ void CuboExplorador::mover(double t)
     }
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
     {
-        v.y += -250;
+        if (chao) {
+            v.y = -500;
+            chao = false;
+        }
+    }
+    if (chao) {
+        v.y = 0;
+    }
+    else {
+        v.y += g * t;
     }
 }
 
