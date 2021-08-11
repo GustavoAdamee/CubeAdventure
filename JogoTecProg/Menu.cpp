@@ -1,9 +1,8 @@
 #include "Menu.h"
 
-Menu::Menu(GerenciadorEventos& gE, GerenciadorGrafico& g, int n_itens) :
+Menu::Menu(GerenciadorEventos& gE, int n_itens) :
 	
 	Ente(),
-	gGraf(&g),
 	gEv(&gE),
 	qnt_itens(n_itens),
 	indiceItem(0),
@@ -12,8 +11,8 @@ Menu::Menu(GerenciadorEventos& gE, GerenciadorGrafico& g, int n_itens) :
 	
 {
 	
-	float width = gGraf->getJanela()->getSize().x;
-	float height = gGraf->getJanela()->getSize().y;
+	float width = gGrafico->getJanela()->getSize().x;
+	float height = gGrafico->getJanela()->getSize().y;
 	
 	if (!fonte.loadFromFile("Happy chicken.ttf")) {
 	}
@@ -30,13 +29,13 @@ Menu::Menu(GerenciadorEventos& gE, GerenciadorGrafico& g, int n_itens) :
 
 Menu::~Menu()
 {
-	gGraf = nullptr;
+
 }
 
 void Menu::desenhar()
 {
 	for (int i = 0; i < qnt_itens; i++) {
-		gGraf->getJanela()->draw(texto[i]);
+		gGrafico->getJanela()->draw(texto[i]);
 	}
 }
 

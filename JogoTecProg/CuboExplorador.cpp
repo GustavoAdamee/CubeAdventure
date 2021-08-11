@@ -9,7 +9,7 @@ CuboExplorador::~CuboExplorador()
 {
 }
 
-void CuboExplorador::mover()
+void CuboExplorador::mover(double t)
 {
 
     v.x = 0;
@@ -30,10 +30,6 @@ void CuboExplorador::mover()
     {
         v.y += -250;
     }
-}
-
-void CuboExplorador::desenhar()
-{
 }
 
 Vector2f CuboExplorador::getTamEntidade()

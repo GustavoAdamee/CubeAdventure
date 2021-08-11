@@ -14,8 +14,6 @@ public:
 
 	void mover();
 
-	void desenhar();
-
 	Vector2f getTamEntidade();
 
 };

@@ -9,7 +9,7 @@ class FaseCaverna : public Fase
 private:
 
 public:
-	FaseCaverna(CuboCowboy* pJ1, CuboExplorador* pJ2, GerenciadorGrafico& g, GerenciadorTiles& gTiles, const char* caminhoTile, const char* caminhoMapaTile, const char* caminhoBackground);
+	FaseCaverna(CuboCowboy* pJ1, CuboExplorador* pJ2, GerenciadorTiles& gTiles, const char* caminhoTile, const char* caminhoMapaTile, const char* caminhoBackground);
 	~FaseCaverna();
 
 	void criarInimigos();
@@ -19,8 +19,6 @@ public:
 	void criarPlataformas();
 
 	int getFaseAtual();
-
-	void desenhar();
 
 };
 

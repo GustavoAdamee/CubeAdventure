@@ -27,7 +27,7 @@ namespace Fases {
 		ListaEntidades* listaEntidades;
 
 		//Gerenciadores
-		GerenciadorGrafico* gGraf;
+		//GerenciadorGrafico* gGraf;
 		GerenciadorTiles* gTiles;
 
 		//"Paths" dos arquivos para desenhar o mapa da fase
@@ -42,7 +42,7 @@ namespace Fases {
 	
 	public:
 		//Construtora e Destrutora
-		Fase(CuboCowboy* pJ1, CuboExplorador* pJ2, GerenciadorGrafico& g, GerenciadorTiles& gTiles, const char* caminhoTile, const char* caminhoMapaTile, const char* caminhoBackground);
+		Fase(CuboCowboy* pJ1, CuboExplorador* pJ2, GerenciadorTiles& gTiles, const char* caminhoTile, const char* caminhoMapaTile, const char* caminhoBackground);
 		virtual ~Fase();
 
 		//Inicializadoras Virtuais
@@ -62,7 +62,7 @@ namespace Fases {
 		void verificaFase();
 
 		//Seta o mapa na tela
-		void desenhaMapa();
+		void desenhar()final;
 
 	};
 }

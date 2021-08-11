@@ -91,5 +91,6 @@ void GerenciadorGrafico::setBackground(const char* caminho)
 
 void GerenciadorGrafico::desenhaBackground()
 {
+	cout << "Aqui" << endl;
 	janela->draw(background);
 }

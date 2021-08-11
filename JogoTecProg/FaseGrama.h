@@ -9,7 +9,7 @@ class FaseGrama : public Fase
 private:
 
 public:
-	FaseGrama(CuboCowboy* pJ1, CuboExplorador* pJ2, GerenciadorGrafico& g, GerenciadorTiles& gTiles, const char* caminhoTile, const char* caminhoMapaTile, const char* caminhoBackground);
+	FaseGrama(CuboCowboy* pJ1, CuboExplorador* pJ2, GerenciadorTiles& gTiles, const char* caminhoTile, const char* caminhoMapaTile, const char* caminhoBackground);
 	~FaseGrama();
 
 	void criarInimigos();
@@ -19,9 +19,6 @@ public:
 	void criarPlataformas();
 
 	int getFaseAtual();
-
-	void desenhar();
-
 };
 
 

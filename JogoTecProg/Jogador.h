@@ -5,7 +5,8 @@ namespace Jogadores {
 
 	class Jogador : public Personagem
 	{
-	private:
+	protected:
+		bool chao = true;
 
 	public:
 
@@ -14,11 +15,12 @@ namespace Jogadores {
 		~Jogador();
 
 		//Move o jogador conforme seu movimento proprio
-		virtual void mover() = 0;
-
-		void desenhar();
+		virtual void mover(double t);
 
 		virtual Vector2f getTamEntidade() = 0;
+
+		void setChao(bool aux);
+		bool getChao();
 
 	};
 

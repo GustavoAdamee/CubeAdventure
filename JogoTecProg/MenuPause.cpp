@@ -1,8 +1,8 @@
 #include "MenuPause.h"
 #include <Windows.h>
 
-MenuPause::MenuPause(GerenciadorEventos& gE, GerenciadorGrafico& g):
-	Menu(gE, g, 3),
+MenuPause::MenuPause(GerenciadorEventos& gE):
+	Menu(gE, 3),
 	tipoMenu(3)
 {
 	
@@ -26,7 +26,7 @@ int MenuPause::executar()
 {
 	
 	desenhar();
-	gGraf->mostrar();
+	gGrafico->mostrar();
 	Sleep(400);
 	int i = -1;
 	while (i == -1) {
@@ -46,7 +46,7 @@ int MenuPause::executar()
 				i = 1;
 				break;
 			case 2:
-				gGraf->getJanela()->close();
+				gGrafico->getJanela()->close();
 				i = 2;
 				break;
 			}
@@ -61,7 +61,7 @@ int MenuPause::executar()
 			break;
 		}
 		desenhar();
-		gGraf->mostrar();
+		gGrafico->mostrar();
 	}
 	return i;
 }

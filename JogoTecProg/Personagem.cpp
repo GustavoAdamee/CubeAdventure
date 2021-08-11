@@ -9,6 +9,15 @@ Personagem::~Personagem()
 {
 }
 
-void Personagem::desenhar()
+void Personagem::mover()
 {
+}
+
+void Personagem::setChao(bool aux)
+{
+}
+
+bool Personagem::getChao()
+{
+	return false;
 }

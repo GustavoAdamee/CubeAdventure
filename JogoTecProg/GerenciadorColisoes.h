@@ -19,13 +19,17 @@ private:
 	//vector<GerenciadorColisoes::DadosTiles> vetorTiles;
 
 public:
-	typedef struct infoTiles
+	class InfoTiles
 	{
+	public:
 		Vector2f posicao;
 		Vector2f tamanho;
-	}InfoTiles;
+	};
 
-	vector<infoTiles> vetorTiles;
+private:
+	vector<InfoTiles> vetorTiles;
+
+public:
 
 	//Construtora e Destrutora
 	GerenciadorColisoes();
@@ -40,7 +44,7 @@ public:
 	void setListaEntidades(ListaEntidades* listaEnt);
 	void setGerenciadorTiles(GerenciadorTiles* gTiles);
 
-	void adicionarTile(infoTiles aux);
+	void adicionarTile(InfoTiles aux);
 	void limparTiles();
 };
 

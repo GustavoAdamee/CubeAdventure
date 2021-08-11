@@ -1,7 +1,7 @@
 #include "MenuJogadores.h"
 
-MenuJogadores::MenuJogadores(GerenciadorEventos& gE, GerenciadorGrafico& g):
-	Menu(gE, g, 3),
+MenuJogadores::MenuJogadores(GerenciadorEventos& gE):
+	Menu(gE, 3),
 	tipoMenu(2)
 {
 	texto[0].setString("1 jogador");
@@ -11,7 +11,6 @@ MenuJogadores::MenuJogadores(GerenciadorEventos& gE, GerenciadorGrafico& g):
 
 MenuJogadores::~MenuJogadores()
 {
-	gGraf = nullptr;
 	gEv = nullptr;
 }
 
@@ -22,9 +21,9 @@ int MenuJogadores::getTipo()
 
 int MenuJogadores::executar()
 {
-	gGraf->limpar();
+	gGrafico->limpar();
 	desenhar();
-	gGraf->mostrar();
+	gGrafico->mostrar();
 	int i = -1;
 	while (i == -1) {
 		int evento = gEv->verificaEvento();
@@ -55,9 +54,9 @@ int MenuJogadores::executar()
 		default:
 			break;
 		}
-		gGraf->limpar();
+		gGrafico->limpar();
 		desenhar();
-		gGraf->mostrar();
+		gGrafico->mostrar();
 	}
 	return i;
 }

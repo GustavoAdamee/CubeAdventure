@@ -11,7 +11,7 @@ private:
 public:
 	
 	//Construtora e Destrutora
-	MenuJogadores(GerenciadorEventos& gE, GerenciadorGrafico& g);
+	MenuJogadores(GerenciadorEventos& gE);
 	~MenuJogadores();
 	
 	//Retorna um int para qual menu esta sendo executado no momento

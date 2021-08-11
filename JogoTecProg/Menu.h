@@ -12,7 +12,6 @@ class Menu:
 protected:
 	
 	//Gerenciadores
-	GerenciadorGrafico* gGraf;
 	GerenciadorEventos* gEv;
 
 	//indica a quantidade de "opções" de cada menu
@@ -26,7 +25,7 @@ protected:
 	
 public:
 	//Construtora e Destrutora
-	Menu(GerenciadorEventos& gE, GerenciadorGrafico& g, int n_itens);
+	Menu(GerenciadorEventos& gE, int n_itens);
 	virtual ~Menu();
 
 	//Desenha os textos na tela

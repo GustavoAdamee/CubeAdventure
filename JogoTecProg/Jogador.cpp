@@ -10,7 +10,17 @@ Jogador::~Jogador()
 {
 }
 
-void Jogadores::Jogador::desenhar()
+void Jogadores::Jogador::mover(double t)
 {
+}
+
+void Jogadores::Jogador::setChao(bool aux)
+{
+    chao = aux;
+}
+
+bool Jogadores::Jogador::getChao()
+{
+    return chao;
 }
 

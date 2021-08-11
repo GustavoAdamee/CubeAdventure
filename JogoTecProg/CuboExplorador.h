@@ -12,9 +12,7 @@ public:
 	CuboExplorador(Vector2f pos = { 0.0f, 0.0f }, Vector2f vel = { 0.0f, 0.0f }, const char* caminhoTextura = nullptr);
 	~CuboExplorador();
 
-	void mover();
-
-	void desenhar();
+	void mover(double t);
 
 	Vector2f getTamEntidade();
 

@@ -11,7 +11,7 @@ private:
 public:
 	
 	//Construtora e Destrutora
-	MenuPause(GerenciadorEventos& gE, GerenciadorGrafico& g);
+	MenuPause(GerenciadorEventos& gE);
 	~MenuPause();
 	
 	//Retorna um int para qual menu esta sendo executado no momento

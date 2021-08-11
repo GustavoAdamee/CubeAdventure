@@ -1,9 +1,9 @@
 #include "MenuPrincipal.h"
 #include <iostream>
 
-MenuPrincipal::MenuPrincipal(GerenciadorEventos& gE, GerenciadorGrafico& g):
+MenuPrincipal::MenuPrincipal(GerenciadorEventos& gE):
 	
-	Menu(gE, g, 4),
+	Menu(gE, 4),
 	tipoMenu(1)
 
 {
@@ -17,7 +17,6 @@ MenuPrincipal::MenuPrincipal(GerenciadorEventos& gE, GerenciadorGrafico& g):
 
 MenuPrincipal::~MenuPrincipal()
 {
-	gGraf = nullptr;
 	gEv = nullptr;
 }
 
@@ -28,11 +27,9 @@ int MenuPrincipal::getTipo()
 
 int MenuPrincipal::executar()
 {
-	gGraf->limpar();
-	
+	gGrafico->limpar();
 	desenhar();
-	
-	gGraf->mostrar();
+	gGrafico->mostrar();
 	int i = -1;
 	while (i == -1) {
 		int evento = gEv->verificaEvento();
@@ -50,7 +47,7 @@ int MenuPrincipal::executar()
 			case 2: //Implementar ranking
 				break;
 			case 3:
-				gGraf->getJanela()->close();
+				gGrafico->getJanela()->close();
 				i = 3;
 				break;
 			}
@@ -64,9 +61,9 @@ int MenuPrincipal::executar()
 		default:
 			break;
 		}
-		gGraf->limpar();
+		gGrafico->limpar();
 		desenhar();
-		gGraf->mostrar();
+		gGrafico->mostrar();
 	}
 	return i;
 }

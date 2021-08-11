@@ -17,7 +17,7 @@ GerenciadorColisoes::~GerenciadorColisoes()
 
 void GerenciadorColisoes::VerificaColisoes(Entidade* entidade)
 {
-
+	entidade->setChao(false);
 	for (auto it = vetorTiles.begin(); it != vetorTiles.end(); it++) {
 		
 		Vector2f pos1 = entidade->getPos();
@@ -27,31 +27,35 @@ void GerenciadorColisoes::VerificaColisoes(Entidade* entidade)
 
 
 
-		//por baixo do aux2
+		//por baixo do tile
 		if (pos1.x + tam1.x > pos2.x && pos1.x < pos2.x + tam2.x &&
 			pos1.y < pos2.y + tam2.y && pos1.y > pos2.y + tam2.y - 2) {
 
 			entidade->setPos(Vector2f(pos1.x, pos2.y + tam2.y));
+			if (entidade->getVel().y < 0) {
+				entidade->setVel(Vector2f(entidade->getVel().x, 0));
+			}
 		}
-		//pela esquerda do aux2
+		//pela esquerda do tile
 		else if (pos1.x + tam1.x > pos2.x && pos1.x + tam1.x < pos2.x + tam2.x / 2 &&
 			pos1.y + tam1.y > pos2.y + 2 && pos1.y < pos2.y + tam2.y) {
 
 			entidade->setPos(Vector2f(pos2.x - tam1.x, pos1.y));
 		}
 
-		//pela direita do aux2
+		//pela direita do tile
 		else if (pos1.x > pos2.x + tam2.x / 2 && pos1.x < pos2.x + tam2.x &&
 			pos1.y + tam1.y > pos2.y + 2 && pos1.y < pos2.y + tam2.y) {
 
 			entidade->setPos(Vector2f(pos2.x + tam2.x, pos1.y));
 		}
 
-		//por cima do aux2
+		//por cima do tile
 		else if (pos1.x + tam1.x > pos2.x && pos1.x < pos2.x + tam2.x &&
 			pos1.y + tam1.y > pos2.y && pos1.y < pos2.y + 2) {
 
 			entidade->setPos(Vector2f(pos1.x, pos2.y - tam1.y));
+			entidade->setChao(true);
 		}
 
 
@@ -65,7 +69,6 @@ void GerenciadorColisoes::VerificaColisoes(Entidade* entidade)
 		checarColisao(entidade, pAux);
 		//pAux->colidir(checarColisao(entidade, pAux));
 	}
-		
 }
 
 int GerenciadorColisoes::checarColisao(Entidade* aux1, Entidade* aux2)
@@ -76,6 +79,7 @@ int GerenciadorColisoes::checarColisao(Entidade* aux1, Entidade* aux2)
 	Vector2f pos2 = aux2->getPos();
 	Vector2f tam2 = aux2->getTamEntidade();
 
+	int i = 0;
 	/*
 	1 = colisao pela esquerda do aux2
 	2 = colisao por cima do aux2
@@ -105,6 +109,9 @@ int GerenciadorColisoes::checarColisao(Entidade* aux1, Entidade* aux2)
 		pos1.y + tam1.y > pos2.y && pos1.y < pos2.y + 2) {
 
 			aux1->setPos(Vector2f(pos1.x, pos2.y - tam1.y));
+
+			aux1->setVel(Vector2f(aux1->getVel().x, 0));
+			aux1->setChao(true);
 			//listaEnt->getLista().pop(aux2);
 			return 2;
 		}
@@ -134,7 +141,7 @@ void GerenciadorColisoes::setGerenciadorTiles(GerenciadorTiles* gTiles)
 	this->gTiles = gTiles;
 }
 
-void GerenciadorColisoes::adicionarTile(infoTiles aux)
+void GerenciadorColisoes::adicionarTile(InfoTiles aux)
 {
 	vetorTiles.push_back(aux);
 }

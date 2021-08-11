@@ -10,9 +10,10 @@ public:
 
 	~Personagem();
 
-	virtual void mover() = 0;
-
-	void desenhar();
+	virtual void mover();
 
 	virtual Vector2f getTamEntidade() = 0;
+
+	virtual void setChao(bool aux);
+	virtual bool getChao();
 };

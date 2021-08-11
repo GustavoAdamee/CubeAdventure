@@ -14,10 +14,6 @@ void Inseto::mover()
 {
 }
 
-void Inseto::desenhar()
-{
-}
-
 Vector2f Inseto::getTamEntidade()
 {
 	return tam;

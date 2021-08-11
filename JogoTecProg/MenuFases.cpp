@@ -1,8 +1,8 @@
 #include "MenuFases.h"
 
-MenuFases::MenuFases(GerenciadorEventos& gE, GerenciadorGrafico& g):
+MenuFases::MenuFases(GerenciadorEventos& gE):
 	
-	Menu(gE, g, 4),
+	Menu(gE, 4),
 	TipoMenu(4)
 
 {
@@ -24,9 +24,9 @@ int MenuFases::getTipo()
 
 int MenuFases::executar()
 {
-	gGraf->limpar();
+	gGrafico->limpar();
 	desenhar();
-	gGraf->mostrar();
+	gGrafico->mostrar();
 	int i = -1;
 	while (i == -1) {
 		int evento = gEv->verificaEvento();
@@ -58,9 +58,9 @@ int MenuFases::executar()
 		default:
 			break;
 		}
-		gGraf->limpar();
+		gGrafico->limpar();
 		desenhar();
-		gGraf->mostrar();
+		gGrafico->mostrar();
 	}
 	return i;
 }

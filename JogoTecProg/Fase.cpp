@@ -1,21 +1,20 @@
 #include "Fase.h"
 using namespace Fases;
 
-Fase::Fase(CuboCowboy* pJ1, CuboExplorador* pJ2, GerenciadorGrafico& g, GerenciadorTiles& gTiles, const char* caminhoTile, const char* caminhoMapaTile, const char* caminhoBackground) :
+Fase::Fase(CuboCowboy* pJ1, CuboExplorador* pJ2, GerenciadorTiles& gTiles, const char* caminhoTile, const char* caminhoMapaTile, const char* caminhoBackground) :
 	
 	Ente(),
 	gTiles(&gTiles),
 	pJogador1(pJ1),
 	pJogador2(nullptr),
 	listaEntidades(nullptr),
-	gGraf(&g),
 	caminhoTile(caminhoTile),
 	caminhoMapaTile(caminhoMapaTile),
 	passaFase(false)
 
 {
 	gTiles.setCaminhos(caminhoTile, caminhoMapaTile);
-	gGraf->setBackground(caminhoBackground);
+	gGrafico->setBackground(caminhoBackground);
 	
 	gTiles.initTiles();
 	
@@ -45,8 +44,6 @@ Fase::~Fase()
 	
 	delete listaEntidades;
 	listaEntidades = nullptr;	
-	
-	gGraf = nullptr;
 }
 
 int Fase::getFaseAtual()
@@ -86,23 +83,23 @@ void Fase::inicializaElementos()
 }
 void Fase::verificaFase()	
 {
-	gGraf->getJanela();
+	gGrafico->getJanela();
 	if(pJogador2!=nullptr){
-		if (pJogador1->getPos().x > gGraf->getJanela()->getSize().x || pJogador2->getPos().x > gGraf->getJanela()->getSize().x) {
+		if (pJogador1->getPos().x > gGrafico->getJanela()->getSize().x || pJogador2->getPos().x > gGrafico->getJanela()->getSize().x) {
 			setPassouFase(true);
 		}
 	}
 	else
 	{
-		if (pJogador1->getPos().x > gGraf->getJanela()->getSize().x) {
+		if (pJogador1->getPos().x > gGrafico->getJanela()->getSize().x) {
 			setPassouFase(true);
 		}
 	}
 	
 }
 
-void Fase::desenhaMapa()
+void Fase::desenhar()
 {
-	gGraf->desenhaBackground();
+	gGrafico->desenhaBackground();
 	gTiles->desenhaListaTiles();
 }
