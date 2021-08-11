@@ -3,13 +3,13 @@
 
 GerenciadorGrafico::GerenciadorGrafico():
 	
-	janela{ new RenderWindow(VideoMode(1600, 900), "Slime killer") },
+	janela{ new RenderWindow(VideoMode(1600, 900), "Cube Adventure") },
 	texturas(),
 	background(),
 	backgroundText()
 
 {
-	cout << "Gerenciador grafico" << endl;
+
 }
 
 GerenciadorGrafico::~GerenciadorGrafico()
@@ -91,6 +91,5 @@ void GerenciadorGrafico::setBackground(const char* caminho)
 
 void GerenciadorGrafico::desenhaBackground()
 {
-	cout << "Aqui" << endl;
 	janela->draw(background);
 }

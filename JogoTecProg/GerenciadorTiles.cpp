@@ -96,7 +96,6 @@ int GerenciadorTiles::getInfo(int i, int j)
 
 void GerenciadorTiles::desenhaListaTiles()
 {
-	cout << "GerenciadorTiles.cpp/desenhaListaTiles" << endl;
 	vector<Sprite>::const_iterator aux;
 	for (aux = vetorTiles.begin(); aux != vetorTiles.end(); aux++) {
 		
