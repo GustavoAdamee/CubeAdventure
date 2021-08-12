@@ -51,6 +51,7 @@ namespace Fases {
 		virtual void criarInimigos();
 		virtual void criarObstaculosDanosos();
 		virtual void criarObsataculos();
+		virtual void criarProjeteis();
 		
 		//Retorna a fase atual
 		virtual int getFaseAtual() = 0;

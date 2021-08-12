@@ -28,18 +28,18 @@ void FaseGrama::criarInimigos()
 	Inseto* insetoAux = nullptr;
 
 	//Spawn de Insetos
-	insetoAux = new Inseto(Vector2f(900, 700), Vector2f(-50, 0), "images/inseto.png", Vector2f(850, 900)); //lim em x
+	insetoAux = new Inseto(Vector2f(900, 700), Vector2f(-60, 0), "images/inseto.png", Vector2f(800, 1000)); //lim em x
 	listaEntidades->getLista().push(insetoAux);
 
-	insetoAux = new Inseto(Vector2f(800, 500), Vector2f(-50, 0), "images/inseto.png", Vector2f(750, 800));
+	insetoAux = new Inseto(Vector2f(800, 500), Vector2f(-50, 0), "images/inseto.png", Vector2f(750, 1000));
 	listaEntidades->getLista().push(insetoAux);
 
-	insetoAux = new Inseto(Vector2f(400, 400), Vector2f(-50, 0), "images/inseto.png", Vector2f(350, 400));
+	insetoAux = new Inseto(Vector2f(400, 400), Vector2f(-50, 0), "images/inseto.png", Vector2f(250, 450));
 	listaEntidades->getLista().push(insetoAux);
 
 	//Inimigos aleatorios (66% de chance de spawn)
 	if (rand() % 3 != 1) {
-		insetoAux = new Inseto(Vector2f(1300, 250), Vector2f(-50, 0), "images/inseto.png", Vector2f(1250, 1300));
+		insetoAux = new Inseto(Vector2f(1300, 250), Vector2f(-50, 0), "images/inseto.png", Vector2f(1150, 1500));
 		listaEntidades->getLista().push(insetoAux);
 	}
 	
@@ -49,19 +49,19 @@ void FaseGrama::criarInimigos()
 
 	//Spawn de Aranhas
 
-	aranhaAux = new Aranha(Vector2f(1170,705), Vector2f(-50, 0), "images/aranha.png", Vector2f(1150, 1200));
+	aranhaAux = new Aranha(Vector2f(1170,705), Vector2f(-50, 0), "images/aranha.png", Vector2f(1130, 1200));
 	listaEntidades->getLista().push(aranhaAux);
 
-	aranhaAux = new Aranha(Vector2f(1000, 205), Vector2f(-50, 0), "images/aranha.png", Vector2f(950, 1000));
+	aranhaAux = new Aranha(Vector2f(1000, 205), Vector2f(-50, 0), "images/aranha.png", Vector2f(950, 1030));
 	listaEntidades->getLista().push(aranhaAux);
 
 
-	aranhaAux = new Aranha(Vector2f(750, 205), Vector2f(-50, 0), "images/aranha.png", Vector2f(700, 750));
+	aranhaAux = new Aranha(Vector2f(750, 205), Vector2f(-50, 0), "images/aranha.png", Vector2f(700, 800));
 	listaEntidades->getLista().push(aranhaAux);
 	
 	//Inimigos aleatorios (50% de chance de spawn)
 	if (rand() % 2 != 1) {
-		aranhaAux = new Aranha(Vector2f(1320, 505), Vector2f(-50, 0), "images/aranha.png", Vector2f(1300, 1350));
+		aranhaAux = new Aranha(Vector2f(1320, 505), Vector2f(-50, 0), "images/aranha.png", Vector2f(1300, 1400));
 		listaEntidades->getLista().push(aranhaAux);
 	}
 
@@ -109,7 +109,7 @@ void FaseGrama::criarObstaculosDanosos()
 	listaEntidades->getLista().push(blocoVoadorAux);
 
 	if (rand() % 3 != 0) {
-		blocoVoadorAux = new BlocoVoador(Vector2f(450, 50), Vector2f(0, 50), "images/blocoVoador.png", Vector2f(50, 150));
+		blocoVoadorAux = new BlocoVoador(Vector2f(450, 50), Vector2f(0, 60), "images/blocoVoador.png", Vector2f(50, 180));
 		listaEntidades->getLista().push(blocoVoadorAux);
 	}
 	

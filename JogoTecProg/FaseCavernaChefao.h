@@ -9,6 +9,8 @@ class FaseCavernaChefao : public Fase
 {
 private:
 
+	AranhaChefao* aranhaChefao;
+
 public:
 	FaseCavernaChefao(CuboCowboy* pJ1, CuboExplorador* pJ2, GerenciadorTiles& gTiles, const char* caminhoTile, const char* caminhoMapaTile, const char* caminhoBackground);
 	~FaseCavernaChefao();
@@ -18,6 +20,8 @@ public:
 	void criarObstaculosDanosos();
 
 	void criarObstaculos();
+
+	void criarProjeteis();
 
 	int getFaseAtual();
 };

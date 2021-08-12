@@ -11,8 +11,11 @@ Aranha::~Aranha()
 
 void Aranha::mover(double t) //em X
 {
-	if (posicao.x <= limite.x || posicao.x >= limite.y) {
-		v.x = -v.x;
+	if (posicao.x <= limite.x) {
+		v.x = fabsf(v.x);
+	}
+	else if (posicao.x >= limite.y) {
+		v.x = -fabs(v.x);
 	}
 }
 
@@ -35,7 +38,4 @@ int Aranha::colidir(int lado)
 	}
 }
 
-//bool Aranha::checaColisao(Entidade* entidade)
-//{
-//
-//}
+

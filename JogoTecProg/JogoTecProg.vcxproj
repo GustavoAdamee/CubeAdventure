@@ -175,6 +175,7 @@
     <ClCompile Include="MenuJogadores.cpp" />
     <ClCompile Include="MenuPause.cpp" />
     <ClCompile Include="Personagem.cpp" />
+    <ClCompile Include="Projetil.cpp" />
     <ClCompile Include="Relogio.cpp" />
     <ClCompile Include="AranhaChefao.cpp" />
     <ClCompile Include="Tiles.cpp" />
@@ -211,6 +212,7 @@
     <ClInclude Include="MenuJogadores.h" />
     <ClInclude Include="MenuPause.h" />
     <ClInclude Include="Personagem.h" />
+    <ClInclude Include="Projetil.h" />
     <ClInclude Include="Relogio.h" />
     <ClInclude Include="AranhaChefao.h" />
     <ClInclude Include="Tiles.h" />

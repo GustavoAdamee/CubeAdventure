@@ -26,6 +26,32 @@ bool Jogadores::Jogador::getChao()
 
 int Jogadores::Jogador::colidir(int lado)
 {
+    if (lado == 1 && delay >= 1.3) {
+
+        vida--;
+
+        delay = 0;
+
+        if (vida == 0) {
+
+            destruir = true;
+
+            vida = 3;
+        }
+    }
+
     return 0;
 }
+
+void Jogadores::Jogador::resetaVida()
+{
+    vida = 3;
+}
+
+int Jogadores::Jogador::getVida()
+{
+    return vida;
+}
+
+
 

@@ -37,6 +37,9 @@ void CuboCowboy::mover(double t)
     else {
         v.y += g * t;
     }
+
+    delay += t;
+
 }
 
 Vector2f CuboCowboy::getTamEntidade()
@@ -44,26 +47,29 @@ Vector2f CuboCowboy::getTamEntidade()
     return tam;
 }
 
-int CuboCowboy::colidir(int lado)
+
+void CuboCowboy::desenharVidas()
 {
-    
-    delay++;
-    
-    if (lado == 1 && delay >= 3500) {
 
-        cout << "tomei dano colisao jogador" << endl;
+    gGrafico->carregarTextura("images/vida.png");
 
-        vida--;
-        
-        delay = 0;
+    if (vida >= 1) {
 
-        if (vida == 0) {
+        gGrafico->desenhar("images/vida.png", Vector2f(60, 60));
 
-            destruir = true;
-
-            vida = 3;
-        }
     }
 
-    return 0;
+    if (vida >= 2) {
+
+        gGrafico->desenhar("images/vida.png", Vector2f(100, 60));
+
+    }
+
+    if (vida >= 3) {
+
+        gGrafico->desenhar("images/vida.png", Vector2f(140, 60));
+
+    }
+
+
 }

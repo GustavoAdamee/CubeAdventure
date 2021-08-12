@@ -16,6 +16,8 @@ public:
 
 	Vector2f getTamEntidade();
 
+	void desenharVidas();
+
 };
 
 

@@ -55,19 +55,6 @@ bool GerenciadorGrafico::carregarTextura(const string& caminho)
 	if (texturas.count(caminho) == 1) return true;
 	else {
 
-
-		/*Texture* text = new Texture();
-
-		cout << caminho << endl;
-		if (!text->loadFromFile(caminho)) {
-			cout << "Atencao! imagem em " << caminho << "nao encontrada!" << endl;
-			exit(120);
-		}
-
-		
-		texturas.emplace(caminho, text);
-		return true;*/
-
 		try
 		{
 			Texture* text = new Texture();

@@ -58,6 +58,10 @@ void Fases::Fase::criarObsataculos()
 {
 }
 
+void Fases::Fase::criarProjeteis()
+{
+}
+
 int Fase::getFaseAtual()
 {
 	return 0;
@@ -112,6 +116,13 @@ void Fase::verificaFase()
 
 void Fase::desenhar()
 {
+	
 	gGrafico->desenhaBackground();
 	gTiles->desenhaListaTiles();
+
+	pJogador1->desenharVidas();
+
+	if (pJogador2) {
+		pJogador2->desenharVidas();
+	}
 }

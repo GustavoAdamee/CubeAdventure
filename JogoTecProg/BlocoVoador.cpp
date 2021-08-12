@@ -11,8 +11,11 @@ BlocoVoador::~BlocoVoador()
 
 void BlocoVoador::mover(double t)
 {
-	if (posicao.y <= limite.x || posicao.y >= limite.y) {
-		v.y = -v.y;
+	if (posicao.y < limite.x ) {
+		v.y = fabsf(v.y);
+	}
+	else if (posicao.y > limite.y){
+		v.y = -fabsf(v.y);
 	}
 }
 

@@ -21,7 +21,8 @@ Entidade::~Entidade()
 
 void Entidade::atualizar(float t)
 {
-	posicao += v * t;
+	posicao.x += v.x * t;
+	posicao.y += v.y * t;
 }
 
 void Entidade::desenhar()

@@ -12,8 +12,11 @@ Inseto::~Inseto()
 
 void Inseto::mover(double t)
 {
-	if (posicao.x <= limite.x || posicao.x >= limite.y) {
-		v.x = -v.x;
+	if (posicao.x <= limite.x) {
+		v.x = fabsf(v.x);
+	}
+	else if (posicao.x >= limite.y) {
+		v.x = -fabsf(v.x);
 	}
 }
 

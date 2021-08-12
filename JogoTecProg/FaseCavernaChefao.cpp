@@ -23,46 +23,44 @@ void FaseCavernaChefao::criarInimigos()
 	Inseto* insetoAux = nullptr;
 
 	//Spawn de Insetos
-	insetoAux = new Inseto(Vector2f(350, 800), Vector2f(0, 0), "images/inseto.png");
+	insetoAux = new Inseto(Vector2f(350, 800), Vector2f(-25, 0), "images/inseto.png", Vector2f(250, 430));
 	listaEntidades->getLista().push(insetoAux);
 
-	insetoAux = new Inseto(Vector2f(1150, 800), Vector2f(0, 0), "images/inseto.png");
+	insetoAux = new Inseto(Vector2f(1150, 800), Vector2f(-30, 0), "images/inseto.png", Vector2f(1100, 1250));
 	listaEntidades->getLista().push(insetoAux);
 
-	insetoAux = new Inseto(Vector2f(900, 550), Vector2f(0, 0), "images/inseto.png");
+	insetoAux = new Inseto(Vector2f(900, 550), Vector2f(25, 0), "images/inseto.png", Vector2f(850, 980));
 	listaEntidades->getLista().push(insetoAux);
 
 	//Inimigos aleatorios (66% de chance de spawn)
-	//if (rand() % 3 != 1) {
-		insetoAux = new Inseto(Vector2f(300, 550), Vector2f(0, 0), "images/inseto.png");
+	if (rand() % 3 != 1) {
+		insetoAux = new Inseto(Vector2f(300, 550), Vector2f(-20, 0), "images/inseto.png", Vector2f(255, 340));
 		listaEntidades->getLista().push(insetoAux);
-	//}
+	}
 
 
 	Aranha* aranhaAux = nullptr;
 
 	//Spawn de Aranhas
-	aranhaAux = new Aranha(Vector2f(700, 805), Vector2f(0, 0), "images/aranha.png");
+	aranhaAux = new Aranha(Vector2f(700, 805), Vector2f(-25, 0), "images/aranha.png", Vector2f(610,790));
 	listaEntidades->getLista().push(aranhaAux);
 
-	aranhaAux = new Aranha(Vector2f(1300, 555), Vector2f(0, 0), "images/aranha.png");
+	aranhaAux = new Aranha(Vector2f(1300, 555), Vector2f(20, 0), "images/aranha.png", Vector2f(1263, 1348));
 	listaEntidades->getLista().push(aranhaAux);
 
-	aranhaAux = new Aranha(Vector2f(900, 755), Vector2f(0, 0), "images/aranha.png");
+	aranhaAux = new Aranha(Vector2f(900, 755), Vector2f(18, 0), "images/aranha.png", Vector2f(900,947));
 	listaEntidades->getLista().push(aranhaAux);
 
 	//Inimigos aleatorios (66% de chance de spawn)
-	//if (rand() % 3 != 1) {
-		aranhaAux = new Aranha(Vector2f(550, 555), Vector2f(0, 0), "images/aranha.png");
+	if (rand() % 3 != 1) {
+		aranhaAux = new Aranha(Vector2f(550, 555), Vector2f(-25, 0), "images/aranha.png", Vector2f(503, 596));
 		listaEntidades->getLista().push(aranhaAux);
-	//}
+	}
 
-	
-	AranhaChefao* chefaoAux = nullptr;
 
 	//Spawn do Chefao
-	chefaoAux = new AranhaChefao(Vector2f(1100, 235), Vector2f(100, 0), "images/aranhaChefao.png", Vector2f(1000, 1110));
-	listaEntidades->getLista().push(chefaoAux);
+	aranhaChefao = new AranhaChefao(Vector2f(1100, 235), Vector2f(100, 0), "images/aranhaChefao.png", Vector2f(1000, 1110));
+	listaEntidades->getLista().push(aranhaChefao);
 }
 
 void FaseCavernaChefao::criarObstaculosDanosos()
@@ -93,23 +91,24 @@ void FaseCavernaChefao::criarObstaculosDanosos()
 	BlocoVoador* blocoVoadorAux = nullptr;
 
 	//Spawn de BlocosVoadores
-	blocoVoadorAux = new BlocoVoador(Vector2f(550, 650), Vector2f(0, 0), "images/blocoVoador.png");
+	blocoVoadorAux = new BlocoVoador(Vector2f(550, 652), Vector2f(0, 20), "images/blocoVoador.png", Vector2f(652, 760));
 	listaEntidades->getLista().push(blocoVoadorAux);
 
-	blocoVoadorAux = new BlocoVoador(Vector2f(250, 50), Vector2f(0, 0), "images/blocoVoador.png");
+	blocoVoadorAux = new BlocoVoador(Vector2f(250, 53), Vector2f(0, 45), "images/blocoVoador.png", Vector2f(53, 270));
 	listaEntidades->getLista().push(blocoVoadorAux);
 
-	blocoVoadorAux = new BlocoVoador(Vector2f(550, 50), Vector2f(0, 0), "images/blocoVoador.png");
+	blocoVoadorAux = new BlocoVoador(Vector2f(550, 53), Vector2f(0, 45), "images/blocoVoador.png", Vector2f(53, 270));
 	listaEntidades->getLista().push(blocoVoadorAux);
 
 	//Obstaculo aleatorio(50 % de chance de spawn)
 	if (rand() % 2 == 0) {
-		blocoVoadorAux = new BlocoVoador(Vector2f(800, 400), Vector2f(0, 0), "images/blocoVoador.png");
+		blocoVoadorAux = new BlocoVoador(Vector2f(800, 403), Vector2f(0, 20), "images/blocoVoador.png", Vector2f(403,560));
 		listaEntidades->getLista().push(blocoVoadorAux);
 	}
+	
 	//Obstaculo aleatorio(66 % de chance de spawn)
 	if (rand() % 3 != 0) {
-		blocoVoadorAux = new BlocoVoador(Vector2f(400, 50), Vector2f(0, 0), "images/blocoVoador.png");
+		blocoVoadorAux = new BlocoVoador(Vector2f(400, 53), Vector2f(0, 35), "images/blocoVoador.png", Vector2f(53, 270));
 		listaEntidades->getLista().push(blocoVoadorAux);
 	}
 
@@ -125,6 +124,22 @@ void FaseCavernaChefao::criarObstaculos()
 			}
 		}
 	}
+}
+
+void FaseCavernaChefao::criarProjeteis()
+{
+	if (aranhaChefao) {
+		Projetil* pAux = nullptr;
+
+		pAux = aranhaChefao->atirar();
+
+		if (pAux) {
+
+			listaEntidades->getLista().push(pAux);
+
+		}
+		
+	}	
 }
 
 int FaseCavernaChefao::getFaseAtual()

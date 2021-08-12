@@ -1,3 +1,5 @@
 ﻿  Jogo.cpp
-C:\Users\Gustavo\Desktop\CubeAdventure\JogoTecProg\Jogo.cpp(296,25): warning C4244: 'argumento': conversão de 'double' para 'float', possível perda de dados
+C:\Users\Gustavo\Desktop\CubeAdventure\JogoTecProg\Jogo.cpp(315,25): warning C4244: 'argumento': conversão de 'double' para 'float', possível perda de dados
+  Projetil.cpp
+  Gerando Código...
   JogoTecProg.vcxproj -> C:\Users\Gustavo\Desktop\CubeAdventure\Debug\JogoTecProg.exe

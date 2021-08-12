@@ -6,8 +6,12 @@ namespace Jogadores {
 	class Jogador : public Personagem
 	{
 	protected:
+	
 		bool chao = true;
+		
 		int vida = 3;
+
+		double delay = 0;
 
 	public:
 
@@ -24,6 +28,12 @@ namespace Jogadores {
 		bool getChao();
 
 		int colidir(int lado);
+
+		void resetaVida();
+
+		int getVida();
+
+		virtual void desenharVidas() = 0;
 
 	};
 

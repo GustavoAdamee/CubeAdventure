@@ -35,9 +35,37 @@ void CuboExplorador::mover(double t)
     else {
         v.y += g * t;
     }
+
+    delay += t;
 }
 
 Vector2f CuboExplorador::getTamEntidade()
 {
     return tam;
+}
+
+void CuboExplorador::desenharVidas()
+{
+
+    gGrafico->carregarTextura("images/vida.png");
+
+    if (vida >= 1) {
+
+        gGrafico->desenhar("images/vida.png", Vector2f(1438, 60));
+
+    }
+
+    if (vida >= 2) {
+
+        gGrafico->desenhar("images/vida.png", Vector2f(1478, 60));
+
+    }
+
+    if (vida >= 3) {
+
+        gGrafico->desenhar("images/vida.png", Vector2f(1518, 60));
+
+    }
+
+
 }

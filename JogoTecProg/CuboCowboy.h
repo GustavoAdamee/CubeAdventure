@@ -8,8 +8,6 @@ private:
 	
 	Vector2f tam = Vector2f(50, 70);
 
-	int delay = 0;
-
 public:
 	CuboCowboy(Vector2f pos = { 0.0f, 0.0f }, Vector2f vel = { 0.0f, 0.0f }, const char* caminhoTextura = nullptr);
 	~CuboCowboy();
@@ -18,6 +16,6 @@ public:
 
 	Vector2f getTamEntidade();
 
-	int colidir(int lado);
+	void desenharVidas();
 
 };
