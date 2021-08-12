@@ -148,7 +148,7 @@
       <Filter>Arquivos de Origem\Ente\Entidades</Filter>
     </ClCompile>
     <ClCompile Include="BlocoVoador.cpp">
-      <Filter>Arquivos de Origem</Filter>
+      <Filter>Arquivos de Origem\Ente\Entidades</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -252,7 +252,7 @@
       <Filter>Arquivos de Cabeçalho\Ente\Entidades</Filter>
     </ClInclude>
     <ClInclude Include="BlocoVoador.h">
-      <Filter>Arquivos de Cabeçalho</Filter>
+      <Filter>Arquivos de Cabeçalho\Ente\Entidades</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

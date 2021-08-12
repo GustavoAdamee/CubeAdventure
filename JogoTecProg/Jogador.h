@@ -7,6 +7,7 @@ namespace Jogadores {
 	{
 	protected:
 		bool chao = true;
+		int vida = 3;
 
 	public:
 
@@ -21,6 +22,8 @@ namespace Jogadores {
 
 		void setChao(bool aux);
 		bool getChao();
+
+		int colidir(int lado);
 
 	};
 

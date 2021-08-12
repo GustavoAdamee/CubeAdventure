@@ -14,7 +14,7 @@ protected:
 
 public:
     
-    Tiles(Vector2f pos = { 0.0f, 0.0f }, Vector2f vel = { 0.0f, 0.0f }, const char* caminhoTextura = nullptr, GerenciadorTiles* gTiles = nullptr);
+    Tiles(Vector2f pos = { 0.0f, 0.0f }, Vector2f vel = { 0.0f, 0.0f }, const char* caminhoTextura = nullptr, Vector2f lim = { 0.0f, 0.0f }, GerenciadorTiles* gTiles = nullptr);
     ~Tiles();
 
     //Deixar virtual e depois mandar para tile que for mover 
@@ -23,5 +23,7 @@ public:
     void initTile(int i, int j);
 
     virtual Vector2f getTamEntidade() = 0;
+
+    virtual int colidir(int lado);
 };
 

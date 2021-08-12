@@ -61,7 +61,7 @@ void FaseCavernaChefao::criarInimigos()
 	AranhaChefao* chefaoAux = nullptr;
 
 	//Spawn do Chefao
-	chefaoAux = new AranhaChefao(Vector2f(1100, 235), Vector2f(0, 0), "images/aranhaChefao.png");
+	chefaoAux = new AranhaChefao(Vector2f(1100, 235), Vector2f(100, 0), "images/aranhaChefao.png", Vector2f(1000, 1110));
 	listaEntidades->getLista().push(chefaoAux);
 }
 
@@ -117,7 +117,7 @@ void FaseCavernaChefao::criarObstaculosDanosos()
 
 void FaseCavernaChefao::criarObstaculos()
 {
-	Tiles* pTile = new BlocoCaverna({ 0,0 }, { 0,0 }, caminhoTile, gTiles);
+	Tiles* pTile = new BlocoCaverna({ 0,0 }, { 0,0 }, caminhoTile, { 0,0 }, gTiles);
 	for (int i = 0; i < 32; i++) {
 		for (int j = 0; j < 18; j++) {
 			if (gTiles->getInfo(i, j) != -1) {

@@ -114,7 +114,7 @@ void FaseCaverna::criarObstaculosDanosos()
 
 void FaseCaverna::criarObstaculos()
 {
-	Tiles* pTile = new BlocoCaverna({ 0,0 }, { 0,0 }, caminhoTile, gTiles);
+	Tiles* pTile = new BlocoCaverna({ 0,0 }, { 0,0 }, caminhoTile, { 0,0 }, gTiles);
 	for (int i = 0; i < 32; i++) {
 		for (int j = 0; j < 18; j++) {
 			if (gTiles->getInfo(i, j) != -1) {

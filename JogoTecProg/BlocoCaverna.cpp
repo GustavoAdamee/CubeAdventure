@@ -1,7 +1,7 @@
 #include "BlocoCaverna.h"
 
-BlocoCaverna::BlocoCaverna(Vector2f pos, Vector2f vel, const char* caminhoTextura, GerenciadorTiles* gTiles):
-	Tiles(pos, vel, caminhoTextura, gTiles)
+BlocoCaverna::BlocoCaverna(Vector2f pos, Vector2f vel, const char* caminhoTextura, Vector2f lim, GerenciadorTiles* gTiles):
+	Tiles(pos, vel, caminhoTextura, lim, gTiles)
 {
 }
 

@@ -1,12 +1,13 @@
 #include "Entidade.h"
 
-Entidade::Entidade(Vector2f pos, Vector2f vel, const char* caminhoTextura):
+Entidade::Entidade(Vector2f pos, Vector2f vel, const char* caminhoTextura, Vector2f lim):
 	
 	Ente(),
 	posicao(pos), 
 	v(vel), 
 	caminho(caminhoTextura),
-	gEv()
+	gEv(),
+	limite(lim)
 
 {
 	gGrafico->carregarTextura(caminho);
@@ -43,6 +44,7 @@ Vector2f Entidade::getVel()
 }
 void Entidade::setVel(Vector2f vel)
 {
+	v.x = vel.x;
 	v.y = vel.y;
 }
 void Entidade::setGEventos(GerenciadorEventos gE)

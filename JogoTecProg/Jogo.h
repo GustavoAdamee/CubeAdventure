@@ -83,5 +83,6 @@ public:
 	//Percorre a lista de entidades desenhando-as
 	void desenhaEntidades();
 
+	void reiniciaFase();
 };
 

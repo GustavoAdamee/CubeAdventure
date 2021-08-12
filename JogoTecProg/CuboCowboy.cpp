@@ -43,3 +43,15 @@ Vector2f CuboCowboy::getTamEntidade()
 {
     return tam;
 }
+
+int CuboCowboy::colidir(int lado)
+{
+    if (lado == 1) {
+        vida--;
+        if (vida == 0) {
+            destruir = true;
+            vida = 3;
+        }
+    }
+    return 0;
+}

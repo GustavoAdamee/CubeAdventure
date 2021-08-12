@@ -16,4 +16,6 @@ public:
 
 	Vector2f getTamEntidade();
 
+	int colidir(int lado);
+
 };

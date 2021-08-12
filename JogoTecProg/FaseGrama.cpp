@@ -28,18 +28,18 @@ void FaseGrama::criarInimigos()
 	Inseto* insetoAux = nullptr;
 
 	//Spawn de Insetos
-	insetoAux = new Inseto(Vector2f(900, 700), Vector2f(0, 0), "images/inseto.png");
+	insetoAux = new Inseto(Vector2f(900, 700), Vector2f(-50, 0), "images/inseto.png", Vector2f(850, 900)); //lim em x
 	listaEntidades->getLista().push(insetoAux);
 
-	insetoAux = new Inseto(Vector2f(800, 500), Vector2f(0, 0), "images/inseto.png");
+	insetoAux = new Inseto(Vector2f(800, 500), Vector2f(-50, 0), "images/inseto.png", Vector2f(750, 800));
 	listaEntidades->getLista().push(insetoAux);
 
-	insetoAux = new Inseto(Vector2f(400, 400), Vector2f(0, 0), "images/inseto.png");
+	insetoAux = new Inseto(Vector2f(400, 400), Vector2f(-50, 0), "images/inseto.png", Vector2f(350, 400));
 	listaEntidades->getLista().push(insetoAux);
 
 	//Inimigos aleatorios (66% de chance de spawn)
 	if (rand() % 3 != 1) {
-		insetoAux = new Inseto(Vector2f(1300, 250), Vector2f(0, 0), "images/inseto.png");
+		insetoAux = new Inseto(Vector2f(1300, 250), Vector2f(-50, 0), "images/inseto.png", Vector2f(1250, 1300));
 		listaEntidades->getLista().push(insetoAux);
 	}
 	
@@ -48,24 +48,24 @@ void FaseGrama::criarInimigos()
 	Aranha* aranhaAux = nullptr;
 
 	//Spawn de Aranhas
-	aranhaAux = new Aranha(Vector2f(550, 705), Vector2f(0, 0), "images/aranha.png");
+	aranhaAux = new Aranha(Vector2f(550, 705), Vector2f(-50, 0), "images/aranha.png", Vector2f(500, 550)); //lim em x
 	listaEntidades->getLista().push(aranhaAux);
 
-	aranhaAux = new Aranha(Vector2f(1150,705), Vector2f(0, 0), "images/aranha.png");
+	aranhaAux = new Aranha(Vector2f(1170,705), Vector2f(-50, 0), "images/aranha.png", Vector2f(1150, 1200));
 	listaEntidades->getLista().push(aranhaAux);
 
-	aranhaAux = new Aranha(Vector2f(1000, 205), Vector2f(0, 0), "images/aranha.png");
+	aranhaAux = new Aranha(Vector2f(1000, 205), Vector2f(-50, 0), "images/aranha.png", Vector2f(950, 1000));
 	listaEntidades->getLista().push(aranhaAux);
 
 	//Inimigos aleatorios (50% de chance de spawn)
 	if (rand() % 2 != 1) {
-		aranhaAux = new Aranha(Vector2f(1305, 505), Vector2f(0, 0), "images/aranha.png");
+		aranhaAux = new Aranha(Vector2f(1320, 505), Vector2f(-50, 0), "images/aranha.png", Vector2f(1300, 1350));
 		listaEntidades->getLista().push(aranhaAux);
 	}
 
 	//Inimigos aleatorios(66 % de chance de spawn)
 	if (rand() % 3 != 1) {
-		aranhaAux = new Aranha(Vector2f(750, 205), Vector2f(0, 0), "images/aranha.png");
+		aranhaAux = new Aranha(Vector2f(750, 205), Vector2f(-50, 0), "images/aranha.png", Vector2f(700, 750));
 		listaEntidades->getLista().push(aranhaAux);
 	}
 
@@ -101,17 +101,17 @@ void FaseGrama::criarObstaculosDanosos()
 	BlocoVoador* blocoVoadorAux = nullptr;
 	
 	//Spawn de BlocosVoadores
-	blocoVoadorAux = new BlocoVoador(Vector2f(400, 600), Vector2f(0, 0), "images/blocoVoador.png");
+	blocoVoadorAux = new BlocoVoador(Vector2f(400, 600), Vector2f(0, 50), "images/blocoVoador.png", Vector2f(600, 700)); //lim em y
 	listaEntidades->getLista().push(blocoVoadorAux);
 
-	blocoVoadorAux = new BlocoVoador(Vector2f(300, 50), Vector2f(0, 0), "images/blocoVoador.png");
+	blocoVoadorAux = new BlocoVoador(Vector2f(300, 50), Vector2f(0, 50), "images/blocoVoador.png", Vector2f(50, 150));
 	listaEntidades->getLista().push(blocoVoadorAux);
 
-	blocoVoadorAux = new BlocoVoador(Vector2f(600, 50), Vector2f(0, 0), "images/blocoVoador.png");
+	blocoVoadorAux = new BlocoVoador(Vector2f(600, 50), Vector2f(0, 50), "images/blocoVoador.png", Vector2f(50, 150));
 	listaEntidades->getLista().push(blocoVoadorAux);
 
 	if (rand() % 3 != 0) {
-		blocoVoadorAux = new BlocoVoador(Vector2f(450, 50), Vector2f(0, 0), "images/blocoVoador.png");
+		blocoVoadorAux = new BlocoVoador(Vector2f(450, 50), Vector2f(0, 50), "images/blocoVoador.png", Vector2f(50, 150));
 		listaEntidades->getLista().push(blocoVoadorAux);
 	}
 	
@@ -120,7 +120,7 @@ void FaseGrama::criarObstaculosDanosos()
 
 void FaseGrama::criarObstaculos()
 {
-	Tiles* pTile = new BlocoGrama({ 0,0 }, { 0,0 }, caminhoTile, gTiles);
+	Tiles* pTile = new BlocoGrama({ 0,0 }, { 0,0 }, caminhoTile, { 0,0 }, gTiles);
 	for (int i = 0; i < 32; i++) {
 		for (int j = 0; j < 18; j++) {
 			if (gTiles->getInfo(i, j) != -1) {

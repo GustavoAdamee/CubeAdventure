@@ -6,7 +6,7 @@ class Personagem : public Entidade
 protected:
 
 public:
-	Personagem(Vector2f pos = { 0.0f, 0.0f }, Vector2f vel = { 0.0f, 0.0f }, const char* caminhoTextura = nullptr);
+	Personagem(Vector2f pos = { 0.0f, 0.0f }, Vector2f vel = { 0.0f, 0.0f }, const char* caminhoTextura = nullptr, Vector2f lim = { 0.0f, 0.0f });
 
 	~Personagem();
 
@@ -16,4 +16,6 @@ public:
 
 	virtual void setChao(bool aux);
 	virtual bool getChao();
+
+	virtual int colidir(int lado) = 0;
 };

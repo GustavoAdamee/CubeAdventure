@@ -8,11 +8,13 @@ private:
     Vector2f tam = Vector2f(50, 50);
 
 public:
-    BlocoVoador(Vector2f pos = { 0.0f, 0.0f }, Vector2f vel = { 0.0f, 0.0f }, const char* caminhoTextura = nullptr, GerenciadorTiles* gTiles = nullptr);
+    BlocoVoador(Vector2f pos = { 0.0f, 0.0f }, Vector2f vel = { 0.0f, 0.0f }, const char* caminhoTextura = nullptr, Vector2f lim = { 0.0f, 0.0f }, GerenciadorTiles* gTiles = nullptr);
     ~BlocoVoador();
 
-    void mover();
+    void mover(double t);
 
     Vector2f getTamEntidade();
+
+    int colidir(int lado);
 };
 

@@ -24,3 +24,8 @@ bool Jogadores::Jogador::getChao()
     return chao;
 }
 
+int Jogadores::Jogador::colidir(int lado)
+{
+    return 0;
+}
+

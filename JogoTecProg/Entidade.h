@@ -15,6 +15,7 @@ protected:
 	//Vetores responsaveis pelo posição e velocidade da entidade
 	Vector2f posicao;
 	Vector2f v;
+	Vector2f limite;
 	
 	//"Path" para a textura da entidade
 	const char* caminho;
@@ -25,7 +26,7 @@ protected:
 
 public:
 	//Construtora e destrutora
-	Entidade(Vector2f pos = { 0.0f, 0.0f }, Vector2f vel = {0.0f, 0.0f}, const char* caminhoTextura = nullptr);
+	Entidade(Vector2f pos = { 0.0f, 0.0f }, Vector2f vel = {0.0f, 0.0f}, const char* caminhoTextura = nullptr, Vector2f lim = { 0.0f, 0.0f });
 	virtual ~Entidade();
 
 	//Atualiza e desenha a entidade
@@ -55,6 +56,8 @@ public:
 
 	void setDestruir(bool aux);
 	bool getDestruir();
+
+	virtual int colidir(int lado) = 0;
 
 	//Metodo virtual responsavel para verificar se a entidade em questão colidiu com a entidade passada por referencia
 	//virtual void colidir(Entidade* entidade) = 0;
