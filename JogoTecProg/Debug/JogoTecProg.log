@@ -1,2 +1,3 @@
-﻿  AranhaChefao.cpp
-  JogoTecProg.vcxproj -> C:\Users\Mateus\Downloads\UTFPR\Tec Prog\CubeAdventure\Debug\JogoTecProg.exe
+﻿  Jogo.cpp
+C:\Users\Gustavo\Desktop\CubeAdventure\JogoTecProg\Jogo.cpp(296,25): warning C4244: 'argumento': conversão de 'double' para 'float', possível perda de dados
+  JogoTecProg.vcxproj -> C:\Users\Gustavo\Desktop\CubeAdventure\Debug\JogoTecProg.exe

@@ -46,12 +46,24 @@ Vector2f CuboCowboy::getTamEntidade()
 
 int CuboCowboy::colidir(int lado)
 {
-    if (lado == 1) {
+    
+    delay++;
+    
+    if (lado == 1 && delay >= 3500) {
+
+        cout << "tomei dano colisao jogador" << endl;
+
         vida--;
+        
+        delay = 0;
+
         if (vida == 0) {
+
             destruir = true;
+
             vida = 3;
         }
     }
+
     return 0;
 }
