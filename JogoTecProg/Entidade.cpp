@@ -27,6 +27,9 @@ void Entidade::atualizar(float t)
 
 void Entidade::desenhar()
 {
+	if (limite.x == 901) {
+		printf("Projetil\n");
+	}
 	gGrafico->desenhar(caminho, posicao);
 }
 
@@ -71,6 +74,10 @@ void Entidade::setDestruir(bool aux)
 bool Entidade::getDestruir()
 {
 	return destruir;
+}
+
+void Entidade::desenharVidas()
+{
 }
 
 const float Entidade::g = 1200;

@@ -18,3 +18,7 @@ bool Personagem::getChao()
 {
 	return false;
 }
+
+void Personagem::desenharVidas()
+{
+}

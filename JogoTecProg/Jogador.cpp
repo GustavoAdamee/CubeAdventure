@@ -53,5 +53,9 @@ int Jogadores::Jogador::getVida()
     return vida;
 }
 
+void Jogadores::Jogador::desenharVidas()
+{
+}
+
 
 

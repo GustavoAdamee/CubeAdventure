@@ -23,18 +23,18 @@ void FaseCavernaChefao::criarInimigos()
 	Inseto* insetoAux = nullptr;
 
 	//Spawn de Insetos
-	insetoAux = new Inseto(Vector2f(350, 800), Vector2f(-25, 0), "images/inseto.png", Vector2f(250, 430));
+	insetoAux = new Inseto(Vector2f(350, 800), Vector2f(-25, -300), "images/inseto.png", Vector2f(250, 430));
 	listaEntidades->getLista().push(insetoAux);
 
-	insetoAux = new Inseto(Vector2f(1150, 800), Vector2f(-30, 0), "images/inseto.png", Vector2f(1100, 1250));
+	insetoAux = new Inseto(Vector2f(1150, 800), Vector2f(-30, -300), "images/inseto.png", Vector2f(1100, 1250));
 	listaEntidades->getLista().push(insetoAux);
 
-	insetoAux = new Inseto(Vector2f(900, 550), Vector2f(25, 0), "images/inseto.png", Vector2f(850, 980));
+	insetoAux = new Inseto(Vector2f(900, 550), Vector2f(25, -300), "images/inseto.png", Vector2f(850, 980));
 	listaEntidades->getLista().push(insetoAux);
 
 	//Inimigos aleatorios (66% de chance de spawn)
 	if (rand() % 3 != 1) {
-		insetoAux = new Inseto(Vector2f(300, 550), Vector2f(-20, 0), "images/inseto.png", Vector2f(255, 340));
+		insetoAux = new Inseto(Vector2f(300, 550), Vector2f(-20, -300), "images/inseto.png", Vector2f(255, 340));
 		listaEntidades->getLista().push(insetoAux);
 	}
 
@@ -59,7 +59,7 @@ void FaseCavernaChefao::criarInimigos()
 
 
 	//Spawn do Chefao
-	aranhaChefao = new AranhaChefao(Vector2f(1100, 235), Vector2f(100, 0), "images/aranhaChefao.png", Vector2f(1000, 1110));
+	aranhaChefao = new AranhaChefao(Vector2f(1100, 235), Vector2f(50, 0), "images/aranhaChefao.png", Vector2f(1000, 1110));
 	listaEntidades->getLista().push(aranhaChefao);
 }
 

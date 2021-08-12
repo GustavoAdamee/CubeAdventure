@@ -59,6 +59,8 @@ public:
 
 	virtual int colidir(int lado) = 0;
 
+	virtual void desenharVidas();
+
 	//Metodo virtual responsavel para verificar se a entidade em questão colidiu com a entidade passada por referencia
 	//virtual void colidir(Entidade* entidade) = 0;
 };

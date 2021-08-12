@@ -19,6 +19,8 @@ namespace Inimigos {
         virtual Vector2f getTamEntidade() = 0;
 
         virtual int colidir(int lado) = 0;
+
+        virtual void desenharVidas();
     };
 
 }

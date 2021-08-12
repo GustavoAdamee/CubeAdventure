@@ -20,7 +20,7 @@ void Projetil::mover(double t)
 		destruir = true;
 	}
 
-	cout << "posicao" << posicao.x << endl;
+	//cout << "posicao" << posicao.x << endl;
 }
 
 Vector2f Projetil::getTamEntidade()

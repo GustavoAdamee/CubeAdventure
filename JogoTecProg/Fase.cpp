@@ -120,9 +120,9 @@ void Fase::desenhar()
 	gGrafico->desenhaBackground();
 	gTiles->desenhaListaTiles();
 
-	pJogador1->desenharVidas();
+	/*pJogador1->desenharVidas();
 
 	if (pJogador2) {
 		pJogador2->desenharVidas();
-	}
+	}*/
 }

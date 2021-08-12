@@ -33,7 +33,7 @@ namespace Jogadores {
 
 		int getVida();
 
-		virtual void desenharVidas() = 0;
+		virtual void desenharVidas();
 
 	};
 

@@ -303,6 +303,7 @@ void Jogo::verificaAtualizacoes()
     }
 
     fase->criarProjeteis();
+    LEs = fase->getListaEntidades();
 
     //Atualiza todas as entidades da fase em execução
     for (int i = 0; i < LEs->getLista().getTam(); i++) {
@@ -367,6 +368,7 @@ void Jogo::desenhaEntidades()
         pAux = LEs->getLista().getItem(i); //Aponta para a elemento<entidades> na posição i
         
         pAux->desenhar();
+        pAux->desenharVidas();
     }
 }
 

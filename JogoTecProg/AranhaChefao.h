@@ -14,6 +14,8 @@ private:
 
 	double delayVida = 0;
 
+	int projetil = 0;
+
 public:
 	
 	
@@ -27,6 +29,8 @@ public:
 	int colidir(int lado);
 
 	Projetil* atirar();
+
+	void desenharVidas();
 
 };
 
