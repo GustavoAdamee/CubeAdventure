@@ -21,15 +21,13 @@ Entidade::~Entidade()
 
 void Entidade::atualizar(float t)
 {
-	posicao.x += v.x * t;
-	posicao.y += v.y * t;
+	posicao += v * t;
+	//posicao.x += v.x * t;
+	//posicao.y += v.y * t;
 }
 
 void Entidade::desenhar()
 {
-	if (limite.x == 901) {
-		printf("Projetil\n");
-	}
 	gGrafico->desenhar(caminho, posicao);
 }
 

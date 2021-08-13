@@ -1,31 +1,9 @@
-﻿  Aranha.cpp
-  AranhaChefao.cpp
-  Atirador.cpp
-  BlocoCaverna.cpp
-  BlocoGrama.cpp
-  BlocoVoador.cpp
-  CuboCowboy.cpp
-C:\Users\Mateus\Downloads\UTFPR\Tec Prog\CubeAdventure\JogoTecProg\CuboCowboy.cpp(38,21): warning C4244: '+=': conversão de 'double' para 'T', possível perda de dados
-          with
-          [
-              T=float
-          ]
-  CuboExplorador.cpp
-C:\Users\Mateus\Downloads\UTFPR\Tec Prog\CubeAdventure\JogoTecProg\CuboExplorador.cpp(36,21): warning C4244: '+=': conversão de 'double' para 'T', possível perda de dados
-          with
-          [
-              T=float
-          ]
-  Ente.cpp
-  Entidade.cpp
-  Espinho.cpp
+﻿  Entidade.cpp
   Fase.cpp
   FaseCaverna.cpp
   FaseCavernaChefao.cpp
   FaseGrama.cpp
   GerenciadorColisoes.cpp
-  GerenciadorEventos.cpp
-  GerenciadorGrafico.cpp
   GerenciadorTiles.cpp
 C:\Users\Mateus\Downloads\UTFPR\Tec Prog\CubeAdventure\JogoTecProg\GerenciadorTiles.cpp(78,29): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
 C:\Users\Mateus\Downloads\UTFPR\Tec Prog\CubeAdventure\JogoTecProg\GerenciadorTiles.cpp(78,21): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
@@ -39,40 +17,9 @@ C:\Users\Mateus\Downloads\UTFPR\Tec Prog\CubeAdventure\JogoTecProg\GerenciadorTi
           [
               T=float
           ]
-  Inimigo.cpp
-  Gerando Código...
-C:\Users\Mateus\Downloads\UTFPR\Tec Prog\CubeAdventure\JogoTecProg\GerenciadorGrafico.cpp(78): warning C4715: 'GerenciadorGrafico::carregarTextura': nem todos os caminhos de controle retornam um valor
-  Compilando...
-  Inseto.cpp
-C:\Users\Mateus\Downloads\UTFPR\Tec Prog\CubeAdventure\JogoTecProg\Inseto.cpp(21,15): warning C4244: '+=': conversão de 'double' para 'T', possível perda de dados
-          with
-          [
-              T=float
-          ]
-  Jogador.cpp
   Jogo.cpp
-C:\Users\Mateus\Downloads\UTFPR\Tec Prog\CubeAdventure\JogoTecProg\Jogo.cpp(318,25): warning C4244: 'argumento': conversão de 'double' para 'float', possível perda de dados
+C:\Users\Mateus\Downloads\UTFPR\Tec Prog\CubeAdventure\JogoTecProg\Jogo.cpp(319,25): warning C4244: 'argumento': conversão de 'double' para 'float', possível perda de dados
   ListaEntidades.cpp
-  Menu.cpp
-C:\Users\Mateus\Downloads\UTFPR\Tec Prog\CubeAdventure\JogoTecProg\Menu.cpp(14,14): warning C4244: 'inicializando': conversão de 'T' para 'float', possível perda de dados
-          with
-          [
-              T=unsigned int
-          ]
-C:\Users\Mateus\Downloads\UTFPR\Tec Prog\CubeAdventure\JogoTecProg\Menu.cpp(15,15): warning C4244: 'inicializando': conversão de 'T' para 'float', possível perda de dados
-          with
-          [
-              T=unsigned int
-          ]
-  MenuFases.cpp
-  MenuJogadores.cpp
-  MenuPause.cpp
-  MenuPrincipal.cpp
-  Personagem.cpp
-  Projetil.cpp
-  Relogio.cpp
-  Tiles.cpp
   main.cpp
   Gerando Código...
-  LINK : C:\Users\Mateus\Downloads\UTFPR\Tec Prog\CubeAdventure\Debug\JogoTecProg.exe não encontrado ou não compilado pelo o último link incremental; executando link completo
   JogoTecProg.vcxproj -> C:\Users\Mateus\Downloads\UTFPR\Tec Prog\CubeAdventure\Debug\JogoTecProg.exe

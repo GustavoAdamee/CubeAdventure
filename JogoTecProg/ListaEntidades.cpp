@@ -19,4 +19,13 @@ Entidade* ListaEntidades::operator[](int i)
     return getLista().getItem(i);
 }
 
+bool ListaEntidades::operator>(int i)
+{
+    if (LEs.getTam() > i) {
+        return true;
+    }
+    return false;
+}
+
+
 

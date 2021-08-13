@@ -9,6 +9,7 @@ AranhaChefao::AranhaChefao(Vector2f pos, Vector2f vel, const char* caminhoTextur
 
 AranhaChefao::~AranhaChefao()
 {
+	instancia = 0;
 }
 
 AranhaChefao* AranhaChefao::getInstancia(Vector2f pos, Vector2f vel, const char* caminhoTextura, Vector2f lim)

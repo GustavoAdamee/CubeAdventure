@@ -114,7 +114,7 @@ int GerenciadorColisoes::checarColisao(Entidade* aux1, Entidade* aux2)
 		else if (pos1.x + tam1.x > pos2.x && pos1.x < pos2.x + tam2.x &&
 		pos1.y + tam1.y > pos2.y && pos1.y < pos2.y + 2 
 		&& aux1->getVel().y > 0) {
-
+			
 			aux1->setPos(Vector2f(pos1.x, pos2.y - tam1.y));
 
 			aux1->setVel(Vector2f(aux1->getVel().x, 0));
