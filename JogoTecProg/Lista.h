@@ -129,3 +129,11 @@ inline void Lista<TL>::pop(TL* pItem)
 
 }
 
+//template<class LE>
+//template<class TE>
+//class Lista<LE>::Elemento<TE>* Lista<LE>::Elemento<TE>::getAnte()
+//{
+//	return pAnte;
+//}
+//
+////TypeName

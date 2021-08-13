@@ -25,6 +25,8 @@ public:
 
 	void setItem(TE* pI);
 	TE* getItem();
+
+	//void operator ++(int);
 };
 
 
@@ -80,4 +82,12 @@ inline TE* Elemento<TE>::getItem()
 {
 	return pItem;
 }
+
+//template<class TE>
+//inline void Elemento<TE>::operator++(int)
+//{
+//
+//	
+//
+//}
 

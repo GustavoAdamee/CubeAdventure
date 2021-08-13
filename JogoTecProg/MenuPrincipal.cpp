@@ -38,16 +38,16 @@ int MenuPrincipal::executar()
 		case 2:
 			switch (getBotaoPressionado())
 			{
-			case 0:
+			case 0:			//Jogar
 				i = 0;
 				break;
-			case 1:
+			case 1:			//Fases
 				i = 1;
 				break;
-			case 2: //Implementar ranking
+			case 2:			//Implementar ranking
 				break;
 			case 3:
-				gGrafico->getJanela()->close();
+				gGrafico->getJanela()->close();		//Sair
 				i = 3;
 				break;
 			}

@@ -59,6 +59,8 @@ void Jogo::executarJogo()
 
         gerenciaColisoes();
 
+        //verificaPontuacao();
+
         //Desenha na tela o mapa de cada fase: (BackGround, tiles...)
         fase->desenhar();
 
@@ -357,6 +359,7 @@ void Jogo::gerenciaColisoes()
     if (pJogador2) {
         gerenciadorColisoes.VerificaColisoes(pJogador2);
     }
+
 }
 
 void Jogo::desenhaEntidades()
@@ -365,9 +368,22 @@ void Jogo::desenhaEntidades()
     {
         Entidade* pAux = NULL;
         
-        pAux = LEs->getLista().getItem(i); //Aponta para a elemento<entidades> na posição i
+        ListaEntidades& lAux = *LEs;
+
+        //Aponta para a elemento<entidades> na posição i
+        pAux = lAux[i];
         
-        pAux->desenhar();
+        /*Vector2f x, y, *pY;
+
+        x + y;
+
+        pY = &y;
+
+        x + pY;
+
+        x.operator+(y);*/
+
+        (*pAux).desenhar();
         pAux->desenharVidas();
     }
 }
