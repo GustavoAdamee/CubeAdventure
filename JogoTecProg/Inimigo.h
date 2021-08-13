@@ -21,6 +21,8 @@ namespace Inimigos {
         virtual int colidir(int lado) = 0;
 
         virtual void desenharVidas();
+
+        virtual float getPontos();
     };
 
 }

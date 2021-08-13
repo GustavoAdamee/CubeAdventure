@@ -59,8 +59,6 @@ void Jogo::executarJogo()
 
         gerenciaColisoes();
 
-        //verificaPontuacao();
-
         //Desenha na tela o mapa de cada fase: (BackGround, tiles...)
         fase->desenhar();
 
@@ -68,6 +66,8 @@ void Jogo::executarJogo()
 
         //Display ma tela de tudo de foi setado nela
         gerenciadorGrafico.mostrar();
+
+        cout << pontuacao << endl;
     }
 }
 
@@ -279,7 +279,11 @@ void Jogo::verificaFase()
 
     fase->verificaFase();
     if (fase->passouFase()) {
+    
         gerarFase();
+        
+        pontuacao = pontuacao + 200;
+    
     }
 
 }
@@ -295,6 +299,8 @@ void Jogo::verificaAtualizacoes()
         pJogador1->setDestruir(false);
 
         reiniciaFase();
+
+        pontuacao -= 450;
     }
 
     if (pJogador2 && pJogador2->getDestruir()) {
@@ -302,6 +308,8 @@ void Jogo::verificaAtualizacoes()
         pJogador2->setDestruir(false);
 
         reiniciaFase();
+
+        pontuacao -= 450;
     }
 
     fase->criarProjeteis();
@@ -319,16 +327,15 @@ void Jogo::verificaAtualizacoes()
 
         pAux->atualizar(t);
 
+        pontuacao = pontuacao + pAux->getPontos();
+
         if (pAux->getDestruir()) {
+
             LEs->getLista().pop(pAux);
+
         }
 
     }
-
-    //ListaEntidades* lista = 0; lista < LEs->getLista().getTam(); lista++){
-    //
-    //}
-
 }
 
 void Jogo::gerarFase()
@@ -370,6 +377,10 @@ void Jogo::gerenciaColisoes()
 
 void Jogo::desenhaEntidades()
 {
+    
+    gerenciadorGrafico.desenhaPontos(pontuacao);
+    
+    
     for (int i = 0; i < LEs->getLista().getTam(); i++)
     {
         Entidade* pAux = NULL;
@@ -377,16 +388,6 @@ void Jogo::desenhaEntidades()
         ListaEntidades& lAux = *LEs;
         //Aponta para a elemento<entidades> na posição i
         pAux = lAux[i];
-        
-        /*Vector2f x, y, *pY;
-
-        x + y;
-
-        pY = &y;
-
-        x + pY;
-
-        x.operator+(y);*/
 
         (*pAux).desenhar();
         pAux->desenharVidas();

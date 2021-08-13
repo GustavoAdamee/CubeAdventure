@@ -100,3 +100,29 @@ void GerenciadorGrafico::desenhaBackground()
 {
 	janela->draw(background);
 }
+
+
+void GerenciadorGrafico::desenhaPontos(float pontuacao)
+{
+
+	if (!fonte.loadFromFile("Happy chicken.ttf")) {
+	}
+
+	for (int i = 0; i < 2; i++) {
+		texto[i].setFont(fonte);
+		texto[i].setScale(1, 1);
+		texto[i].setFillColor(sf::Color::Yellow);
+	}
+
+	texto[0].setPosition(sf::Vector2f((janela->getSize().x -200) / 2, 50));
+	texto[1].setPosition(sf::Vector2f((janela->getSize().x + 100) / 2, 50));
+
+
+	texto[0].setString("Pontos: ");
+	texto[1].setString(to_string(static_cast<int>(pontuacao)));
+
+	janela->draw(texto[0]);
+	janela->draw(texto[1]);
+
+
+}

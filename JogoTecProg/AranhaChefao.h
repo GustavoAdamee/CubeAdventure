@@ -35,6 +35,8 @@ public:
 
 	void desenharVidas();
 
+	float getPontos();
+
 };
 
 

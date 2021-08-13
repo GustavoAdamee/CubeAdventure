@@ -19,5 +19,7 @@ public:
 
 	int colidir(int lado);
 
+	float getPontos();
+
 };
 

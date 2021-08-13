@@ -51,3 +51,13 @@ int Inseto::colidir(int lado)
 	}
 }
 
+float Inseto::getPontos()
+{
+	if (destruir) {
+		return 100.0f;
+	}
+
+	return 0.0f;
+		
+}
+

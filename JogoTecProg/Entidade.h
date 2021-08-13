@@ -61,6 +61,5 @@ public:
 
 	virtual void desenharVidas();
 
-	//Metodo virtual responsavel para verificar se a entidade em questão colidiu com a entidade passada por referencia
-	//virtual void colidir(Entidade* entidade) = 0;
+	virtual float getPontos();
 };

@@ -78,6 +78,11 @@ void Entidade::desenharVidas()
 {
 }
 
+float Entidade::getPontos()
+{
+	return 0.0f;
+}
+
 const float Entidade::g = 1200;
 
 

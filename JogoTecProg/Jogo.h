@@ -49,6 +49,9 @@ private:
 	//Passagem de tempo
 	Relogio relogio;
 
+	//Pontuação de cada Jogada 
+	float pontuacao = 0;
+
 public:
 
 	//Construtora e destrutora

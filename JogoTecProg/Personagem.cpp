@@ -22,3 +22,8 @@ bool Personagem::getChao()
 void Personagem::desenharVidas()
 {
 }
+
+float Personagem::getPontos()
+{
+	return 0.0f;
+}

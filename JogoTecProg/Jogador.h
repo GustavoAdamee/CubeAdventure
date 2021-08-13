@@ -35,6 +35,8 @@ namespace Jogadores {
 
 		virtual void desenharVidas();
 
+		float getPontos();
+
 	};
 
 }

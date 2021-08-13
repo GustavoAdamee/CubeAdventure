@@ -110,4 +110,13 @@ void AranhaChefao::desenharVidas()
 	}
 }
 
+float AranhaChefao::getPontos()
+{
+	if (destruir) {
+		return 500.0f;
+	}
+	
+	return 0.0f;
+}
+
 AranhaChefao* AranhaChefao::instancia = 0;

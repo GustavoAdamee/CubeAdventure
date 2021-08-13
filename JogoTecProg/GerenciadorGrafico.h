@@ -19,6 +19,10 @@ private:
 	Sprite background;
 	Texture backgroundText;
 
+	//Atributos para desenhar um score na tela em tempo de execução
+	sf::Font fonte;
+	sf::Text texto[2];
+
 public:
 	//Construtora e Destrutora
 	GerenciadorGrafico();
@@ -45,5 +49,9 @@ public:
 	//Seta e desenha um background
 	void setBackground(const char* caminho);
 	void desenhaBackground();
+
+	//Desenha a pontuação do jogador na tela
+	void desenhaPontos(float pontuacao);
+
 };
 

@@ -1,25 +1,21 @@
-﻿  Entidade.cpp
-  Fase.cpp
-  FaseCaverna.cpp
-  FaseCavernaChefao.cpp
-  FaseGrama.cpp
-  GerenciadorColisoes.cpp
-  GerenciadorTiles.cpp
-C:\Users\Mateus\Downloads\UTFPR\Tec Prog\CubeAdventure\JogoTecProg\GerenciadorTiles.cpp(78,29): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
-C:\Users\Mateus\Downloads\UTFPR\Tec Prog\CubeAdventure\JogoTecProg\GerenciadorTiles.cpp(78,21): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
-C:\Users\Mateus\Downloads\UTFPR\Tec Prog\CubeAdventure\JogoTecProg\GerenciadorTiles.cpp(83,35): warning C4244: 'argumento': conversão de 'int' para 'T', possível perda de dados
+﻿  GerenciadorGrafico.cpp
+C:\Users\Gustavo\Desktop\CubeAdventure\JogoTecProg\GerenciadorGrafico.cpp(117,63): warning C4244: 'argumento': conversão de 'T' para 'T', possível perda de dados
           with
+          [
+              T=unsigned int
+          ]
+          and
           [
               T=float
           ]
-C:\Users\Mateus\Downloads\UTFPR\Tec Prog\CubeAdventure\JogoTecProg\GerenciadorTiles.cpp(83,27): warning C4244: 'argumento': conversão de 'int' para 'T', possível perda de dados
+C:\Users\Gustavo\Desktop\CubeAdventure\JogoTecProg\GerenciadorGrafico.cpp(118,64): warning C4244: 'argumento': conversão de 'T' para 'T', possível perda de dados
           with
+          [
+              T=unsigned int
+          ]
+          and
           [
               T=float
           ]
-  Jogo.cpp
-C:\Users\Mateus\Downloads\UTFPR\Tec Prog\CubeAdventure\JogoTecProg\Jogo.cpp(319,25): warning C4244: 'argumento': conversão de 'double' para 'float', possível perda de dados
-  ListaEntidades.cpp
-  main.cpp
-  Gerando Código...
-  JogoTecProg.vcxproj -> C:\Users\Mateus\Downloads\UTFPR\Tec Prog\CubeAdventure\Debug\JogoTecProg.exe
+C:\Users\Gustavo\Desktop\CubeAdventure\JogoTecProg\GerenciadorGrafico.cpp(78): warning C4715: 'GerenciadorGrafico::carregarTextura': nem todos os caminhos de controle retornam um valor
+  JogoTecProg.vcxproj -> C:\Users\Gustavo\Desktop\CubeAdventure\Debug\JogoTecProg.exe

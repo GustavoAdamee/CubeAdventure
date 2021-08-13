@@ -57,5 +57,15 @@ void Jogadores::Jogador::desenharVidas()
 {
 }
 
+float Jogadores::Jogador::getPontos()
+{
+    if (destruir) {
+        return -450.0f;
+    }
+    
+    
+    return 0.0f;
+}
+
 
 

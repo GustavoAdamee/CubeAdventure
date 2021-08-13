@@ -13,3 +13,8 @@ Inimigo::~Inimigo()
 void Inimigos::Inimigo::desenharVidas()
 {
 }
+
+float Inimigos::Inimigo::getPontos()
+{
+	return 0.0f;
+}

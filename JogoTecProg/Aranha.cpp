@@ -38,4 +38,13 @@ int Aranha::colidir(int lado)
 	}
 }
 
+float Aranha::getPontos()
+{
+	if (destruir) {
+		return 50.0f;
+	}
+	
+	return 0.0f;
+}
+
 
