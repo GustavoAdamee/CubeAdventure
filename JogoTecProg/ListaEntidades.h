@@ -16,5 +16,6 @@ public:
 	Lista<Entidade>& getLista();
 
 	Entidade* operator[](int i);
+	bool operator>(int i);
 
 };

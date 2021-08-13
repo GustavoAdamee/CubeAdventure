@@ -15,7 +15,7 @@ public:
     ~Atirador();
 
     //Retorna o projetil atirado quando possível
-    virtual Entidade* atirar() = 0;
+    virtual Projetil* atirar() = 0;
 
 };
 

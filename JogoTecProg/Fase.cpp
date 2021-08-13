@@ -37,7 +37,8 @@ Fase::~Fase()
 	Entidade* pAux = NULL;
 	for (int i = 0; i < listaEntidades->getLista().getTam(); i++)
 	{
-		pAux = listaEntidades->getLista().getItem(i);
+		pAux = (*listaEntidades)[i];
+		//pAux = listaEntidades->getLista().getItem(i);
 		listaEntidades->getLista().pop(pAux);
 	}
 	pAux = nullptr;

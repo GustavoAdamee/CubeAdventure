@@ -288,12 +288,12 @@ void Jogo::verificaAtualizacoes()
 {
     //Atualiza as posições de cada entidade conforme o relogio "passa"
     double t = relogio.getTempo();
- 
+
     //Verifica se o jogador foi morto
     if (pJogador1->getDestruir()) {
-        
+
         pJogador1->setDestruir(false);
-        
+
         reiniciaFase();
     }
 
@@ -308,20 +308,26 @@ void Jogo::verificaAtualizacoes()
     LEs = fase->getListaEntidades();
 
     //Atualiza todas as entidades da fase em execução
-    for (int i = 0; i < LEs->getLista().getTam(); i++) {
+    //for (int i = 0; i < LEs->getLista().getTam(); i++)
+    for (int i = 0; (*LEs) > i; i++) {
         Entidade* pAux = NULL;
-        
-        pAux = LEs->getLista().getItem(i);
-        
+
+        pAux = (*LEs)[i];
+        //pAux = LEs->getLista().getItem(i);
+
         pAux->mover(t);
-            
+
         pAux->atualizar(t);
 
         if (pAux->getDestruir()) {
             LEs->getLista().pop(pAux);
         }
-    
+
     }
+
+    //ListaEntidades* lista = 0; lista < LEs->getLista().getTam(); lista++){
+    //
+    //}
 
 }
 
@@ -369,7 +375,6 @@ void Jogo::desenhaEntidades()
         Entidade* pAux = NULL;
         
         ListaEntidades& lAux = *LEs;
-
         //Aponta para a elemento<entidades> na posição i
         pAux = lAux[i];
         

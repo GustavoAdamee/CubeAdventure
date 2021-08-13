@@ -9,6 +9,15 @@ AranhaChefao::AranhaChefao(Vector2f pos, Vector2f vel, const char* caminhoTextur
 
 AranhaChefao::~AranhaChefao()
 {
+	instancia = 0;
+}
+
+AranhaChefao* AranhaChefao::getInstancia(Vector2f pos, Vector2f vel, const char* caminhoTextura, Vector2f lim)
+{
+	if (instancia == 0) {
+		instancia = new AranhaChefao(pos, vel, caminhoTextura, lim);
+	}
+	return instancia;
 }
 
 void AranhaChefao::mover(double t)
@@ -55,19 +64,19 @@ Projetil* AranhaChefao::atirar()
 
 	if (delayAtirar > 1.5) {
 		
-		if (projetil == 0) {
+		if (projetil == 0) { //Projetil frente
 			projetilAux = new Projetil(Vector2f(posicao.x + 50, posicao.y + 70), Vector2f(-150, 0), "images/orbFogo.png", Vector2f(50, 50));
 			projetil = 1;
 		}
-		else if(projetil == 1){
+		else if(projetil == 1){ //Projetil diagonal frente
 			projetilAux = new Projetil(Vector2f(posicao.x + 50, posicao.y + 70), Vector2f(-150, -100), "images/orbFogo.png", Vector2f(50, 50));
 			projetil = 2;
 		}
 		else {
-			if (rand() % 3) {
+			if (rand() % 3) { // Projetil cima
 				projetilAux = new Projetil(Vector2f(posicao.x + 50, posicao.y + 70), Vector2f(0, -150), "images/orbFogo.png", Vector2f(50, 50));
 			}
-			else {
+			else { //Projetil diagonal atrás
 				projetilAux = new Projetil(Vector2f(posicao.x + 50, posicao.y + 70), Vector2f(50, -150), "images/orbFogo.png", Vector2f(50, 50));
 			}
 			projetil = 0;
@@ -100,3 +109,5 @@ void AranhaChefao::desenharVidas()
 
 	}
 }
+
+AranhaChefao* AranhaChefao::instancia = 0;
