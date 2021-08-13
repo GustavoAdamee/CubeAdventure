@@ -120,7 +120,6 @@ void GerenciadorGrafico::desenhaPontos(float pontuacao)
 
 	texto[0].setString("Pontos: ");
 	texto[1].setString(to_string(static_cast<int>(pontuacao)));
-
 	janela->draw(texto[0]);
 	janela->draw(texto[1]);
 

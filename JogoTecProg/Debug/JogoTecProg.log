@@ -1,21 +1,2 @@
-﻿  GerenciadorGrafico.cpp
-C:\Users\Gustavo\Desktop\CubeAdventure\JogoTecProg\GerenciadorGrafico.cpp(117,63): warning C4244: 'argumento': conversão de 'T' para 'T', possível perda de dados
-          with
-          [
-              T=unsigned int
-          ]
-          and
-          [
-              T=float
-          ]
-C:\Users\Gustavo\Desktop\CubeAdventure\JogoTecProg\GerenciadorGrafico.cpp(118,64): warning C4244: 'argumento': conversão de 'T' para 'T', possível perda de dados
-          with
-          [
-              T=unsigned int
-          ]
-          and
-          [
-              T=float
-          ]
-C:\Users\Gustavo\Desktop\CubeAdventure\JogoTecProg\GerenciadorGrafico.cpp(78): warning C4715: 'GerenciadorGrafico::carregarTextura': nem todos os caminhos de controle retornam um valor
+﻿  CadastradorJogadas.cpp
   JogoTecProg.vcxproj -> C:\Users\Gustavo\Desktop\CubeAdventure\Debug\JogoTecProg.exe

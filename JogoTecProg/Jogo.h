@@ -12,6 +12,7 @@
 #include"MenuJogadores.h"
 #include"MenuPause.h"
 #include"MenuFases.h"
+#include"CadastradorJogadas.h"
 #include<Windows.h>
 #include"GerenciadorGrafico.h"
 #include"GerenciadorEventos.h"
@@ -51,6 +52,11 @@ private:
 
 	//Pontuação de cada Jogada 
 	float pontuacao = 0;
+	bool initPontuacao = false;
+
+	//Cadastrador de pontuação
+	CadastradorJogadas cadastrarJogadas;
+
 
 public:
 
