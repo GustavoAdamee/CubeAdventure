@@ -57,9 +57,8 @@ void FaseCavernaChefao::criarInimigos()
 		listaEntidades->getLista().push(aranhaAux);
 	}
 
-
-	//Spawn do Chefao
-	aranhaChefao = new AranhaChefao(Vector2f(1100, 235), Vector2f(50, 0), "images/aranhaChefao.png", Vector2f(1000, 1110));
+	//Spawn do Chefao (singleton)
+	aranhaChefao = AranhaChefao::getInstancia(Vector2f(1100, 235), Vector2f(50, 0), "images/aranhaChefao.png", Vector2f(1000, 1110));
 	listaEntidades->getLista().push(aranhaChefao);
 }
 

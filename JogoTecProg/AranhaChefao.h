@@ -7,6 +7,7 @@ class AranhaChefao :
     public Inimigo, public Atirador
 {
 private:
+	static AranhaChefao* instancia;
 	
 	Vector2f tam = Vector2f(200, 130);
 	
@@ -16,10 +17,12 @@ private:
 
 	int projetil = 0;
 
+	AranhaChefao(Vector2f pos = { 0.0f, 0.0f }, Vector2f vel = { 0.0f, 0.0f }, const char* caminhoTextura = nullptr, Vector2f lim = { 0.0f, 0.0f });
+
 public:
 	
+	static AranhaChefao* getInstancia(Vector2f pos = { 0.0f, 0.0f }, Vector2f vel = { 0.0f, 0.0f }, const char* caminhoTextura = nullptr, Vector2f lim = { 0.0f, 0.0f });
 	
-	AranhaChefao(Vector2f pos = { 0.0f, 0.0f }, Vector2f vel = { 0.0f, 0.0f }, const char* caminhoTextura = nullptr, Vector2f lim = { 0.0f, 0.0f });
 	~AranhaChefao();
 
 	void mover(double t);
@@ -33,4 +36,7 @@ public:
 	void desenharVidas();
 
 };
+
+
+
 
