@@ -1,8 +1,8 @@
 #include "MenuFases.h"
 
-MenuFases::MenuFases(GerenciadorEventos& gE):
+MenuFases::MenuFases():
 	
-	Menu(gE, 4),
+	Menu(4),
 	TipoMenu(4)
 
 {

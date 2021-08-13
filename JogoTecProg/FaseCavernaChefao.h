@@ -9,7 +9,7 @@ class FaseCavernaChefao : public Fase
 {
 private:
 
-	AranhaChefao* aranhaChefao;
+	AranhaChefao* aranhaChefao = NULL;
 
 public:
 	FaseCavernaChefao(CuboCowboy* pJ1, CuboExplorador* pJ2, GerenciadorTiles& gTiles, const char* caminhoTile, const char* caminhoMapaTile, const char* caminhoBackground);

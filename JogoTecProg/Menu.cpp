@@ -1,9 +1,8 @@
 #include "Menu.h"
 
-Menu::Menu(GerenciadorEventos& gE, int n_itens) :
+Menu::Menu(int n_itens) :
 
 	Ente(),
-	gEv(&gE),
 	qnt_itens(n_itens),
 	indiceItem(0),
 	fonte(),
@@ -62,3 +61,14 @@ int Menu::getBotaoPressionado()
 {
 	return indiceItem;
 }
+
+void Menu::setGEventos(GerenciadorEventos* gEventos)
+{
+	gEv = gEventos;
+}
+
+void Menu::cadastrar(String nome, int pontos)
+{
+}
+
+GerenciadorEventos* Menu::gEv = 0;

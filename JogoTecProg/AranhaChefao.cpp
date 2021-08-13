@@ -9,16 +9,16 @@ AranhaChefao::AranhaChefao(Vector2f pos, Vector2f vel, const char* caminhoTextur
 
 AranhaChefao::~AranhaChefao()
 {
-	instancia = 0;
+	//instancia = 0;
 }
 
-AranhaChefao* AranhaChefao::getInstancia(Vector2f pos, Vector2f vel, const char* caminhoTextura, Vector2f lim)
+/*AranhaChefao* AranhaChefao::getInstancia(Vector2f pos, Vector2f vel, const char* caminhoTextura, Vector2f lim)
 {
 	if (instancia == 0) {
 		instancia = new AranhaChefao(pos, vel, caminhoTextura, lim);
 	}
 	return instancia;
-}
+}*/
 
 void AranhaChefao::mover(double t)
 {
@@ -119,4 +119,4 @@ float AranhaChefao::getPontos()
 	return 0.0f;
 }
 
-AranhaChefao* AranhaChefao::instancia = 0;
+//AranhaChefao* AranhaChefao::instancia = 0;

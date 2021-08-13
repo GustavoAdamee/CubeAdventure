@@ -1,7 +1,7 @@
 #include "MenuJogadores.h"
 
-MenuJogadores::MenuJogadores(GerenciadorEventos& gE):
-	Menu(gE, 3),
+MenuJogadores::MenuJogadores():
+	Menu(3),
 	tipoMenu(2)
 {
 	texto[0].setString("1 jogador");

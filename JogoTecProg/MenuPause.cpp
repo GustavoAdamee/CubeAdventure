@@ -1,8 +1,8 @@
 #include "MenuPause.h"
 #include <Windows.h>
 
-MenuPause::MenuPause(GerenciadorEventos& gE):
-	Menu(gE, 3),
+MenuPause::MenuPause():
+	Menu(3),
 	tipoMenu(3)
 {
 	

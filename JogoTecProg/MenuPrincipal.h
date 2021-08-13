@@ -11,7 +11,7 @@ private:
 
 public:
 	//Construtora e Destrutora
-	MenuPrincipal(GerenciadorEventos& gE);
+	MenuPrincipal();
 	~MenuPrincipal();
 	
 	//Retorna um int para qual menu esta sendo executado no momento

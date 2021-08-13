@@ -12,7 +12,7 @@ private:
 public:
 	
 	//Construtora e Destrutora
-	MenuFases(GerenciadorEventos& gE);
+	MenuFases();
 	~MenuFases();
 
 	//Retorna um int para qual menu esta sendo executado no momento

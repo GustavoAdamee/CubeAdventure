@@ -10,13 +10,18 @@ Jogo::Jogo():
 
 {
     Ente::setGGrafico(&gerenciadorGrafico);
+    Menu::setGEventos(&gerenciadorEventos);
+
+    ranking = new MenuRanking();
+
+    cadastrarJogadas.setGEv(&gerenciadorEventos);
     
     //Seta os gerenciadores
     gerenciadorEventos.setGGraf(gerenciadorGrafico);
     gerenciadorTiles.setGColisoes(&gerenciadorColisoes);
     gerenciadorTiles.setGGraf(&gerenciadorGrafico);
 
-    menu = new MenuPrincipal(gerenciadorEventos);
+    menu = new MenuPrincipal();
     indiceMenu = menu->executar();
     
     pJogador1 = new CuboCowboy(Vector2f(0, 0), Vector2f(0, 0), "images/cowboy.png");
@@ -66,8 +71,6 @@ void Jogo::executarJogo()
 
         //Display ma tela de tudo de foi setado nela
         gerenciadorGrafico.mostrar();
-
-        cout << pontuacao << endl;
     }
 }
 
@@ -98,16 +101,24 @@ void Jogo::gerenciarMenuPrincipal()
     }
     else {
         delete menu;
+        Menu::setGEventos(&gerenciadorEventos);
 
         if (indiceMenu == 0) { //Jogar
 
-            menu = new MenuJogadores(gerenciadorEventos);
+            menu = new MenuJogadores();
             indiceMenu = menu->executar();
             trocarMenu();
         }
         else if (indiceMenu == 1) { //Fases
 
-            menu = new MenuFases(gerenciadorEventos);
+            menu = new MenuFases();
+            indiceMenu = menu->executar();
+            trocarMenu();
+        }
+        else if (indiceMenu == 2) { //Ranking
+            //ranking->cadastrar(cadastrarJogadas.executar(pontuacao), pontuacao); //Cadastra pontuacao e a coloca no ranking
+            ranking->executar(); //Mostra o ranking
+            menu = new MenuPrincipal();
             indiceMenu = menu->executar();
             trocarMenu();
         }
@@ -131,7 +142,6 @@ void Jogo::gerenciarMenuJogadores(int numFase)
         
         if (numFase == 0 || numFase == 1) {
            
-            initPontuacao = true;
             pontuacao = 0;
 
             pJogador1->resetaVida();
@@ -172,7 +182,6 @@ void Jogo::gerenciarMenuJogadores(int numFase)
         
         if (numFase == 0 || numFase == 1) {
             
-            initPontuacao = true;
             pontuacao = 0;
 
             fase = new FaseGrama(pJogador1, pJogador2, gerenciadorTiles, "images/tilesGrama.png", "faseGrama.txt", "images/fundoGrama.png");
@@ -199,8 +208,9 @@ void Jogo::gerenciarMenuJogadores(int numFase)
     }
     else if (indiceMenu == 2) { //Voltar
         delete menu;
+        Menu::setGEventos(&gerenciadorEventos);
        
-        menu = new MenuPrincipal(gerenciadorEventos);
+        menu = new MenuPrincipal();
         indiceMenu = menu->executar();
         
         trocarMenu();
@@ -216,10 +226,11 @@ void Jogo::gerenciarMenuPause()
     else {
         
         delete menu;
+        Menu::setGEventos(&gerenciadorEventos);
         
         if (indiceMenu == 1) { //Menu principal
 
-            menu = new MenuPrincipal(gerenciadorEventos);
+            menu = new MenuPrincipal();
             indiceMenu = menu->executar();
             trocarMenu();
         }
@@ -234,10 +245,10 @@ void Jogo::gerenciarMenuFases()
 {
     
     delete menu;
+    Menu::setGEventos(&gerenciadorEventos);
     
-    menu = new MenuJogadores(gerenciadorEventos);
+    menu = new MenuJogadores();
     
-    initPontuacao = false;
 
     pJogador1->resetaVida();
 
@@ -276,7 +287,8 @@ void Jogo::verificaPause()
     if (evento == 1) {       //Esc durante o jogo (pause)
         relogio.pausar();
         delete menu;
-        menu = new MenuPause(gerenciadorEventos);
+        Menu::setGEventos(&gerenciadorEventos);
+        menu = new MenuPause();
         indiceMenu = menu->executar();
         trocarMenu();
         relogio.reiniciar();
@@ -357,10 +369,8 @@ void Jogo::gerarFase()
      
         delete fase;
         
-        /*fase = new FaseCaverna(pJogador1, pJogador2, gerenciadorTiles, "images/tilesCaverna.png", "faseCaverna.txt", "images/fundoCaverna.png");
-        LEs = fase->getListaEntidades();*/
-
-        cadastrarJogadas.desenhar();
+        fase = new FaseCaverna(pJogador1, pJogador2, gerenciadorTiles, "images/tilesCaverna.png", "faseCaverna.txt", "images/fundoCaverna.png");
+        LEs = fase->getListaEntidades();
      
     }
     //Passa de fase Caverna para a Caverna Chefao
@@ -370,6 +380,13 @@ void Jogo::gerarFase()
         fase = new FaseCavernaChefao(pJogador1, pJogador2, gerenciadorTiles, "images/tilesCaverna.png", "faseCavernaChefao.txt", "images/fundoCaverna.png");
         LEs = fase->getListaEntidades();
         
+    }
+    else {
+        ranking->cadastrar(cadastrarJogadas.executar(pontuacao), pontuacao); //Cadastra pontuacao e a coloca no ranking
+        ranking->executar(); //Mostra o ranking
+        menu = new MenuPrincipal();
+        indiceMenu = menu->executar();
+        trocarMenu();
     }
 
     gerenciadorColisoes.setListaEntidades(LEs);
@@ -390,9 +407,9 @@ void Jogo::gerenciaColisoes()
 void Jogo::desenhaEntidades()
 {
     
-    if (initPontuacao) {
-        gerenciadorGrafico.desenhaPontos(pontuacao);
-    }
+    
+    gerenciadorGrafico.desenhaPontos(pontuacao);
+    
    
     
     

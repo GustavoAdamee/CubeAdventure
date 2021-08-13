@@ -11,6 +11,11 @@ private:
 	Font fonte;
 	Text texto[5];
 
+	GerenciadorEventos* gEv;
+
+	int letra = 65;
+	int n_letra = 1;
+
 public:
 	
 	//Construtora e Destrutora
@@ -18,11 +23,11 @@ public:
 	~CadastradorJogadas();
 
 	//Executa o cadastro da pontuação do(a) "nome da pessoa"
-	void executar();
+	String executar(int pontos);
 
 	//Desenha na tela os textos
 	void desenhar();
 
-
+	void setGEv(GerenciadorEventos* gEventos);
 };
 

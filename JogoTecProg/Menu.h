@@ -4,7 +4,7 @@
 #include "GerenciadorGrafico.h"
 #include "GerenciadorEventos.h"
 
-#define MAX_ITENS 4
+#define MAX_ITENS 8
 
 class Menu:
 	public Ente
@@ -12,7 +12,7 @@ class Menu:
 protected:
 	
 	//Gerenciadores
-	GerenciadorEventos* gEv;
+	//GerenciadorEventos* gEv;
 
 	//indica a quantidade de "opções" de cada menu
 	//Indica o indice de cada "opção"	
@@ -22,10 +22,12 @@ protected:
 	//Parte "grafica" de cada menu
 	sf::Font fonte;
 	sf::Text texto[MAX_ITENS];
+
+	static GerenciadorEventos* gEv;
 	
 public:
 	//Construtora e Destrutora
-	Menu(GerenciadorEventos& gE, int n_itens);
+	Menu(int n_itens);
 	virtual ~Menu();
 
 	//Desenha os textos na tela
@@ -42,5 +44,8 @@ public:
 	virtual int getTipo() = 0;
 	virtual int executar() = 0;
 
+	static void setGEventos(GerenciadorEventos* gEventos);
+
+	virtual void cadastrar(String nome, int pontos);
 };
 

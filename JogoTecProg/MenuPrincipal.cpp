@@ -1,9 +1,9 @@
 #include "MenuPrincipal.h"
 #include <iostream>
 
-MenuPrincipal::MenuPrincipal(GerenciadorEventos& gE):
+MenuPrincipal::MenuPrincipal():
 	
-	Menu(gE, 4),
+	Menu(4),
 	tipoMenu(1)
 
 {
@@ -44,7 +44,8 @@ int MenuPrincipal::executar()
 			case 1:			//Fases
 				i = 1;
 				break;
-			case 2:			//Implementar ranking
+			case 2:	
+				i = 2;		//Implementar ranking
 				break;
 			case 3:
 				gGrafico->getJanela()->close();		//Sair

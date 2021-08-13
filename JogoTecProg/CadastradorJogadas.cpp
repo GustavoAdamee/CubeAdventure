@@ -34,7 +34,7 @@ CadastradorJogadas::CadastradorJogadas():
 	texto[1].setString("A");
 	texto[2].setString("A");
 	texto[3].setString("A");
-	texto[4].setString("2000 pontos");
+	//texto[4].setString("2000 pontos");
 
 }
 
@@ -42,39 +42,59 @@ CadastradorJogadas::~CadastradorJogadas()
 {
 }
 
-void CadastradorJogadas::executar()
+String CadastradorJogadas::executar(int pontos)
 {
+	texto[1].setString("A");
+	texto[2].setString("A");
+	texto[3].setString("A");
+	texto[4].setString(to_string(pontos) + " pontos");
 
 	gGrafico->limpar();
 	desenhar();
 	gGrafico->mostrar();
-	/*int i = -1;
+	int i = -1;
 	while (i == -1) {
 		int evento = gEv->verificaEvento();
 		switch (evento)
 		{
-		case 2:
-			switch (getBotaoPressionado())
+		case 2: //Enter pressionado
+			switch (n_letra)
 			{
-			case 0:
-				i = 0;
+			case 1: //Primeira letra
+				texto[n_letra++].setFillColor(sf::Color::White);
+				texto[n_letra].setFillColor(sf::Color::Yellow);
+				letra = 65;
 				break;
-			case 1:
+			case 2: //Segunda letra
+				texto[n_letra++].setFillColor(sf::Color::White);
+				texto[n_letra].setFillColor(sf::Color::Yellow);
+				letra = 65;
+				break;
+			case 3: //Terceira letra
 				i = 1;
-				break;
-			case 2:
-				i = 2;
-				break;
-			case 3:
-				i = 3;
+				texto[n_letra].setFillColor(sf::Color::White);
+				texto[1].setFillColor(sf::Color::Yellow);
+				n_letra = 1;
 				break;
 			}
 			break;
-		case 3:
-			moveCima();
+		case 3: //Seta cima (letra anterior)
+			if (letra == 65) { //A para Z
+				letra = 90;
+			}
+			else {
+				letra--;
+			}
+			texto[n_letra].setString(char(letra));
 			break;
-		case 4:
-			moveBaixo();
+		case 4: //Seta baixo (proxima letra)
+			if (letra == 90) { //Z para A
+				letra = 65;
+			}
+			else {
+				letra++;
+			}
+			texto[n_letra].setString(char(letra));
 			break;
 		default:
 			break;
@@ -83,21 +103,17 @@ void CadastradorJogadas::executar()
 		desenhar();
 		gGrafico->mostrar();
 	}
-	return i;*/
-
+	return (String(texto[1].getString() + texto[2].getString() + texto[3].getString()));
 }
 
 void CadastradorJogadas::desenhar()
 {
-	while (1)
-	{
-		gGrafico->limpar();
-
-
-		for (int i = 0; i < 5; i++) {
-			gGrafico->getJanela()->draw(texto[i]);
-		}
-
-		gGrafico->mostrar();
+	for (int i = 0; i < 5; i++) {
+		gGrafico->getJanela()->draw(texto[i]);
 	}
+}
+
+void CadastradorJogadas::setGEv(GerenciadorEventos* gEventos)
+{
+	gEv = gEventos;
 }
