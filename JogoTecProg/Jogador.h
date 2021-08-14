@@ -17,7 +17,7 @@ namespace Jogadores {
 
 		//Construtora e destrutora
 		Jogador(Vector2f pos = { 0.0f, 0.0f }, Vector2f vel = { 0.0f, 0.0f }, const char* caminhoTextura = nullptr);
-		~Jogador();
+		virtual ~Jogador();
 
 		//Move o jogador conforme seu movimento proprio
 		virtual void mover(double t) = 0;

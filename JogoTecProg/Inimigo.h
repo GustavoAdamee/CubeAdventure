@@ -12,7 +12,7 @@ namespace Inimigos {
 
         //Construtora e destrutora
         Inimigo(Vector2f pos = { 0.0f, 0.0f }, Vector2f vel = { 0.0f, 0.0f }, const char* caminhoTextura = nullptr, Vector2f lim = { 0.0f, 0.0f });
-        ~Inimigo();
+        virtual ~Inimigo();
 
         virtual void mover(double t) = 0 ;
 

@@ -12,7 +12,7 @@ public:
     
     //Construtora e destrutora
     Atirador();
-    ~Atirador();
+    virtual ~Atirador();
 
     //Retorna o projetil atirado quando possível
     virtual Projetil* atirar() = 0;

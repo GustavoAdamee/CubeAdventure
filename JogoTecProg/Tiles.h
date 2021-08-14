@@ -15,7 +15,7 @@ protected:
 public:
     
     Tiles(Vector2f pos = { 0.0f, 0.0f }, Vector2f vel = { 0.0f, 0.0f }, const char* caminhoTextura = nullptr, Vector2f lim = { 0.0f, 0.0f }, GerenciadorTiles* gTiles = nullptr);
-    ~Tiles();
+    virtual ~Tiles();
 
     //Deixar virtual e depois mandar para tile que for mover 
     virtual void mover(double t);
