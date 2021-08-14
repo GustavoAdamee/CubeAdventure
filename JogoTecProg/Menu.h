@@ -11,9 +11,6 @@ class Menu:
 {
 protected:
 	
-	//Gerenciadores
-	//GerenciadorEventos* gEv;
-
 	//indica a quantidade de "opções" de cada menu
 	//Indica o indice de cada "opção"	
 	int qnt_itens;
@@ -23,6 +20,7 @@ protected:
 	sf::Font fonte;
 	sf::Text texto[MAX_ITENS];
 
+	//Todos os menus possuem o mesmo gerenciador
 	static GerenciadorEventos* gEv;
 	
 public:

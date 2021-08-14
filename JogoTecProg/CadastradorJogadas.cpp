@@ -4,7 +4,8 @@ CadastradorJogadas::CadastradorJogadas():
 	
 	Ente(),
 	fonte(),
-	texto()
+	texto(),
+	gEv()
 
 {
 
@@ -34,7 +35,6 @@ CadastradorJogadas::CadastradorJogadas():
 	texto[1].setString("A");
 	texto[2].setString("A");
 	texto[3].setString("A");
-	//texto[4].setString("2000 pontos");
 
 }
 

@@ -41,7 +41,6 @@ private:
 	//Atributos para menu
 	Menu* menu;
 	int indiceMenu;
-
 	MenuRanking* ranking;
 
 	//Gerenciadores

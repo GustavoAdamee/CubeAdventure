@@ -4,6 +4,7 @@ class MenuRanking :
     public Menu
 {
 private:
+
     int n = 2;
 
 public:

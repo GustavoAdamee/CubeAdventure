@@ -115,7 +115,7 @@ void Jogo::gerenciarMenuPrincipal()
             trocarMenu();
         }
         else if (indiceMenu == 2) { //Ranking
-            //ranking->cadastrar(cadastrarJogadas.executar(pontuacao), pontuacao); //Cadastra pontuacao e a coloca no ranking
+            
             ranking->executar(); //Mostra o ranking
             menu = new MenuPrincipal();
             indiceMenu = menu->executar();
@@ -378,9 +378,12 @@ void Jogo::gerarFase()
         
     }
     else {
+        
         ranking->cadastrar(cadastrarJogadas.executar(pontuacao), pontuacao); //Cadastra pontuacao e a coloca no ranking
         ranking->executar(); //Mostra o ranking
+        
         menu = new MenuPrincipal();
+        
         indiceMenu = menu->executar();
         trocarMenu();
     }

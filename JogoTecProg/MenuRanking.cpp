@@ -5,11 +5,7 @@ MenuRanking::MenuRanking():
 {
 	texto[0].setString("Voltar");
 	texto[1].setString("Ranking");
-	//texto[2].setString("  AAA          2100 pontos");
-	//texto[3].setString("  MAT          2000 pontos");
-	//texto[4].setString("  GUS          -800 pontos");
-	//texto[5].setString(" ");
-	//texto[6].setString(" ");
+	
 
 	texto[0].setPosition(Vector2f(50, 50));
 	texto[1].setPosition(Vector2f(700, 50));
@@ -56,7 +52,9 @@ void MenuRanking::cadastrar(String nome, int pontos)
 	while (i != n) {
 		i++;
 	}
+	
 	texto[i].setString("  " + nome + "          " + to_string(pontos) + " pontos");
+	
 	if (n != 6) {
 		n++;
 	}
