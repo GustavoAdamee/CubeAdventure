@@ -31,7 +31,7 @@ public:
 	virtual ~Menu();
 
 	//Desenha os textos na tela
-	void desenhar();
+	virtual void desenhar();
 	
 	//Interações de cada menu seta cima e baixo
 	void moveCima();

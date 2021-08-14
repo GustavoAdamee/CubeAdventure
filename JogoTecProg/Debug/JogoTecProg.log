@@ -1,17 +1,2 @@
-﻿  Jogo.cpp
-C:\Users\Gustavo\Desktop\CubeAdventure\JogoTecProg\Jogo.cpp(344,25): warning C4244: 'argumento': conversão de 'double' para 'float', possível perda de dados
-C:\Users\Gustavo\Desktop\CubeAdventure\JogoTecProg\Jogo.cpp(381,54): warning C4244: 'argumento': conversão de 'float' para 'int', possível perda de dados
-C:\Users\Gustavo\Desktop\CubeAdventure\JogoTecProg\Jogo.cpp(381,66): warning C4244: 'argumento': conversão de 'float' para 'int', possível perda de dados
-  Menu.cpp
-C:\Users\Gustavo\Desktop\CubeAdventure\JogoTecProg\Menu.cpp(13,14): warning C4244: 'inicializando': conversão de 'T' para 'float', possível perda de dados
-          with
-          [
-              T=unsigned int
-          ]
-C:\Users\Gustavo\Desktop\CubeAdventure\JogoTecProg\Menu.cpp(14,15): warning C4244: 'inicializando': conversão de 'T' para 'float', possível perda de dados
-          with
-          [
-              T=unsigned int
-          ]
-  Gerando Código...
+﻿  CadastradorJogadas.cpp
   JogoTecProg.vcxproj -> C:\Users\Gustavo\Desktop\CubeAdventure\Debug\JogoTecProg.exe

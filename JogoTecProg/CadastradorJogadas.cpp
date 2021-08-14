@@ -108,6 +108,10 @@ String CadastradorJogadas::executar(int pontos)
 
 void CadastradorJogadas::desenhar()
 {
+	
+	gGrafico->setBackground("images/fundoCaverna.png");
+	gGrafico->desenhaBackground();
+	
 	for (int i = 0; i < 5; i++) {
 		gGrafico->getJanela()->draw(texto[i]);
 	}

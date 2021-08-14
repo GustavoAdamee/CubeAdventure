@@ -22,6 +22,15 @@ int MenuPause::getTipo()
 	return tipoMenu;
 }
 
+void MenuPause::desenhar()
+{
+
+	for (int i = 0; i < qnt_itens; i++) {
+		gGrafico->getJanela()->draw(texto[i]);
+	}
+
+}
+
 int MenuPause::executar()
 {
 	
