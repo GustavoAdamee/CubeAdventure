@@ -26,7 +26,7 @@ Jogo::Jogo():
     
     pJogador1 = new CuboCowboy(Vector2f(0, 0), Vector2f(0, 0), "images/cowboy.png");
     pJogador1->setGEventos(gerenciadorEventos);
-
+    
     trocarMenu();
 }
 

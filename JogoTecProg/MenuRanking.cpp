@@ -11,7 +11,7 @@ MenuRanking::MenuRanking():
 	//texto[5].setString(" ");
 	//texto[6].setString(" ");
 
-	texto[0].setPosition(Vector2f(50, 700));
+	texto[0].setPosition(Vector2f(50, 50));
 	texto[1].setPosition(Vector2f(700, 50));
 	texto[2].setPosition(Vector2f(600, 300));
 	texto[3].setPosition(Vector2f(600, 350));

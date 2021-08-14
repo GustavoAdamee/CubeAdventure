@@ -150,14 +150,14 @@
     <ClCompile Include="BlocoVoador.cpp">
       <Filter>Arquivos de Origem\Ente\Entidades</Filter>
     </ClCompile>
-    <ClCompile Include="Projetil.cpp">
-      <Filter>Arquivos de Origem</Filter>
-    </ClCompile>
     <ClCompile Include="CadastradorJogadas.cpp">
-      <Filter>Arquivos de Origem</Filter>
+      <Filter>Arquivos de Origem\Ente\Menu</Filter>
     </ClCompile>
     <ClCompile Include="MenuRanking.cpp">
-      <Filter>Arquivos de Origem</Filter>
+      <Filter>Arquivos de Origem\Ente\Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="Projetil.cpp">
+      <Filter>Arquivos de Origem\Ente\Entidades</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -263,14 +263,14 @@
     <ClInclude Include="BlocoVoador.h">
       <Filter>Arquivos de Cabeçalho\Ente\Entidades</Filter>
     </ClInclude>
-    <ClInclude Include="Projetil.h">
-      <Filter>Arquivos de Cabeçalho</Filter>
-    </ClInclude>
     <ClInclude Include="CadastradorJogadas.h">
-      <Filter>Arquivos de Cabeçalho</Filter>
+      <Filter>Arquivos de Cabeçalho\Ente\Menu</Filter>
     </ClInclude>
     <ClInclude Include="MenuRanking.h">
-      <Filter>Arquivos de Cabeçalho</Filter>
+      <Filter>Arquivos de Cabeçalho\Ente\Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="Projetil.h">
+      <Filter>Arquivos de Cabeçalho\Ente\Entidades</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

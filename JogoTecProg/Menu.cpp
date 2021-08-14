@@ -34,6 +34,10 @@ Menu::~Menu()
 
 void Menu::desenhar()
 {
+	
+	gGrafico->setBackground("images/fundoGrama.png");
+	gGrafico->desenhaBackground();
+	
 	for (int i = 0; i < qnt_itens; i++) {
 		gGrafico->getJanela()->draw(texto[i]);
 	}

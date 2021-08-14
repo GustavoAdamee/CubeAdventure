@@ -6,10 +6,12 @@ MenuFases::MenuFases():
 	TipoMenu(4)
 
 {
+	
 	texto[0].setString("Fase Grama");
 	texto[1].setString("Fase Caverna");
 	texto[2].setString("Fase Caverna Chefao");
 	texto[3].setString("Voltar");
+
 }
 
 MenuFases::~MenuFases()
