@@ -17,7 +17,7 @@ MenuPrincipal::MenuPrincipal():
 
 MenuPrincipal::~MenuPrincipal()
 {
-	gEv = nullptr;
+	
 }
 
 int MenuPrincipal::getTipo()

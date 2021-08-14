@@ -1,9 +1,4 @@
-﻿  FaseCavernaChefao.cpp
-  Jogo.cpp
-C:\Users\Mateus\Downloads\UTFPR\Tec Prog\CubeAdventure\JogoTecProg\Jogo.cpp(348,25): warning C4244: 'argumento': conversão de 'double' para 'float', possível perda de dados
-C:\Users\Mateus\Downloads\UTFPR\Tec Prog\CubeAdventure\JogoTecProg\Jogo.cpp(385,54): warning C4244: 'argumento': conversão de 'float' para 'int', possível perda de dados
-C:\Users\Mateus\Downloads\UTFPR\Tec Prog\CubeAdventure\JogoTecProg\Jogo.cpp(385,66): warning C4244: 'argumento': conversão de 'float' para 'int', possível perda de dados
-  main.cpp
-  AranhaChefao.cpp
+﻿  MenuJogadores.cpp
+  MenuPrincipal.cpp
   Gerando Código...
   JogoTecProg.vcxproj -> C:\Users\Mateus\Downloads\UTFPR\Tec Prog\CubeAdventure\Debug\JogoTecProg.exe

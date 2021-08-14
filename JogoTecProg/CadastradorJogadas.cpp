@@ -63,12 +63,12 @@ String CadastradorJogadas::executar(int pontos)
 			case 1: //Primeira letra
 				texto[n_letra++].setFillColor(sf::Color::White);
 				texto[n_letra].setFillColor(sf::Color::Yellow);
-				letra = 65;
+				letra = 'A';
 				break;
 			case 2: //Segunda letra
 				texto[n_letra++].setFillColor(sf::Color::White);
 				texto[n_letra].setFillColor(sf::Color::Yellow);
-				letra = 65;
+				letra = 'A';
 				break;
 			case 3: //Terceira letra
 				i = 1;
@@ -79,8 +79,8 @@ String CadastradorJogadas::executar(int pontos)
 			}
 			break;
 		case 3: //Seta cima (letra anterior)
-			if (letra == 65) { //A para Z
-				letra = 90;
+			if (letra == 'A') { //A para Z
+				letra = 'Z';
 			}
 			else {
 				letra--;
@@ -88,8 +88,8 @@ String CadastradorJogadas::executar(int pontos)
 			texto[n_letra].setString(char(letra));
 			break;
 		case 4: //Seta baixo (proxima letra)
-			if (letra == 90) { //Z para A
-				letra = 65;
+			if (letra == 'Z') { //Z para A
+				letra = 'A';
 			}
 			else {
 				letra++;

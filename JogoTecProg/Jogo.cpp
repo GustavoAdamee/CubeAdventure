@@ -101,7 +101,6 @@ void Jogo::gerenciarMenuPrincipal()
     }
     else {
         delete menu;
-        Menu::setGEventos(&gerenciadorEventos);
 
         if (indiceMenu == 0) { //Jogar
 
@@ -208,7 +207,7 @@ void Jogo::gerenciarMenuJogadores(int numFase)
     }
     else if (indiceMenu == 2) { //Voltar
         delete menu;
-        Menu::setGEventos(&gerenciadorEventos);
+        
        
         menu = new MenuPrincipal();
         indiceMenu = menu->executar();
@@ -226,7 +225,6 @@ void Jogo::gerenciarMenuPause()
     else {
         
         delete menu;
-        Menu::setGEventos(&gerenciadorEventos);
         
         if (indiceMenu == 1) { //Menu principal
 
@@ -245,7 +243,6 @@ void Jogo::gerenciarMenuFases()
 {
     
     delete menu;
-    Menu::setGEventos(&gerenciadorEventos);
     
     menu = new MenuJogadores();
     
@@ -287,7 +284,6 @@ void Jogo::verificaPause()
     if (evento == 1) {       //Esc durante o jogo (pause)
         relogio.pausar();
         delete menu;
-        Menu::setGEventos(&gerenciadorEventos);
         menu = new MenuPause();
         indiceMenu = menu->executar();
         trocarMenu();

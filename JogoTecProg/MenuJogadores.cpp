@@ -11,7 +11,7 @@ MenuJogadores::MenuJogadores():
 
 MenuJogadores::~MenuJogadores()
 {
-	gEv = nullptr;
+	
 }
 
 int MenuJogadores::getTipo()
