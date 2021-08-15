@@ -1123,7 +1123,7 @@
 											"top": 262,
 											"width": 407,
 											"height": 13,
-											"text": "+cadastrarJogadas: CadastradorJogadas",
+											"text": "-cadastrarJogadas: CadastradorJogadas",
 											"horizontalAlignment": 0
 										}
 									],
@@ -3804,7 +3804,7 @@
 											"top": 334,
 											"width": 1015,
 											"height": 13,
-											"text": "Listas"
+											"text": "Lista"
 										},
 										{
 											"_type": "LabelView",
@@ -3933,7 +3933,7 @@
 											"top": 632,
 											"width": 72.22998046875,
 											"height": 13,
-											"text": "(from Listas)"
+											"text": "(from Lista)"
 										},
 										{
 											"_type": "LabelView",
@@ -5194,7 +5194,7 @@
 											"top": 432,
 											"width": 72.22998046875,
 											"height": 13,
-											"text": "(from Listas)"
+											"text": "(from Lista)"
 										},
 										{
 											"_type": "LabelView",
@@ -27876,6 +27876,7 @@
 								"$ref": "AAAAAAF6oYkD3zCXnUQ="
 							},
 							"name": "cadastrarJogadas",
+							"visibility": "private",
 							"type": {
 								"$ref": "AAAAAAF7Rk6iaXIv0L0="
 							}
@@ -31761,7 +31762,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "Listas",
+					"name": "Lista",
 					"ownedElements": [
 						{
 							"_type": "UMLClass",
