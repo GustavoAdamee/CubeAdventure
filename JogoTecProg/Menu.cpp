@@ -9,21 +9,23 @@ Menu::Menu(int n_itens) :
 	texto()
 
 {
+	if (qnt_itens) {
+		float width = gGrafico->getJanela()->getSize().x;
+		float height = gGrafico->getJanela()->getSize().y;
 
-	float width = gGrafico->getJanela()->getSize().x;
-	float height = gGrafico->getJanela()->getSize().y;
+		if (!fonte.loadFromFile("Happy chicken.ttf")) {
+		}
 
-	if (!fonte.loadFromFile("Happy chicken.ttf")) {
+		for (int i = 0; i < qnt_itens; i++) {
+			texto[i].setFont(fonte);
+			texto[i].setScale(1, 1);
+			texto[i].setFillColor(sf::Color::White);
+			texto[i].setPosition(sf::Vector2f(50, height / (qnt_itens + 1) * (i + 1)));
+		}
+
+		texto[0].setFillColor(sf::Color::Yellow);
 	}
-
-	for (int i = 0; i < qnt_itens; i++) {
-		texto[i].setFont(fonte);
-		texto[i].setScale(1, 1);
-		texto[i].setFillColor(sf::Color::White);
-		texto[i].setPosition(sf::Vector2f(50, height / (qnt_itens + 1) * (i+1)));
-	}
-
-	texto[0].setFillColor(sf::Color::Yellow);
+	
 
 }
 

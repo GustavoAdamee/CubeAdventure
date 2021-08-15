@@ -44,10 +44,10 @@ private:
 	MenuRanking* ranking;
 
 	//Gerenciadores
-	GerenciadorGrafico gerenciadorGrafico;
-	GerenciadorEventos gerenciadorEventos;
-	GerenciadorColisoes gerenciadorColisoes;
-	GerenciadorTiles gerenciadorTiles;
+	GerenciadorGrafico* gerenciadorGrafico;
+	GerenciadorEventos* gerenciadorEventos;
+	GerenciadorColisoes* gerenciadorColisoes;
+	GerenciadorTiles* gerenciadorTiles;
 
 	//Passagem de tempo
 	Relogio relogio;

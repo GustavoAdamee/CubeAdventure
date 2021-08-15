@@ -6,15 +6,23 @@ GerenciadorEventos::GerenciadorEventos():
 {
 }
 
+GerenciadorEventos* GerenciadorEventos::getInstancia()
+{
+	if (instancia == 0) {
+		instancia = new GerenciadorEventos();
+	}
+	return instancia;
+}
+
 GerenciadorEventos::~GerenciadorEventos()
 {
 	gGraf = nullptr;
 
 }
 
-void GerenciadorEventos::setGGraf(GerenciadorGrafico& gGrafico)
+void GerenciadorEventos::setGGraf(GerenciadorGrafico* gGrafico)
 {
-	gGraf = &gGrafico;
+	gGraf = gGrafico;
 }
 
 int GerenciadorEventos::verificaEvento()
@@ -50,3 +58,4 @@ int GerenciadorEventos::verificaEvento()
 	return i;
 }
 
+GerenciadorEventos* GerenciadorEventos::instancia = 0;

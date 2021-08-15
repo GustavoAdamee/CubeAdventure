@@ -12,6 +12,14 @@ GerenciadorGrafico::GerenciadorGrafico():
 
 }
 
+GerenciadorGrafico* GerenciadorGrafico::getInstancia()
+{
+	if (instancia == 0) {
+		instancia = new GerenciadorGrafico();
+	}
+	return instancia;
+}
+
 GerenciadorGrafico::~GerenciadorGrafico()
 {
 	delete janela;
@@ -125,3 +133,5 @@ void GerenciadorGrafico::desenhaPontos(float pontuacao)
 
 
 }
+
+GerenciadorGrafico* GerenciadorGrafico::instancia = 0;

@@ -1,7 +1,7 @@
 #include "FaseCaverna.h"
 
-FaseCaverna::FaseCaverna(CuboCowboy* pJ1, CuboExplorador* pJ2, GerenciadorTiles& gTiles, const char* caminhoTile, const char* caminhoMapaTile, const char* caminhoBackground) :
-	Fase(pJ1, pJ2, gTiles, caminhoTile, caminhoMapaTile, caminhoBackground)
+FaseCaverna::FaseCaverna(CuboCowboy* pJ1, CuboExplorador* pJ2, const char* caminhoTile, const char* caminhoMapaTile, const char* caminhoBackground) :
+	Fase(pJ1, pJ2, caminhoTile, caminhoMapaTile, caminhoBackground)
 {
 	pJogador1->setPos(sf::Vector2f(50, 50));
 	

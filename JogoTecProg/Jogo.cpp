@@ -5,21 +5,27 @@ Jogo::Jogo():
     pJogador2(nullptr),
     LEs(nullptr),
     fase(nullptr),
-    gerenciadorColisoes(),
+    //gerenciadorColisoes(),
     relogio()
 
 {
-    Ente::setGGrafico(&gerenciadorGrafico);
-    Menu::setGEventos(&gerenciadorEventos);
+    gerenciadorColisoes = gerenciadorColisoes->getInstancia();
+    gerenciadorEventos = gerenciadorEventos->getInstancia();
+    gerenciadorGrafico = gerenciadorGrafico->getInstancia();
+    gerenciadorTiles = gerenciadorTiles->getInstancia();
+
+    Ente::setGGrafico(gerenciadorGrafico);
+    Menu::setGEventos(gerenciadorEventos);
+    Fase::setGTiles(gerenciadorTiles);
 
     ranking = new MenuRanking();
 
-    cadastrarJogadas.setGEv(&gerenciadorEventos);
+    cadastrarJogadas.setGEv(gerenciadorEventos);
     
     //Seta os gerenciadores
-    gerenciadorEventos.setGGraf(gerenciadorGrafico);
-    gerenciadorTiles.setGColisoes(&gerenciadorColisoes);
-    gerenciadorTiles.setGGraf(&gerenciadorGrafico);
+    gerenciadorEventos->setGGraf(gerenciadorGrafico);
+    gerenciadorTiles->setGColisoes(gerenciadorColisoes);
+    gerenciadorTiles->setGGraf(gerenciadorGrafico);
 
     menu = new MenuPrincipal();
     indiceMenu = menu->executar();
@@ -50,7 +56,7 @@ void Jogo::executarJogo()
     relogio.reiniciar();
     
     //Laço de execução do jogo
-    while(gerenciadorGrafico.janelaAberta())
+    while(gerenciadorGrafico->janelaAberta())
     {
 
         verificaPause();
@@ -60,7 +66,7 @@ void Jogo::executarJogo()
         verificaAtualizacoes();
 
         //Limpa a tela
-        gerenciadorGrafico.limpar(105, 105, 105); //Limpa tela na cor cinza
+        gerenciadorGrafico->limpar(105, 105, 105); //Limpa tela na cor cinza
 
         gerenciaColisoes();
 
@@ -70,7 +76,7 @@ void Jogo::executarJogo()
         desenhaEntidades();
 
         //Display ma tela de tudo de foi setado nela
-        gerenciadorGrafico.mostrar();
+        gerenciadorGrafico->mostrar();
     }
 }
 
@@ -136,8 +142,8 @@ void Jogo::gerenciarMenuJogadores(int numFase)
         
         
         delete fase;
-        gerenciadorTiles.limpaTiles();
-        gerenciadorColisoes.limparTiles();
+        gerenciadorTiles->limpaTiles();
+        gerenciadorColisoes->limparTiles();
         
         if (numFase == 0 || numFase == 1) {
            
@@ -148,24 +154,24 @@ void Jogo::gerenciarMenuJogadores(int numFase)
                 pJogador2->resetaVida();
             }
 
-            fase = new FaseGrama(pJogador1, pJogador2, gerenciadorTiles, "images/tilesGrama.png", "faseGrama.txt", "images/fundoGrama.png");
+            fase = new FaseGrama(pJogador1, pJogador2, "images/tilesGrama.png", "faseGrama.txt", "images/fundoGrama.png");
             LEs = fase->getListaEntidades();
             
         }
         else if (numFase == 2) {
          
-            fase = new FaseCaverna(pJogador1, pJogador2, gerenciadorTiles, "images/tilesCaverna.png","faseCaverna.txt", "images/fundoCaverna.png");
+            fase = new FaseCaverna(pJogador1, pJogador2, "images/tilesCaverna.png","faseCaverna.txt", "images/fundoCaverna.png");
             LEs = fase->getListaEntidades();
             
         }
         else {
            
-            fase = new FaseCavernaChefao(pJogador1, pJogador2, gerenciadorTiles, "images/tilesCaverna.png", "faseCavernaChefao.txt", "images/fundoCaverna.png");
+            fase = new FaseCavernaChefao(pJogador1, pJogador2, "images/tilesCaverna.png", "faseCavernaChefao.txt", "images/fundoCaverna.png");
             LEs = fase->getListaEntidades();
            
         }
 
-        gerenciadorColisoes.setListaEntidades(LEs);
+        gerenciadorColisoes->setListaEntidades(LEs);
         executarJogo();
 
     }
@@ -176,32 +182,32 @@ void Jogo::gerenciarMenuJogadores(int numFase)
         
         delete fase;
         
-        gerenciadorTiles.limpaTiles();
-        gerenciadorColisoes.limparTiles();
+        gerenciadorTiles->limpaTiles();
+        gerenciadorColisoes->limparTiles();
         
         if (numFase == 0 || numFase == 1) {
             
             pontuacao = 0;
 
-            fase = new FaseGrama(pJogador1, pJogador2, gerenciadorTiles, "images/tilesGrama.png", "faseGrama.txt", "images/fundoGrama.png");
+            fase = new FaseGrama(pJogador1, pJogador2, "images/tilesGrama.png", "faseGrama.txt", "images/fundoGrama.png");
             LEs = fase->getListaEntidades();
             
         }
         else if (numFase == 2) {
             
             
-            fase = new FaseCaverna(pJogador1, pJogador2, gerenciadorTiles, "images/tilesCaverna.png", "faseCaverna.txt", "images/fundoCaverna.png");
+            fase = new FaseCaverna(pJogador1, pJogador2, "images/tilesCaverna.png", "faseCaverna.txt", "images/fundoCaverna.png");
             LEs = fase->getListaEntidades();
             
         }
         else {
             
-            fase = new FaseCavernaChefao(pJogador1, pJogador2, gerenciadorTiles, "images/tilesCaverna.png", "faseCavernaChefao.txt", "images/fundoCaverna.png");
+            fase = new FaseCavernaChefao(pJogador1, pJogador2, "images/tilesCaverna.png", "faseCavernaChefao.txt", "images/fundoCaverna.png");
             LEs = fase->getListaEntidades();
             
         }
 
-        gerenciadorColisoes.setListaEntidades(LEs);
+        gerenciadorColisoes->setListaEntidades(LEs);
         executarJogo();
 
     }
@@ -243,9 +249,9 @@ void Jogo::gerenciarMenuFases()
 {
     
     delete menu;
-    
     menu = new MenuJogadores();
     
+    pontuacao = 0;
 
     pJogador1->resetaVida();
 
@@ -254,8 +260,7 @@ void Jogo::gerenciarMenuFases()
     }
     
     if (indiceMenu == 0) {              //Fase Grama
-        
-        
+
         indiceMenu = menu->executar();
         trocarMenu(true,1);
     }
@@ -279,7 +284,7 @@ void Jogo::gerenciarMenuFases()
 void Jogo::verificaPause()
 {
 
-    int evento = gerenciadorEventos.verificaEvento();
+    int evento = gerenciadorEventos->verificaEvento();
 
     if (evento == 1) {       //Esc durante o jogo (pause)
         relogio.pausar();
@@ -357,15 +362,15 @@ void Jogo::verificaAtualizacoes()
 void Jogo::gerarFase()
 {
    
-    gerenciadorTiles.limpaTiles();
-    gerenciadorColisoes.limparTiles();
+    gerenciadorTiles->limpaTiles();
+    gerenciadorColisoes->limparTiles();
     
     //Passa da fase grama para fase Caverna
     if (fase->getFaseAtual() == 1) {
      
         delete fase;
         
-        fase = new FaseCaverna(pJogador1, pJogador2, gerenciadorTiles, "images/tilesCaverna.png", "faseCaverna.txt", "images/fundoCaverna.png");
+        fase = new FaseCaverna(pJogador1, pJogador2, "images/tilesCaverna.png", "faseCaverna.txt", "images/fundoCaverna.png");
         LEs = fase->getListaEntidades();
      
     }
@@ -373,7 +378,7 @@ void Jogo::gerarFase()
     else if (fase->getFaseAtual() == 2) {
         delete fase;
         
-        fase = new FaseCavernaChefao(pJogador1, pJogador2, gerenciadorTiles, "images/tilesCaverna.png", "faseCavernaChefao.txt", "images/fundoCaverna.png");
+        fase = new FaseCavernaChefao(pJogador1, pJogador2, "images/tilesCaverna.png", "faseCavernaChefao.txt", "images/fundoCaverna.png");
         LEs = fase->getListaEntidades();
         
     }
@@ -388,17 +393,17 @@ void Jogo::gerarFase()
         trocarMenu();
     }
 
-    gerenciadorColisoes.setListaEntidades(LEs);
+    gerenciadorColisoes->setListaEntidades(LEs);
 
 }
 
 void Jogo::gerenciaColisoes()
 {
     
-    gerenciadorColisoes.VerificaColisoes(pJogador1);
+    gerenciadorColisoes->VerificaColisoes(pJogador1);
 
     if (pJogador2) {
-        gerenciadorColisoes.VerificaColisoes(pJogador2);
+        gerenciadorColisoes->VerificaColisoes(pJogador2);
     }
 
 }
@@ -407,7 +412,7 @@ void Jogo::desenhaEntidades()
 {
     
     
-    gerenciadorGrafico.desenhaPontos(pontuacao);
+    gerenciadorGrafico->desenhaPontos(pontuacao);
     
    
     
@@ -427,8 +432,8 @@ void Jogo::desenhaEntidades()
 
 void Jogo::reiniciaFase()
 {
-    gerenciadorTiles.limpaTiles();
-    gerenciadorColisoes.limparTiles();
+    gerenciadorTiles->limpaTiles();
+    gerenciadorColisoes->limparTiles();
 
  
         
@@ -445,22 +450,22 @@ void Jogo::reiniciaFase()
     if (fase->getFaseAtual() == 1) {
 
         delete fase;
-        fase = new FaseGrama(pJogador1, pJogador2, gerenciadorTiles, "images/tilesGrama.png", "faseGrama.txt", "images/fundoGrama.png");
+        fase = new FaseGrama(pJogador1, pJogador2, "images/tilesGrama.png", "faseGrama.txt", "images/fundoGrama.png");
         LEs = fase->getListaEntidades();
     }
     //Passa de fase Caverna para a Caverna Chefao
     else if (fase->getFaseAtual() == 2) {
         
         delete fase;
-        fase = new FaseCaverna(pJogador1, pJogador2, gerenciadorTiles, "images/tilesCaverna.png", "faseCaverna.txt", "images/fundoCaverna.png");
+        fase = new FaseCaverna(pJogador1, pJogador2, "images/tilesCaverna.png", "faseCaverna.txt", "images/fundoCaverna.png");
         LEs = fase->getListaEntidades();
     }
     else {
         
         delete fase;
-        fase = new FaseCavernaChefao(pJogador1, pJogador2, gerenciadorTiles, "images/tilesCaverna.png", "faseCavernaChefao.txt", "images/fundoCaverna.png");
+        fase = new FaseCavernaChefao(pJogador1, pJogador2, "images/tilesCaverna.png", "faseCavernaChefao.txt", "images/fundoCaverna.png");
         LEs = fase->getListaEntidades();
 
     }
-    gerenciadorColisoes.setListaEntidades(LEs);
+    gerenciadorColisoes->setListaEntidades(LEs);
 }

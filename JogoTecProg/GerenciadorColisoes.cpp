@@ -6,6 +6,14 @@ GerenciadorColisoes::GerenciadorColisoes():
 {
 }
 
+GerenciadorColisoes* GerenciadorColisoes::getInstancia()
+{
+	if (instancia == 0) {
+		instancia = new GerenciadorColisoes();
+	}
+	return instancia;
+}
+
 GerenciadorColisoes::~GerenciadorColisoes()
 {
 	gTiles = nullptr;
@@ -158,3 +166,4 @@ void GerenciadorColisoes::limparTiles()
 	vetorTiles.clear();
 }
 
+GerenciadorColisoes* GerenciadorColisoes::instancia = 0;

@@ -18,11 +18,18 @@ private:
 	
 	//Armazena todas as tiles da uma fase
 	vector < GerenciadorTiles::InfoTiles > vetorTiles;
-	
+
+	//Singleton
+	static GerenciadorColisoes* instancia;
+
+	//Construtora privada
+	GerenciadorColisoes();
+
 public:
 
-	//Construtora e Destrutora
-	GerenciadorColisoes();
+	static GerenciadorColisoes* getInstancia();
+
+	//Destrutora
 	~GerenciadorColisoes();
 
 	//Percorre laços verificando colisões com a entidade passado por parametro

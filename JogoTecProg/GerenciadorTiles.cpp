@@ -18,6 +18,14 @@ GerenciadorTiles::GerenciadorTiles():
 
 }
 
+GerenciadorTiles* GerenciadorTiles::getInstancia()
+{
+	if (instancia == 0) {
+		instancia = new GerenciadorTiles();
+	}
+	return instancia;
+}
+
 GerenciadorTiles::~GerenciadorTiles()
 {
 	gGraf = nullptr;
@@ -130,7 +138,7 @@ void GerenciadorTiles::limpaTiles()
 	vetorTiles.clear();
 }
 
-
+GerenciadorTiles* GerenciadorTiles::instancia = 0;
 
 
 

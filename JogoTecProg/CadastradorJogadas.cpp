@@ -2,7 +2,7 @@
 
 CadastradorJogadas::CadastradorJogadas():
 	
-	Ente(),
+	Menu(0),
 	fonte(),
 	texto(),
 	gEv()
@@ -120,4 +120,14 @@ void CadastradorJogadas::desenhar()
 void CadastradorJogadas::setGEv(GerenciadorEventos* gEventos)
 {
 	gEv = gEventos;
+}
+
+int CadastradorJogadas::getTipo()
+{
+	return 0;
+}
+
+int CadastradorJogadas::executar()
+{
+	return 0;
 }

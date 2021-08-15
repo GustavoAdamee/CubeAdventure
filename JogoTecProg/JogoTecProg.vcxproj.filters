@@ -132,7 +132,7 @@
     <ClCompile Include="Atirador.cpp">
       <Filter>Arquivos de Origem\Ente\Entidades</Filter>
     </ClCompile>
-    <ClCompile Include="AranhaChefao.cpp">
+    <ClCompile Include="Alien.cpp">
       <Filter>Arquivos de Origem\Ente\Entidades</Filter>
     </ClCompile>
     <ClCompile Include="GerenciadorColisoes.cpp">
@@ -242,7 +242,7 @@
     <ClInclude Include="BlocoGrama.h">
       <Filter>Arquivos de Cabeçalho\Ente\Entidades</Filter>
     </ClInclude>
-    <ClInclude Include="AranhaChefao.h">
+    <ClInclude Include="Alien.h">
       <Filter>Arquivos de Cabeçalho\Ente\Entidades</Filter>
     </ClInclude>
     <ClInclude Include="Atirador.h">

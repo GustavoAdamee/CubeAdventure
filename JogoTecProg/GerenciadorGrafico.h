@@ -23,9 +23,17 @@ private:
 	sf::Font fonte;
 	sf::Text texto[2];
 
-public:
-	//Construtora e Destrutora
+	//Singleton
+	static GerenciadorGrafico* instancia;
+
+	//Construtora privada
 	GerenciadorGrafico();
+
+public:
+
+	static GerenciadorGrafico* getInstancia();
+
+	//Destrutora
 	~GerenciadorGrafico();
 	
 	//Printa na tela as texturas

@@ -49,7 +49,7 @@ void Entidade::setVel(Vector2f vel)
 	v.x = vel.x;
 	v.y = vel.y;
 }
-void Entidade::setGEventos(GerenciadorEventos gE)
+void Entidade::setGEventos(GerenciadorEventos* gE)
 {
 	gEv = gE;
 	

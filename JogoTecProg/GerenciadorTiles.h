@@ -35,6 +35,12 @@ private:
     //Armazena as sprites das tiles para desenhá-las
     vector<Sprite> vetorTiles;
 
+    //Singleton
+    static GerenciadorTiles* instancia;
+
+    //Construtora privada
+    GerenciadorTiles();
+
 public:
     
     class InfoTiles
@@ -47,8 +53,9 @@ public:
 
     };
     
-    //Construtora e Destrutora
-    GerenciadorTiles();
+    GerenciadorTiles* getInstancia();
+
+    //Destrutora
     ~GerenciadorTiles();
 
     //Abre o arquivo .txt e inicializa os valores 

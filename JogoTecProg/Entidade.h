@@ -9,7 +9,7 @@ class Entidade:
 protected:
 
 	//Gerenciadores
-	GerenciadorEventos gEv;
+	GerenciadorEventos* gEv;
 	//GerenciadorGrafico* gGraf;
 
 	//Vetores responsaveis pelo posição e velocidade da entidade
@@ -46,7 +46,7 @@ public:
 	Vector2f getVel();
 
 	//Seta o gerenciador de Eventos
-	void setGEventos(GerenciadorEventos gE);
+	void setGEventos(GerenciadorEventos* gE);
 
 	//Retorna as dimensões da entidade
 	virtual Vector2f getTamEntidade() = 0;

@@ -1,10 +1,10 @@
 #pragma once
 
 #include "GerenciadorEventos.h"
-#include "Ente.h"
+#include "Menu.h"
 
 class CadastradorJogadas:
-	public Ente
+	public Menu
 {
 private:
 
@@ -29,5 +29,8 @@ public:
 	void desenhar();
 
 	void setGEv(GerenciadorEventos* gEventos);
+
+	int getTipo();
+	int executar();
 };
 

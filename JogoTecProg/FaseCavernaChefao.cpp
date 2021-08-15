@@ -1,7 +1,7 @@
 #include "FaseCavernaChefao.h"
 
-FaseCavernaChefao::FaseCavernaChefao(CuboCowboy* pJ1, CuboExplorador* pJ2, GerenciadorTiles& gTiles, const char* caminhoTile, const char* caminhoMapaTile, const char* caminhoBackground):
-	Fase(pJ1, pJ2, gTiles, caminhoTile, caminhoMapaTile, caminhoBackground)
+FaseCavernaChefao::FaseCavernaChefao(CuboCowboy* pJ1, CuboExplorador* pJ2, const char* caminhoTile, const char* caminhoMapaTile, const char* caminhoBackground):
+	Fase(pJ1, pJ2, caminhoTile, caminhoMapaTile, caminhoBackground)
 {
 	pJogador1->setPos(sf::Vector2f(60, 780));
 	
@@ -58,8 +58,8 @@ void FaseCavernaChefao::criarInimigos()
 	}
 
 	//Spawn do Chefao
-	aranhaChefao = new AranhaChefao(Vector2f(1100, 235), Vector2f(50, 0), "images/aranhaChefao.png", Vector2f(1000, 1110));
-	listaEntidades->getLista().push(aranhaChefao);
+	alienAux = new Alien(Vector2f(1100, 235), Vector2f(50, 0), "images/alien.png", Vector2f(1000, 1110));
+	listaEntidades->getLista().push(alienAux);
 }
 
 void FaseCavernaChefao::criarObstaculosDanosos()
@@ -127,10 +127,10 @@ void FaseCavernaChefao::criarObstaculos()
 
 void FaseCavernaChefao::criarProjeteis()
 {
-	if (aranhaChefao) {
+	if (alienAux) {
 		Projetil* pAux = nullptr;
 
-		pAux = aranhaChefao->atirar();
+		pAux = alienAux->atirar();
 
 		if (pAux) {
 
@@ -138,7 +138,7 @@ void FaseCavernaChefao::criarProjeteis()
 
 		}
 	}	
-	if (aranhaChefao->getDestruir()) {
+	if (alienAux->getDestruir()) {
 		passaFase = true;
 	}
 	

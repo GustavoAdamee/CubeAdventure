@@ -1,10 +1,8 @@
 #include "Fase.h"
 using namespace Fases;
 
-Fase::Fase(CuboCowboy* pJ1, CuboExplorador* pJ2, GerenciadorTiles& gTiles, const char* caminhoTile, const char* caminhoMapaTile, const char* caminhoBackground) :
-	
+Fase::Fase(CuboCowboy* pJ1, CuboExplorador* pJ2, const char* caminhoTile, const char* caminhoMapaTile, const char* caminhoBackground) :
 	Ente(),
-	gTiles(&gTiles),
 	pJogador1(pJ1),
 	pJogador2(nullptr),
 	listaEntidades(nullptr),
@@ -13,10 +11,10 @@ Fase::Fase(CuboCowboy* pJ1, CuboExplorador* pJ2, GerenciadorTiles& gTiles, const
 	passaFase(false)
 
 {
-	gTiles.setCaminhos(caminhoTile, caminhoMapaTile);
+	gTiles->setCaminhos(caminhoTile, caminhoMapaTile);
 	gGrafico->setBackground(caminhoBackground);
 	
-	gTiles.initTiles();
+	gTiles->initTiles();
 	
 	if(pJ2 != nullptr){
 		this->pJogador2 = pJ2;
@@ -127,3 +125,10 @@ void Fase::desenhar()
 		pJogador2->desenharVidas();
 	}*/
 }
+
+void Fases::Fase::setGTiles(GerenciadorTiles* gT)
+{
+	gTiles = gT;
+}
+
+GerenciadorTiles* Fase::gTiles = nullptr;

@@ -3,8 +3,8 @@ using namespace Jogadores;
 using namespace Fases;
 using namespace Inimigos;
 
-FaseGrama::FaseGrama(CuboCowboy* pJ1, CuboExplorador* pJ2, GerenciadorTiles& gTiles, const char* caminhoTile, const char* caminhoMapaTile, const char* caminhoBackground) :
-	Fase(pJ1, pJ2, gTiles, caminhoTile, caminhoMapaTile, caminhoBackground)
+FaseGrama::FaseGrama(CuboCowboy* pJ1, CuboExplorador* pJ2, const char* caminhoTile, const char* caminhoMapaTile, const char* caminhoBackground) :
+	Fase(pJ1, pJ2, caminhoTile, caminhoMapaTile, caminhoBackground)
 {
 	pJogador1->setPos(sf::Vector2f(130, 780));
 	
