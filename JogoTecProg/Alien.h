@@ -36,7 +36,7 @@ public:
 
 	void desenharVidas();
 
-	float getPontos();
+	const float getPontos() const;
 
 };
 

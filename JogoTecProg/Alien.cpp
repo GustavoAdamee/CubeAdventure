@@ -110,7 +110,8 @@ void Alien::desenharVidas()
 	}
 }
 
-float Alien::getPontos()
+
+const float Alien::getPontos() const
 {
 	if (destruir) {
 		return 500.0f;
@@ -118,5 +119,3 @@ float Alien::getPontos()
 	
 	return 0.0f;
 }
-
-//Alien* Alien::instancia = 0;
