@@ -15,7 +15,7 @@ public:
 	~MenuPause();
 	
 	//Retorna um int para qual menu esta sendo executado no momento
-	int getTipo();
+	const int getTipo() const;
 
 	//Desenha o menu sem background
 	void desenhar();

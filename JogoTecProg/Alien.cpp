@@ -9,16 +9,8 @@ Alien::Alien(Vector2f pos, Vector2f vel, const char* caminhoTextura, Vector2f li
 
 Alien::~Alien()
 {
-	//instancia = 0;
 }
 
-/*Alien* Alien::getInstancia(Vector2f pos, Vector2f vel, const char* caminhoTextura, Vector2f lim)
-{
-	if (instancia == 0) {
-		instancia = new Alien(pos, vel, caminhoTextura, lim);
-	}
-	return instancia;
-}*/
 
 void Alien::mover(double t)
 {
@@ -36,14 +28,14 @@ void Alien::mover(double t)
 }
 
 
-Vector2f Alien::getTamEntidade()
+const Vector2f Alien::getTamEntidade() const
 {
 	return tam;
 }
 
 int Alien::colidir(int lado)
 {
-	if (lado == 2 && delayVida > 1.5) {
+	if (lado == 2 && delayVida > 1.5) { //Colisao por cima apos o delay
 		vida--;
 		delayVida = 0;
 		if (vida == 0) {
@@ -51,7 +43,7 @@ int Alien::colidir(int lado)
 		}
 		return 0;
 	}
-	else if (lado == 0 || lado == 2) {
+	else if (lado == 0 || lado == 2) { //Sem colisao ou colisao por cima durante delay
 		return 0;
 	}
 	return 1;
@@ -113,7 +105,7 @@ void Alien::desenharVidas()
 
 const float Alien::getPontos() const
 {
-	if (destruir) {
+	if (destruir) { //Chefao neutralizado
 		return 500.0f;
 	}
 	

@@ -20,7 +20,7 @@ public:
 	Elemento<TL>* pUltimo;
 
 	//Retorna o tamaho da lista
-	int getTam();
+	const int getTam() const;
 
 	//Retorna um determinado item da lista
 	TL* getItem(int posicao);
@@ -55,7 +55,7 @@ inline Lista<TL>::~Lista()
 }
 
 template<class TL>
-inline int Lista<TL>::getTam()
+inline const int Lista<TL>::getTam() const
 {
 	return tam;
 }

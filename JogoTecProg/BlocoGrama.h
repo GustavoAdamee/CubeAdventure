@@ -12,7 +12,7 @@ public:
 	~BlocoGrama();
 
 	
-	Vector2f getTamEntidade();
+	const Vector2f getTamEntidade() const;
 
 };
 

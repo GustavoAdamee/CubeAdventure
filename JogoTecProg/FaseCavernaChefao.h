@@ -23,6 +23,6 @@ public:
 
 	void criarProjeteis();
 
-	int getFaseAtual();
+	const int getFaseAtual() const;
 };
 

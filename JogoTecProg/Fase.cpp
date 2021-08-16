@@ -61,7 +61,7 @@ void Fases::Fase::criarProjeteis()
 {
 }
 
-int Fase::getFaseAtual()
+const int Fase::getFaseAtual() const
 {
 	return 0;
 }
@@ -71,7 +71,7 @@ ListaEntidades* Fase::getListaEntidades()
 	return listaEntidades;
 }
 
-void Fase::setPassouFase(bool aux)
+void Fase::setPassouFase(const bool aux)
 {
 	passaFase = aux;
 }

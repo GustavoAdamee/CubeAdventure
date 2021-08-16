@@ -10,14 +10,13 @@ protected:
 
 	//Gerenciadores
 	GerenciadorEventos* gEv;
-	//GerenciadorGrafico* gGraf;
 
 	//Vetores responsaveis pelo posição e velocidade da entidade
 	Vector2f posicao;
 	Vector2f v;
 	Vector2f limite;
 	
-	//"Path" para a textura da entidade
+	//Caminho para a textura da entidade
 	const char* caminho;
 
 	static const float g;
@@ -42,24 +41,24 @@ public:
 	//Seta a Posição da Entidade
 	void setPos(const sf::Vector2f pos);
 
-	void setVel(Vector2f vel);
-	Vector2f getVel();
+	void setVel(const Vector2f vel);
+	const Vector2f getVel() const;
 
 	//Seta o gerenciador de Eventos
 	void setGEventos(GerenciadorEventos* gE);
 
 	//Retorna as dimensões da entidade
-	virtual Vector2f getTamEntidade() = 0;
+	const virtual Vector2f getTamEntidade() const = 0;
 
-	virtual void setChao(bool aux);
-	virtual bool getChao();
+	virtual void setChao(const bool aux);
+	const virtual bool getChao() const;
 
-	void setDestruir(bool aux);
-	bool getDestruir();
+	void setDestruir(const bool aux);
+	const bool getDestruir() const;
 
 	virtual int colidir(int lado) = 0;
 
 	virtual void desenharVidas();
 
-	virtual float getPontos();
+	const virtual float getPontos() const;
 };

@@ -19,7 +19,7 @@ MenuFases::~MenuFases()
 	
 }
 
-int MenuFases::getTipo()
+const int MenuFases::getTipo() const
 {
 	return TipoMenu;
 }

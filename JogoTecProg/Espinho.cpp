@@ -9,14 +9,14 @@ Espinho::~Espinho()
 {
 }
 
-Vector2f Espinho::getTamEntidade()
+const Vector2f Espinho::getTamEntidade() const
 {
 	return tam;
 }
 
 int Espinho::colidir(int lado)
 {
-	if (lado == 0) {
+	if (lado == 0) { //Sem colisao
 		return 0;
 	}
 	else {

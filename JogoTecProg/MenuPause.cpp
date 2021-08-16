@@ -17,7 +17,7 @@ MenuPause::~MenuPause()
 	
 }
 
-int MenuPause::getTipo()
+const int MenuPause::getTipo() const
 {
 	return tipoMenu;
 }

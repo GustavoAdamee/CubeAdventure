@@ -13,7 +13,7 @@ public:
 
     void mover(double t);
 
-    Vector2f getTamEntidade();
+    const Vector2f getTamEntidade() const;
 
     int colidir(int lado);
 };

@@ -19,7 +19,7 @@ void BlocoVoador::mover(double t)
 	}
 }
 
-Vector2f BlocoVoador::getTamEntidade()
+const Vector2f BlocoVoador::getTamEntidade() const
 {
 	return tam;
 }

@@ -14,7 +14,7 @@ MenuJogadores::~MenuJogadores()
 	
 }
 
-int MenuJogadores::getTipo()
+const int MenuJogadores::getTipo() const
 {
 	return tipoMenu;
 }

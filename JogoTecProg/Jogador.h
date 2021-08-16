@@ -22,20 +22,20 @@ namespace Jogadores {
 		//Move o jogador conforme seu movimento proprio
 		virtual void mover(double t) = 0;
 
-		virtual Vector2f getTamEntidade() = 0;
+		const virtual Vector2f getTamEntidade() const = 0;
 
-		void setChao(bool aux);
-		bool getChao();
+		void setChao(const bool aux);
+		const bool getChao() const;
 
 		int colidir(int lado);
 
 		void resetaVida();
 
-		int getVida();
+		const int getVida() const;
 
 		virtual void desenharVidas();
 
-		float getPontos();
+		const float getPontos() const;
 
 	};
 

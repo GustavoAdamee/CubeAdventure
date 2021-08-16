@@ -133,7 +133,7 @@ void FaseGrama::criarObstaculos()
 
 }
 
-int FaseGrama::getFaseAtual()
+const int FaseGrama::getFaseAtual() const
 {
 	return 1;
 }

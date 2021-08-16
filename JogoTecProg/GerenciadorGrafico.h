@@ -49,7 +49,7 @@ public:
 	bool carregarTextura(const string& caminho);
 	
 	//retorna a janela do programa
-	RenderWindow* getJanela() const;
+	RenderWindow* getJanela();
 	
 	//Informa true caso a janela estiver aberta
 	bool janelaAberta();

@@ -14,19 +14,19 @@ void Jogadores::Jogador::mover(double t)
 {
 }
 
-void Jogadores::Jogador::setChao(bool aux)
+void Jogadores::Jogador::setChao(const bool aux)
 {
     chao = aux;
 }
 
-bool Jogadores::Jogador::getChao()
+const bool Jogadores::Jogador::getChao() const
 {
     return chao;
 }
 
 int Jogadores::Jogador::colidir(int lado)
 {
-    if (lado == 1 && delay >= 1.3) {
+    if (lado == 1 && delay >= 1.3) { //Colisao danosa com inimigos
 
         vida--;
 
@@ -48,7 +48,7 @@ void Jogadores::Jogador::resetaVida()
     vida = 3;
 }
 
-int Jogadores::Jogador::getVida()
+const int Jogadores::Jogador::getVida() const
 {
     return vida;
 }
@@ -57,9 +57,9 @@ void Jogadores::Jogador::desenharVidas()
 {
 }
 
-float Jogadores::Jogador::getPontos()
+const float Jogadores::Jogador::getPontos() const
 {
-    if (destruir) {
+    if (destruir) { //Perde pontos ao perder todas as vidas
         return -450.0f;
     }
     

@@ -7,7 +7,6 @@ class Alien :
     public Inimigo, public Atirador
 {
 private:
-	//static Alien* instancia;
 	
 	Vector2f tam = Vector2f(200, 130);
 	
@@ -17,18 +16,14 @@ private:
 
 	int projetil = 0;
 
-	//Privar construtora
-
 public:
-	
-	//static Alien* getInstancia(Vector2f pos = { 0.0f, 0.0f }, Vector2f vel = { 0.0f, 0.0f }, const char* caminhoTextura = nullptr, Vector2f lim = { 0.0f, 0.0f });
 	
 	Alien(Vector2f pos = { 0.0f, 0.0f }, Vector2f vel = { 0.0f, 0.0f }, const char* caminhoTextura = nullptr, Vector2f lim = { 0.0f, 0.0f });
 	~Alien();
 
 	void mover(double t);
 
-	Vector2f getTamEntidade();
+	const Vector2f getTamEntidade() const;
 
 	int colidir(int lado);
 

@@ -40,11 +40,11 @@ void Entidade::setPos(const sf::Vector2f pos)
 {
 	posicao = pos;
 }
-Vector2f Entidade::getVel()
+const Vector2f Entidade::getVel() const
 {
 	return v;
 }
-void Entidade::setVel(Vector2f vel)
+void Entidade::setVel(const Vector2f vel)
 {
 	v.x = vel.x;
 	v.y = vel.y;
@@ -59,17 +59,17 @@ void Entidade::setChao(bool aux)
 {
 }
 
-bool Entidade::getChao()
+const bool Entidade::getChao() const
 {
 	return false;
 }
 
-void Entidade::setDestruir(bool aux)
+void Entidade::setDestruir(const bool aux)
 {
 	destruir = aux;
 }
 
-bool Entidade::getDestruir()
+const bool Entidade::getDestruir() const
 {
 	return destruir;
 }
@@ -78,7 +78,7 @@ void Entidade::desenharVidas()
 {
 }
 
-float Entidade::getPontos()
+const float Entidade::getPontos() const
 {
 	return 0.0f;
 }

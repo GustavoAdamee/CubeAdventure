@@ -52,15 +52,15 @@ void FaseCaverna::criarInimigos()
 	listaEntidades->getLista().push(aranhaAux);
 
 	//Inimigos aleatorios (66% de chance de spawn)
-	//if (rand() % 3 != 1) {
+	if (rand() % 3 != 1) {
 		aranhaAux = new Aranha(Vector2f(150, 605), Vector2f(-30, 0), "images/aranha.png", Vector2f(50, 180));
 		listaEntidades->getLista().push(aranhaAux);
-	//}
+	}
 
-	//if (rand() % 3 != 1) {
+	if (rand() % 3 != 1) {
 		aranhaAux = new Aranha(Vector2f(1450, 305), Vector2f(-20, 0), "images/aranha.png", Vector2f(1405, 1495));
 		listaEntidades->getLista().push(aranhaAux);
-	//}
+	}
 
 }
 
@@ -114,6 +114,7 @@ void FaseCaverna::criarObstaculosDanosos()
 
 void FaseCaverna::criarObstaculos()
 {
+	//Cria as plataformas da fase
 	Tiles* pTile = new BlocoCaverna({ 0,0 }, { 0,0 }, caminhoTile, { 0,0 }, gTiles);
 	for (int i = 0; i < 32; i++) {
 		for (int j = 0; j < 18; j++) {
@@ -124,7 +125,7 @@ void FaseCaverna::criarObstaculos()
 	}
 }
 
-int FaseCaverna::getFaseAtual()
+const int FaseCaverna::getFaseAtual() const
 {
 	return 2;
 }

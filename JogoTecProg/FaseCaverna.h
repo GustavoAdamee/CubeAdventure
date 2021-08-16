@@ -18,7 +18,7 @@ public:
 
 	void criarObstaculos();
 
-	int getFaseAtual();
+	const int getFaseAtual() const;
 
 };
 

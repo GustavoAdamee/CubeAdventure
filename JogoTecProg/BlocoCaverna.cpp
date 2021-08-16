@@ -10,7 +10,7 @@ BlocoCaverna::~BlocoCaverna()
 }
 
 
-Vector2f BlocoCaverna::getTamEntidade()
+const Vector2f BlocoCaverna::getTamEntidade() const
 {
 	return Vector2f();
 }

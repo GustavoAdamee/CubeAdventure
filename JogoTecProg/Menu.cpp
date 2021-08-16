@@ -63,12 +63,12 @@ void Menu::moveBaixo()
 	}
 }
 
-int Menu::getBotaoPressionado()
+const int Menu::getBotaoPressionado() const
 {
 	return indiceItem;
 }
 
-int Menu::getTipo()
+const int Menu::getTipo() const
 {
 	return 0;
 }

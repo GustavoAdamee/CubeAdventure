@@ -25,24 +25,24 @@ void CuboCowboy::mover(double t)
     }
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::W))
     {
-        //std::cout << chao << endl;
+        
         if (chao) {
             v.y = -500;
             chao = false;
         }  
     }
-    if (chao) {
+    if (chao) { //Zera a velocidade em y ao encostar no chao
         v.y = 0;
     }
     else {
-        v.y += g * t;
+        v.y += g * t; //Gravidade
     }
 
     delay += t;
 
 }
 
-Vector2f CuboCowboy::getTamEntidade()
+const Vector2f CuboCowboy::getTamEntidade() const
 {
     return tam;
 }

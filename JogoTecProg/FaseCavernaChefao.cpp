@@ -144,7 +144,7 @@ void FaseCavernaChefao::criarProjeteis()
 	
 }
 
-int FaseCavernaChefao::getFaseAtual()
+const int FaseCavernaChefao::getFaseAtual() const
 {
 	return 3;
 }

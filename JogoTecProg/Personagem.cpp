@@ -10,11 +10,11 @@ Personagem::~Personagem()
 }
 
 
-void Personagem::setChao(bool aux)
+void Personagem::setChao(const bool aux)
 {
 }
 
-bool Personagem::getChao()
+const bool Personagem::getChao() const
 {
 	return false;
 }
@@ -23,7 +23,7 @@ void Personagem::desenharVidas()
 {
 }
 
-float Personagem::getPontos()
+const float Personagem::getPontos() const
 {
 	return 0.0f;
 }

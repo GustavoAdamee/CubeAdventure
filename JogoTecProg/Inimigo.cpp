@@ -14,7 +14,7 @@ void Inimigos::Inimigo::desenharVidas()
 {
 }
 
-float Inimigos::Inimigo::getPontos()
+const float Inimigos::Inimigo::getPontos() const
 {
 	return 0.0f;
 }

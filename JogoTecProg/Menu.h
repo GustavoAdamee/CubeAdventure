@@ -36,10 +36,10 @@ public:
 	void moveBaixo();
 
 	//Retorna o indice de cada "opção"
-	int getBotaoPressionado();
+	const int getBotaoPressionado() const;
 
 	//Virtuais para retorna qual menu esta sendo executado e para executá-lo
-	virtual int getTipo();
+	const virtual int getTipo() const;
 	virtual int executar();
 
 	static void setGEventos(GerenciadorEventos* gEventos);

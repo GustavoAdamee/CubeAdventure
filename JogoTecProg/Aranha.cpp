@@ -19,18 +19,18 @@ void Aranha::mover(double t) //em X
 	}
 }
 
-Vector2f Aranha::getTamEntidade()
+const Vector2f Aranha::getTamEntidade() const
 {
 	return tam;
 }
 
 int Aranha::colidir(int lado)
 {
-	if (lado == 2) {
+	if (lado == 2) { //Colisao por cima
 		destruir = true;
 		return 0;
 	}
-	else if (lado == 0) {
+	else if (lado == 0) { //Nao colidiu
 		return 0;
 	}
 	else {
@@ -38,7 +38,7 @@ int Aranha::colidir(int lado)
 	}
 }
 
-float Aranha::getPontos()
+const float Aranha::getPontos() const
 {
 	if (destruir) {
 		return 50.0f;

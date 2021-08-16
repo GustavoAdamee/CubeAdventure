@@ -126,6 +126,9 @@ void Jogo::gerenciarMenuPrincipal()
             indiceMenu = menu->executar();
             trocarMenu();
         }
+        else {
+            gerenciadorGrafico->getJanela()->close();
+        }
     }
     
 }

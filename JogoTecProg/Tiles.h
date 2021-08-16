@@ -22,7 +22,7 @@ public:
 
     void initTile(int i, int j);
 
-    virtual Vector2f getTamEntidade() = 0;
+    const virtual Vector2f getTamEntidade() const = 0;
 
     virtual int colidir(int lado);
 };

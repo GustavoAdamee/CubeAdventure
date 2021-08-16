@@ -11,7 +11,7 @@ public:
     MenuRanking();
     ~MenuRanking();
 
-    int getTipo();
+    const int getTipo() const;
 
     void desenhar();
 

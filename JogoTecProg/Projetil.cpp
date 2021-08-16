@@ -19,11 +19,9 @@ void Projetil::mover(double t)
 	else if (posicao.y < limite.y) {
 		destruir = true;
 	}
-
-	//cout << "posicao" << posicao.x << endl;
 }
 
-Vector2f Projetil::getTamEntidade()
+const Vector2f Projetil::getTamEntidade() const
 {
 	return tam;
 }

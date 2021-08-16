@@ -20,7 +20,7 @@ MenuPrincipal::~MenuPrincipal()
 	
 }
 
-int MenuPrincipal::getTipo()
+const int MenuPrincipal::getTipo() const
 {
 	return tipoMenu;
 }

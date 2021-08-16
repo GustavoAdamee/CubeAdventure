@@ -29,17 +29,17 @@ void CuboExplorador::mover(double t)
             chao = false;
         }
     }
-    if (chao) {
+    if (chao) { //Zera velocidade em y ao encostar no chao
         v.y = 0;
     }
     else {
-        v.y += g * t;
+        v.y += g * t; //Gravidade
     }
 
     delay += t;
 }
 
-Vector2f CuboExplorador::getTamEntidade()
+const Vector2f CuboExplorador::getTamEntidade() const
 {
     return tam;
 }

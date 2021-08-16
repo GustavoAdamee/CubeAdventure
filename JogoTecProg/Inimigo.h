@@ -16,13 +16,13 @@ namespace Inimigos {
 
         virtual void mover(double t) = 0 ;
 
-        virtual Vector2f getTamEntidade() = 0;
+        const virtual Vector2f getTamEntidade() const = 0;
 
         virtual int colidir(int lado) = 0;
 
         virtual void desenharVidas();
 
-        virtual float getPontos();
+        const virtual float getPontos() const;
     };
 
 }

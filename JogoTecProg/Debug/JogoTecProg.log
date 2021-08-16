@@ -1,25 +1,28 @@
 ﻿  Fase.cpp
-  FaseCaverna.cpp
-  FaseCavernaChefao.cpp
-  FaseGrama.cpp
   GerenciadorColisoes.cpp
   GerenciadorTiles.cpp
-C:\Users\Gustavo\Desktop\CubeAdventure\JogoTecProg\GerenciadorTiles.cpp(86,29): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
-C:\Users\Gustavo\Desktop\CubeAdventure\JogoTecProg\GerenciadorTiles.cpp(86,21): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
-C:\Users\Gustavo\Desktop\CubeAdventure\JogoTecProg\GerenciadorTiles.cpp(91,35): warning C4244: 'argumento': conversão de 'int' para 'T', possível perda de dados
+C:\Users\Mateus\Downloads\UTFPR\Tec Prog\CubeAdventure\JogoTecProg\GerenciadorTiles.cpp(86,29): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
+C:\Users\Mateus\Downloads\UTFPR\Tec Prog\CubeAdventure\JogoTecProg\GerenciadorTiles.cpp(86,21): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
+C:\Users\Mateus\Downloads\UTFPR\Tec Prog\CubeAdventure\JogoTecProg\GerenciadorTiles.cpp(91,35): warning C4244: 'argumento': conversão de 'int' para 'T', possível perda de dados
           with
           [
               T=float
           ]
-C:\Users\Gustavo\Desktop\CubeAdventure\JogoTecProg\GerenciadorTiles.cpp(91,27): warning C4244: 'argumento': conversão de 'int' para 'T', possível perda de dados
+C:\Users\Mateus\Downloads\UTFPR\Tec Prog\CubeAdventure\JogoTecProg\GerenciadorTiles.cpp(91,27): warning C4244: 'argumento': conversão de 'int' para 'T', possível perda de dados
           with
           [
               T=float
           ]
+  FaseGrama.cpp
+  FaseCaverna.cpp
+  FaseCavernaChefao.cpp
   Jogo.cpp
-C:\Users\Gustavo\Desktop\CubeAdventure\JogoTecProg\Jogo.cpp(357,25): warning C4244: 'argumento': conversão de 'double' para 'float', possível perda de dados
-C:\Users\Gustavo\Desktop\CubeAdventure\JogoTecProg\Jogo.cpp(395,54): warning C4244: 'argumento': conversão de 'float' para 'int', possível perda de dados
-C:\Users\Gustavo\Desktop\CubeAdventure\JogoTecProg\Jogo.cpp(395,66): warning C4244: 'argumento': conversão de 'float' para 'int', possível perda de dados
+C:\Users\Mateus\Downloads\UTFPR\Tec Prog\CubeAdventure\JogoTecProg\Jogo.cpp(357,25): warning C4244: 'argumento': conversão de 'double' para 'float', possível perda de dados
+C:\Users\Mateus\Downloads\UTFPR\Tec Prog\CubeAdventure\JogoTecProg\Jogo.cpp(395,54): warning C4244: 'argumento': conversão de 'float' para 'int', possível perda de dados
+C:\Users\Mateus\Downloads\UTFPR\Tec Prog\CubeAdventure\JogoTecProg\Jogo.cpp(395,66): warning C4244: 'argumento': conversão de 'float' para 'int', possível perda de dados
+  ListaEntidades.cpp
   main.cpp
+  Tiles.cpp
   Gerando Código...
-  JogoTecProg.vcxproj -> C:\Users\Gustavo\Desktop\CubeAdventure\Debug\JogoTecProg.exe
+  LINK : C:\Users\Mateus\Downloads\UTFPR\Tec Prog\CubeAdventure\Debug\JogoTecProg.exe não encontrado ou não compilado pelo o último link incremental; executando link completo
+  JogoTecProg.vcxproj -> C:\Users\Mateus\Downloads\UTFPR\Tec Prog\CubeAdventure\Debug\JogoTecProg.exe

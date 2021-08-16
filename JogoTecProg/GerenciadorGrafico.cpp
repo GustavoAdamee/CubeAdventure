@@ -85,7 +85,7 @@ bool GerenciadorGrafico::carregarTextura(const string& caminho)
 	}
 }
 
-RenderWindow* GerenciadorGrafico::getJanela() const
+RenderWindow* GerenciadorGrafico::getJanela()
 {
 	return janela;
 }

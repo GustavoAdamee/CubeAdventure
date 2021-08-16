@@ -20,7 +20,7 @@ MenuRanking::~MenuRanking()
 {
 }
 
-int MenuRanking::getTipo()
+const int MenuRanking::getTipo() const
 {
 	return 0;
 }

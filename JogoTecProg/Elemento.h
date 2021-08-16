@@ -26,7 +26,6 @@ public:
 	void setItem(TE* pI);
 	TE* getItem();
 
-	//void operator ++(int);
 };
 
 
@@ -60,7 +59,7 @@ inline void Elemento<TE>::setAnte(Elemento<TE>* pAnte)
 }
 
 template<class TE>
-inline Elemento<TE>* Elemento<TE>::getAnte()
+inline  Elemento<TE>* Elemento<TE>::getAnte()
 {
 	return pAnte;
 }
@@ -83,11 +82,5 @@ inline TE* Elemento<TE>::getItem()
 	return pItem;
 }
 
-//template<class TE>
-//inline void Elemento<TE>::operator++(int)
-//{
-//
-//	
-//
-//}
+
 

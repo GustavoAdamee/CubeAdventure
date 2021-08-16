@@ -32,7 +32,7 @@ namespace Fases {
 		//Gerenciadores
 		static GerenciadorTiles* gTiles;
 
-		//"Paths" dos arquivos para desenhar o mapa da fase
+		//Caminho dos arquivos para desenhar o mapa da fase
 		const char* caminhoTile;
 		const char* caminhoMapaTile;
 
@@ -54,13 +54,13 @@ namespace Fases {
 		virtual void criarProjeteis();
 		
 		//Retorna a fase atual
-		virtual int getFaseAtual() = 0;
+		const virtual int getFaseAtual() const = 0;
 
 		//Retorna a lista de entidades
 		ListaEntidades* getListaEntidades();
 
 		//Funções para caso a fase tenha sido concluida
-		void setPassouFase(bool aux);
+		void setPassouFase(const bool aux);
 		bool passouFase();
 		void verificaFase();
 

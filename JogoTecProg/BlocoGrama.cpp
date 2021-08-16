@@ -10,7 +10,7 @@ BlocoGrama::~BlocoGrama()
 {
 }
 
-Vector2f BlocoGrama::getTamEntidade()
+const Vector2f BlocoGrama::getTamEntidade() const
 {
 	return Vector2f();
 }
