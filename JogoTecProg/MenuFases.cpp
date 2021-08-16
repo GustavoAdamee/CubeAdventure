@@ -29,6 +29,7 @@ int MenuFases::executar()
 	gGrafico->limpar();
 	desenhar();
 	gGrafico->mostrar();
+	
 	int i = -1;
 	while (i == -1) {
 		int evento = gEv->verificaEvento();
@@ -60,6 +61,7 @@ int MenuFases::executar()
 		default:
 			break;
 		}
+		
 		gGrafico->limpar();
 		desenhar();
 		gGrafico->mostrar();

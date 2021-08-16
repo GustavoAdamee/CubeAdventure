@@ -2,8 +2,6 @@
 #include <SFML/Graphics.hpp>
 #include "GerenciadorGrafico.h"
 
-class Jogador1;
-class Jogador2;
 
 class GerenciadorEventos
 {

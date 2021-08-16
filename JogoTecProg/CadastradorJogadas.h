@@ -8,11 +8,7 @@ class CadastradorJogadas:
 {
 private:
 
-	Font fonte;
-	Text texto[5];
-
-	GerenciadorEventos* gEv;
-
+	//Atributos responsáveis por gerenciar as letras "interagíveis" ao salvar uma jogada
 	int letra = 65;
 	int n_letra = 1;
 
@@ -28,9 +24,5 @@ public:
 	//Desenha na tela os textos
 	void desenhar();
 
-	void setGEv(GerenciadorEventos* gEventos);
-
-	int getTipo();
-	int executar();
 };
 

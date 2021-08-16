@@ -13,6 +13,7 @@
 #include"BlocoVoador.h"
 #include"GerenciadorGrafico.h"
 #include"GerenciadorTiles.h"
+
 using namespace Jogadores;
 
 namespace Fases {
@@ -66,6 +67,7 @@ namespace Fases {
 		//Seta o mapa na tela
 		void desenhar()final;
 
+		//Seta um gerenciador de tiles para todas as fases
 		static void setGTiles(GerenciadorTiles* gT);
 
 	};

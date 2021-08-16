@@ -13,6 +13,8 @@ public:
 
     int getTipo();
 
+    void desenhar();
+
     int executar();
 
     void cadastrar(String nome, int pontos);

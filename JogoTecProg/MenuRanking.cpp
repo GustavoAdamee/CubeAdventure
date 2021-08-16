@@ -25,6 +25,18 @@ int MenuRanking::getTipo()
 	return 0;
 }
 
+void MenuRanking::desenhar()
+{
+
+	gGrafico->setBackground("images/fundoGrama.png");
+	gGrafico->desenhaBackground();
+
+	for (int i = 0; i < qnt_itens; i++) {
+		gGrafico->getJanela()->draw(texto[i]);
+	}
+
+}
+
 int MenuRanking::executar()
 {
 	gGrafico->limpar();

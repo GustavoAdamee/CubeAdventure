@@ -20,7 +20,6 @@ Jogo::Jogo():
 
     ranking = new MenuRanking();
 
-    cadastrarJogadas.setGEv(gerenciadorEventos);
     
     //Seta os gerenciadores
     gerenciadorEventos->setGGraf(gerenciadorGrafico);
@@ -249,7 +248,7 @@ void Jogo::gerenciarMenuFases()
 {
     
     delete menu;
-    menu = new MenuJogadores();
+    
     
     pontuacao = 0;
 
@@ -261,20 +260,29 @@ void Jogo::gerenciarMenuFases()
     
     if (indiceMenu == 0) {              //Fase Grama
 
+        menu = new MenuJogadores();
+
         indiceMenu = menu->executar();
         trocarMenu(true,1);
+
     }
     else if (indiceMenu == 1) {         //Fase Caverna
+        
+        menu = new MenuJogadores();
         
         indiceMenu = menu->executar();
         trocarMenu(true,2);
     }   
     else if (indiceMenu == 2) {         //Fase Caverna Chefao
          
+        menu = new MenuJogadores();
+        
         indiceMenu = menu->executar();
         trocarMenu(true, 3);
     }
     else if (indiceMenu == 3) {         //Voltar
+        
+        menu = new MenuPrincipal();
         
         indiceMenu = menu->executar();
         trocarMenu();

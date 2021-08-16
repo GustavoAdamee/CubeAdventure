@@ -1,8 +1,6 @@
 #pragma once
-#include <SFML/Graphics.hpp>
 
 #include"CuboCowboy.h"
-
 #include"CuboExplorador.h"
 #include"ListaEntidades.h"
 #include"FaseGrama.h"
@@ -93,6 +91,7 @@ public:
 	//Percorre a lista de entidades desenhando-as
 	void desenhaEntidades();
 
+	//Reseta a fase executada 
 	void reiniciaFase();
 };
 

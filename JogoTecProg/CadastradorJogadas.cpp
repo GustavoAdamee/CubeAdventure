@@ -2,10 +2,7 @@
 
 CadastradorJogadas::CadastradorJogadas():
 	
-	Menu(0),
-	fonte(),
-	texto(),
-	gEv()
+	Menu(0)
 
 {
 
@@ -115,19 +112,4 @@ void CadastradorJogadas::desenhar()
 	for (int i = 0; i < 5; i++) {
 		gGrafico->getJanela()->draw(texto[i]);
 	}
-}
-
-void CadastradorJogadas::setGEv(GerenciadorEventos* gEventos)
-{
-	gEv = gEventos;
-}
-
-int CadastradorJogadas::getTipo()
-{
-	return 0;
-}
-
-int CadastradorJogadas::executar()
-{
-	return 0;
 }

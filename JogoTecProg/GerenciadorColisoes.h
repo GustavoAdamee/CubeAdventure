@@ -41,7 +41,10 @@ public:
 	void setListaEntidades(ListaEntidades* listaEnt);
 	void setGerenciadorTiles(GerenciadorTiles* gTiles);
 
+	//Adiciona a tile  a um vector
 	void adicionarTile(GerenciadorTiles::InfoTiles aux);
+	
+	//Clear nas tiles do vector
 	void limparTiles();
 };
 

@@ -70,12 +70,17 @@ public:
     //Percorre o vetor de sprites desenhando as tiles
     void desenhaListaTiles();
 
+    //Retorna um vector com as sprites das tiles
     vector<Sprite>* getVetorTiles();
 
+    //Seta gerenciadores
     void setGColisoes(GerenciadorColisoes* gCol);
     void setGGraf(GerenciadorGrafico* gG);
 
+   //Seta as "paths"
     void setCaminhos(const char* caminhoTile, const char* caminhoMapaTile);
+    
+    //Clear no vector da stl
     void limpaTiles();
 };
 

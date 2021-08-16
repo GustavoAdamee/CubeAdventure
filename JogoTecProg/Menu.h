@@ -39,8 +39,8 @@ public:
 	int getBotaoPressionado();
 
 	//Virtuais para retorna qual menu esta sendo executado e para executá-lo
-	virtual int getTipo() = 0;
-	virtual int executar() = 0;
+	virtual int getTipo();
+	virtual int executar();
 
 	static void setGEventos(GerenciadorEventos* gEventos);
 

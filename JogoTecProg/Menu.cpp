@@ -37,7 +37,7 @@ Menu::~Menu()
 void Menu::desenhar()
 {
 	
-	gGrafico->setBackground("images/fundoGrama.png");
+	gGrafico->setBackground("images/backGround.png");
 	gGrafico->desenhaBackground();
 	
 	for (int i = 0; i < qnt_itens; i++) {
@@ -66,6 +66,16 @@ void Menu::moveBaixo()
 int Menu::getBotaoPressionado()
 {
 	return indiceItem;
+}
+
+int Menu::getTipo()
+{
+	return 0;
+}
+
+int Menu::executar()
+{
+	return 0;
 }
 
 void Menu::setGEventos(GerenciadorEventos* gEventos)
