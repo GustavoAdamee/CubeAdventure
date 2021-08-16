@@ -18,7 +18,7 @@ void Inseto::mover(double t)
 		v.y = 0;
 	}
 	else if (posicao.y < chao) { //Gravidade
-		v.y += g * t;
+		v.y += g * (float)t;
 	}
 	if ((chao == posicao.y) && (rand() % 1000 == 0)) { //Pulo com 0.1% de chance por loop
 		v.y = -350;

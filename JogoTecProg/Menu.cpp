@@ -10,8 +10,8 @@ Menu::Menu(int n_itens) :
 
 {
 	if (qnt_itens) {
-		float width = gGrafico->getJanela()->getSize().x;
-		float height = gGrafico->getJanela()->getSize().y;
+		float width = (float)gGrafico->getJanela()->getSize().x;
+		float height = (float)gGrafico->getJanela()->getSize().y;
 
 		if (!fonte.loadFromFile("Happy chicken.ttf")) {
 		}

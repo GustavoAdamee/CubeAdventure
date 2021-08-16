@@ -83,13 +83,13 @@ void GerenciadorTiles::initTiles()
 void GerenciadorTiles::initMapaTiles(int i, int j)
 {
 	//Tamanho de cada tile em pixels
-	tile.setPosition(i * 50, j * 50);		
+	tile.setPosition((float)i * 50, (float)j * 50);		
 	
 	tile.setTextureRect(IntRect(mapa[i][j] * 50, 0, 50, 50));
 
 	InfoTiles  aux;
-	aux.posicao = Vector2f(i * 50, j * 50);
-	aux.tamanho = Vector2f(50, 50);
+	aux.posicao = Vector2f((float)i * 50, (float)j * 50);
+	aux.tamanho = Vector2f(50.0, 50.0);
 
 	gColisoes->adicionarTile(aux);
 

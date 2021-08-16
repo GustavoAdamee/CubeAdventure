@@ -357,7 +357,7 @@ void Jogo::verificaAtualizacoes()
 
         pAux->mover(t);
 
-        pAux->atualizar(t);
+        pAux->atualizar((float)t);
 
         pontuacao = pontuacao + pAux->getPontos();
 
@@ -395,7 +395,7 @@ void Jogo::gerarFase()
     }
     else {
         
-        ranking->cadastrar(cadastrarJogadas.executar(pontuacao), pontuacao); //Cadastra pontuacao e a coloca no ranking
+        ranking->cadastrar(cadastrarJogadas.executar((int)pontuacao), (int)pontuacao); //Cadastra pontuacao e a coloca no ranking
         ranking->executar(); //Mostra o ranking
         
         menu = new MenuPrincipal();

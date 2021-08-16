@@ -33,7 +33,7 @@ void CuboExplorador::mover(double t)
         v.y = 0;
     }
     else {
-        v.y += g * t; //Gravidade
+        v.y += g * (float)t; //Gravidade
     }
 
     delay += t;

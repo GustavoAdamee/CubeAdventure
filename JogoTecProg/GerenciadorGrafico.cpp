@@ -122,8 +122,8 @@ void GerenciadorGrafico::desenhaPontos(float pontuacao)
 		texto[i].setFillColor(sf::Color::Yellow);
 	}
 
-	texto[0].setPosition(sf::Vector2f((janela->getSize().x -200) / 2, 50));
-	texto[1].setPosition(sf::Vector2f((janela->getSize().x + 100) / 2, 50));
+	texto[0].setPosition(sf::Vector2f(((float)janela->getSize().x -200.0f) / 2, 50.0f));
+	texto[1].setPosition(sf::Vector2f(((float)janela->getSize().x + 100.0f) / 2, 50.0f));
 
 
 	texto[0].setString("Pontos: ");
